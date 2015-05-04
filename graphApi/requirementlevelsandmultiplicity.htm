@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Requirement Levels and Multiplicity</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nPreface\nRequirement Levels and Multiplicity");
+addAvenueInfo("Basic Sequence","Preface.htm","commonnamespaces.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"preface.htm\">Preface<\/a> &nbsp;&gt; Requirement Levels and Multiplicity<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Requirement Levels and multiplicity</span></h1>
+<p><span class="rvts6">In RDF, any given resource can have any number of 
+ relationships with any given property with other resources. &#160;This 
+ is powerful as a data model, but can present a challenge to constructing 
+ applications that are simple, maintainable, reliable and predictable.&#160;To 
+ that end, all properties in MindjetGraph are defined with a &quot;requirement 
+ level&quot;. &#160;This is a cue to a MindjetGraph app developer as to 
+ how to code for accessing those properties -- which properties are always 
+ present, which require checks for null, which are common, and which may 
+ have multiple values.</span></p>
+<p><span class="rvts6">The “Req” column in each class definition page declares 
+ the requirement level for the properties. &#160;These requirement levels 
+ may be thought of as indicating a UML-style &#160;multiplicity characteristic. 
+ &#160;They also correspond to the ISO 2119 standard terminology of &#160;“MUST”, 
+ “SHOULD” and “MAY” as defined by the W3C in</span> <a class="rvts14" href="http://www.ietf.org/rfc/rfc2119.txt">RFC 
+ 2119.</a></p>
+<p><span class="rvts6">It is important to know that it is always legal 
+ for undefined or unknown properties to exist for an object in addition 
+ to the ones explained here. &#160;The graph constantly grows with the 
+ addition of new knowledge as represented by new datatypes and new relationships.</span></p>
+<p>&#160;</p>
+<p><span class="rvts36">*</span> <span class="rvts13" style="font-style: italic;"><i>These 
+ are the values that appear in the MindjetGraph class definitions.</i></span></p>
+<div class="rvps2">
+	<table style="border: solid 1px #000000;" cellspacing="0" width="100%">
+		<tr style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">&quot;Req&quot; values</span> <span class="rvts35">*</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="53" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">RFC 2119</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="85" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">UML Multiplicity</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="430" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">MUST</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Yes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">1</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="430"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The property MUST have exactly one value. &#160;There 
+			 is no need to check for null values for this property. &#160;Objects 
+			 of the class cannot exist without this property.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">SHOULD</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Yes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">0..1</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="430"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The property SHOULD have exactly one value. 
+			 &#160;It MAY have no value and MUST have no more than one 
+			 value. &#160;</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">MAY</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Yes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">0..1</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="430"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The property MAY have one value and MAY have 
+			 no value. &#160;&#160;It MUST have no more than one value.</span></p>
+			<p style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">From an implementer's point of view, the distinction 
+			 between SHOULD and MAY is not very substantial. &#160;In both 
+			 cases, one must check for possible null values.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">[ * ]</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">No</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">0..*</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="430"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">There MAY be zero or more values to the property. 
+			 &#160;In other words, the value of the property could be thought 
+			 of as a collection of any size. &#160;That collection may 
+			 be empty.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">[ 1 ]</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">No</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">1..*</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="430"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">There MUST be at least one value to the property 
+			 and there MAY be more. &#160;In other words, the value of 
+			 the property could be thought of as a collection of any size 
+			 but that must have at least one element.</span></p></td>
+		</tr>
+		
+			
+			
+			
+		
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">RULE</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">No</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">0..*</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="430"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Values for this property are defined by a rule 
+			 and derived from other concrete property values. &#160;Common 
+			 rules are inversion and transitivity.</span></p>
+			<p style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">An inversion type of rule goes like this. &#160;If 
+			 there is a property that has a value like this: [ entityA 
+			 propertyX entityB ], then we can infer that there is also 
+			 this property: [ entityB propertyY entityB ]. &#160;An example 
+			 of this is the</span> <span class="rvts13" style="font-style: italic;"><i>memberOf</i></span> 
+			 <span class="rvts6">property on</span> <a class="rvts14" href="agentclass.htm">Agent</a><span 
+			 class="rvts6">, that is the inverse of the</span> <span class="rvts13" 
+			 style="font-style: italic;"><i>member</i></span> <span class="rvts6">property 
+			 on</span> <a class="rvts14" href="groupclass.htm">Group</a><span 
+			 class="rvts6">. &#160;The</span> <span class="rvts13" style="font-style: italic;"><i>member</i></span> 
+			 <span class="rvts6">property is concrete; the</span> <span 
+			 class="rvts13" style="font-style: italic;"><i>memberOf</i></span> 
+			 <span class="rvts6">property is inferred from it.</span></p></td>
+		</tr>
+	</table>
+</div>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

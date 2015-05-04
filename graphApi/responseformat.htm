@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Response Format</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nResponse Format");
+addAvenueInfo("Basic Sequence","QueryParameters.htm","PrimitiveResultElements.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; Response Format<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Response Format</h1>
+<p><span class="rvts6">Sub-topics:</span></p>
+<p style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><a href="primitiveresultelements.htm"><span class="rvts6">P</span>rimitive 
+ Result Elements</a></p>
+<p style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><a 
+	 href="collectionresultelements.htm">Collection Result Elements</a></p>
+<p style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><a href="entityresultelements.htm">Entity Result Elements</a></p>
+<p>&#160;</p>
+<p><span class="rvts6">The specific format of the query response is the 
+ one requested by either the Content-Type header or</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>format</i></span> <span class="rvts6">query 
+ parameter. &#160;The default is JSON. </span></p>
+<p><span class="rvts6">Regardless of format, or even the kind of query 
+ or HTTP method, all responses have a common structure. &#160;The top level 
+ elements are always:</span></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 0pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Top-level 
+			 Response Element</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="76" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 0pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Required</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="491" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">version</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="76"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">MUST</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="491"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The version of the MindjetGraph REST response 
+			 syntax. &#160;Currently always &quot;1.0&quot;.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">query</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="76"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">SHOULD</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="491"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Echoes the HTTP method and URL of the query 
+			 to which this response was made.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xmlns</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="76"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">SHOULD</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="491"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">If any XML namespace prefixes were used in formatting 
+			 this response, their mappings are given here. &#160;Definitions 
+			 for &quot;_ds&quot; and &quot;_host&quot; are typically included.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">results</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="76"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">MAY</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="491"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The array of results, if any, in response to 
+			 the query.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">error</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="76"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">MAY</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="491"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">An error message. &#160;A response typically 
+			 includes either a</span> <span class="rvts13" style="font-style: italic;"><i>results</i></span> 
+			 <span class="rvts6">element or an</span> <span class="rvts13" 
+															 style="font-style: italic;"><i>error</i></span> 
+			 <span class="rvts6">element but not both.</span></p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6">The response to most GET queries is a</span> <span 
+	 class="rvts13" style="font-style: italic;"><i>results</i></span> <span class="rvts6">element 
+ that contains exactly one entry - the result of the query. &#160;If the 
+ response to the query is a collection value, say a list of ideas or users, 
+ the</span> <span class="rvts13" style="font-style: italic;"><i>results</i></span> 
+ <span class="rvts6">element still contains exactly one entry, but that 
+ one entry will contain a collection value.</span></p>
+<p style="font-weight: bold;"><span class="rvts17">Example response in 
+ JSON:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+				 margin-bottom: 0pt;"><span class="rvts6">{</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/tenant-1&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;_sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:tenant-1&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Tenant&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2013-03-12T17:15:21.000Z&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6"><br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;... 
+		 etc. ...</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts6">&#160;&#160;&#160;&#160;]</span></p>
+		<p class="Code_table" style="margin-left: 0in; margin-top: 0pt; 
+			 margin-bottom: 0pt;">}</p></td>
+	</tr>
+</table>
+<p class="Code_table" style="margin-left: 12px;">&#160;</p>
+
+
+<p class="Code_table" style="margin-left: 12px;">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

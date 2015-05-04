@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Entity IDs and Common Prefixes</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nGET Queries\nEntity IDs and common prefixes");
+addAvenueInfo("Basic Sequence","GETQueries.htm","ExtendedQueryURL.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"getqueries.htm\">GET Queries<\/a> &nbsp;&gt; Entity IDs and common prefixes<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Entity IDs and common </span>prefixes</h1>
+<p><span class="rvts6">As discussed in</span> <a class="rvts14" href="entityconcepts.htm">Entity 
+ Concepts</a><span class="rvts6">, entity IDs are URIs that always have 
+ this format:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts38" style="font-style: italic;"><i><span 
+	 class="rvts38" style="font-style: italic;"><i>g</i></span>atewayURL</i></span><span 
+	 style="font-weight: bold;"> </span><span class="rvts39" style="font-weight: bold;">/</span> 
+ <span class="rvts38" style="font-style: italic;"><i>dataspaceKey</i></span><span 
+	 style="font-weight: bold;"> </span><span class="rvts39" style="font-weight: bold;">/</span> 
+ <span class="rvts38" style="font-style: italic;"><i>entityKey</i></span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts43" style="color: #0000ff;"><font color="blue" >http://xyz.mindjet.com/graph</font></span><span 
+	 class="rvts37">/</span><span class="rvts42" style="color: #008000;"><font color="green" >nyc</font></span><span 
+	 class="rvts37">/</span><span class="rvts41" style="color: #ff0000;"><font color="red" >u512-312.b</font></span></p>
+<p><span class="rvts6">has these components:</span></p>
+<table style="left: 0px; top: 1189px; margin-left: 32px;" cellspacing="0" 
+		 width="548">
+	<col style="width: 23.626%;" />
+	<col style="width: 76.374%;" />
+	<tr>
+		<td><span class="rvts6">gateway URL &#160;&#160;&#160;&#160;&#160;</span></td>
+		<td><span class="rvts43" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">http://xyz.mindjet.com/graph</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">dataspace key &#160;&#160;&#160;</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 color: #008000; font-size: 10pt;"><font size="2" color="green" style="font-size:10.000000pt;">nyc</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">entity key &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></td>
+		<td><span class="rvts41" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #ff0000;"><font size="2" color="red" style="font-size:10.000000pt;">u512-312.b</font></span></td>
+	</tr>
+</table>
+<p><span class="rvts6">When entity IDs are returned as part of a response, 
+ they are generally shortened by using XML namespace prefixes.</span></p>
+<p><span class="rvts6">The prefix &quot;</span><span class="rvts17" style="font-weight: bold;">_hos</span><span 
+	 class="rvts17">t</span><span class="rvts6">&quot; usually refers to 
+ the gatewayURI used in the query.</span></p>
+<p><span class="rvts6">The prefix &quot;</span><span class="rvts17" style="font-weight: bold;">_ds</span><span 
+	 class="rvts6">&quot; usually refers to the combination of gatewayURI 
+ and dataspace key from the query, in other words everything except the 
+ entity key.</span></p>
+<p><span class="rvts6">Sticking with the example above, these prefixes 
+ would be mapped this way:</span></p>
+<table style="left: 0px; top: 1189px; margin-left: 32px;" cellspacing="0" 
+		 width="548">
+	<col style="width: 15.779%;" />
+	<col style="width: 84.221%;" />
+	<tr>
+		<td><span class="rvts6" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt;"><font size="2" style="font-size:10pt;">_host:</font></span></td>
+		<td><span class="rvts37" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt;"><font size="2" style="font-size:10pt;">http://mindjet.mindjet.com/graph</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt;"><font size="2" style="font-size:10pt;">_ds:</font></span></td>
+		<td><span class="rvts37" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt;"><font size="2" style="font-size:10pt;">http://mindjet.mindjet.com/graph/nyc</font></span></td>
+	</tr>
+</table>
+<p><span class="rvts6" style="font-family: 'Arial Unicode MS', sans-serif;">So 
+ for</span><span class="rvts6" style="font-family: 'Courier New', monospace;"> 
+ example, the entity ID &quot;</span><span class="rvts37" style="font-family: 'Courier New', monospace;">http://xyz.mindjet.com/graph/nyc/user-5123</span><span 
+	 class="rvts6" style="font-family: 'Courier New', monospace;">&quot; 
+ might be represented instead as either &quot;_ds:user-5123&quot; or &quot; 
+ _host:nyc/user-5123&quot;</span><span class="rvts6">.</span></p>
+<p><span class="rvts6">The exact mappings for these prefixes is always 
+ given in each response in the top level</span> <a class="rvts14" href="responseformat.htm">&quot;xmlns&quot; 
+ element</a><span class="rvts6">.</span></p>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

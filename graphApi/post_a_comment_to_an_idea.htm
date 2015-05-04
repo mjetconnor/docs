@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="NOODP" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Post a Comment to an Idea</title>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorial\nPost a Comment to an Idea");
+addAvenueInfo("Basic Sequence","getthecommentsonanidea.htm","Vote_on_an_Idea.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"tutorial.htm\">Tutorial<\/a> &nbsp;&gt; Post a Comment to an Idea<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Post a Comment to an Idea</span></h1>
+<p><span class="rvts6">Now let's post a comment to that idea. &#160;The 
+ query's URL will be the idea's URI, just like for the GET queries, but 
+ this time we will use the HTTP POST method.</span></p>
+<p><span class="rvts6">The body of the POST request describes what we want 
+ to add to the idea. &#160;Since we want to make a new comment, we have 
+ to give the values we want to use to create that comment.</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">POST</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/node-75494</span></p>
+<p><span class="rvts6">with headers:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">Content-Type: application/json</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">Authorization: Bearer 
+		 914a9b4d83fa7333d3b517643a30bac2</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">and request body:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;type:&quot;Comment&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;content:&quot;I 
+		 love this idea. &#160;It's awesome!&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">or the same thing using form encoding:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">Content-Type: application/x-www-form-urlencoded</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">Authorization: Bearer 
+		 914a9b4d83fa7333d3b517643a30bac2</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">and request body:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="color: #003f00;"><span class="rvts24">type=Comment&amp;content=I+love+this+idea%2E++It%27s+awesome%21</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">The response to the request will be the data for 
+ the newly created comment, in exactly the same format that we have seen 
+ so far.</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;POST https://www.example.mindjet.com/api/ds1/node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-91024&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;creator&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:user-523&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;User&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2013-12-01T13:13:52.000Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;content&quot;: 
+		 &quot;I love this idea. &#160;It's awesome!&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;forum&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:d-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Discussion&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;status&quot;: 
+		 &quot;open&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

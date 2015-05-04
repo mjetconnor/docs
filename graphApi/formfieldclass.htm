@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>FormField Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nGeneral Purpose Datatypes\nFormField Class");
+addAvenueInfo("Basic Sequence","FormDataClass.htm","FormFieldOption.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"generalpurposedatatypes.htm\">General Purpose Datatypes<\/a> &nbsp;&gt; FormField Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">FormField Class</span></h1>
+<p><span class="rvts6">Description of a field within a <a href="formclass.htm">Form</a>.<br />
+</span> <a class="rvts14" href="valuesetclass.htm"><br />
+</a></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0in; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="102" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="71" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0in; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="331" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">name</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">SimpleText</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">The name of the field, for the purpose of labelling 
+			 the values in a corresponding FormData. &#160;This is not 
+			 the display text for the field. &#160;Use the title for that.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">title</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">String</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">The 
+			 display label to be used when rendering this field.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">fieldType</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a class="rvts14" href="rdfandowldatatypes.htm">Class</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">When 
+			 a value is given for this field, for instance in a corresponding 
+			 <a href="formdataclass.htm">FormData</a> object, its value 
+			 should be consistent with this type.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">position</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Decimal</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">The 
+			 ordinal position of this field within the overall form.</p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">required</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a 
+			 class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/XMLBasedDatatypes.htm">Boolean</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a 
+			 class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RequirementLevelsandMultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">True 
+			 IFF data entry into the form is not complete without a value 
+			 for this field. &#160;Default: false.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">description</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">String</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">&#160;</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">promptStyle</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a class="rvts14" href="promptstyleclass.htm">PromptStyle</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">Additional 
+			 information needed to render the appropriate kind of input 
+			 element for this field.</p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px; " width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;">units</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px; " width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a href="rdfandowldatatypes.htm">Thing</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px; " width="71"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px; " width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">If 
+			 fieldType is <a href="moneyclass.htm">Money</a>, this could 
+			 be a <a href="currencyclass.htm">Currency</a> value.</p>
+			<p style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;">If 
+			 fieldType is <a href="intervalclass.htm">Interval</a>, this 
+			 could be a <a href="timeunit_class.htm">TimeUnit</a> value.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="94"><p 
+				 style="margin-left: 0in; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">option</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">options</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="102"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><a href="formfieldoption.htm">FormFieldOption</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a href="requirementlevelsandmultiplicity.htm">[ * ]</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="331"><p style="margin-left: 0in; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">When 
+			 a field has an enumerated set of acceptable values, those 
+			 values are described here.</p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<p><span class="rvts6">Common values for the &quot;fieldType&quot; property, 
+ and how they typically apply to values in a form:</span></p>
+<p><a class="rvts14" href="valuesetclass.htm"><br />
+</a></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">&quot;fieldType&quot; Class value</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="596" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Description of value expected to be entered 
+			 for the field</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">SimpleText</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">A single line of text, typically comparatively 
+			 short.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">String</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">Longer text that could span to multiple lines. 
+			 &#160;A promptStyle value of “richText” indicates that a rich 
+			 text editor such as TinyMCE should be used if possible.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Integer</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">An integer value.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Decimal</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">A number that may include a fractional part.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Boolean</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">True/False</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">DateTime</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">A date/time value; a timestamp.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Date</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">A date value with no time component.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Time</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">A time value with no date component.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="125"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><a class="rvts14" href="userclass.htm">User</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="596"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">A SpigitEngage user.</span></p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

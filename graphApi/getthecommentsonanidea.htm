@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Get the Comments on an Idea</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorial\nGet the Comments on an Idea");
+addAvenueInfo("Basic Sequence","getalistofideas.htm","Post_a_Comment_to_an_Idea.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"tutorial.htm\">Tutorial<\/a> &nbsp;&gt; Get the Comments on an Idea<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Get the Comments on an Idea</h1>
+<p>In MindjetGraph, comments are organized into <a href="discussionclass.htm">Discussions</a>. 
+ &#160;In theory, anything can have any number of discussions about that 
+ thing. &#160;In practice, SpigitEngage only supports a single discussion 
+ for each idea. &#160;The idea's <span style="font-style: italic;"><i>discussion</i></span> 
+ property gives you the entity that represents the comment thread. &#160;That 
+ entity has a <span style="font-style: italic;"><i>comments</i></span> property 
+ that lists all of comments.</p>
+<p>Let's select the discussion property of the idea we were just looking 
+ at in the previous tutorial page:</p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/node-75494/discussion</span></p>
+<p><span class="rvts6">gets:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/node-75494/discussion&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:d-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Discussion&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;comments&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;data&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-7093&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-7092&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-7094&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;dataSpace&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:ds1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;DataSpace&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;entityStatus&quot;: 
+		 &quot;open&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;participants&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:tg-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Group&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;status&quot;: 
+		 &quot;open&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;topic&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Most of these properties are really just bookkeeping. &#160;The substance 
+ is all in the comments. &#160;Let's take a closer look at them:</p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/node-75494/discussion/comments?fields=content,created,creator,replyTo</span></p>
+<p><span class="rvts6">returns:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/node-75494/discussion&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;data&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-7093&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;content&quot;: 
+		 &quot;I think your description in paragraph two could be a little 
+		 clearer&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;creator&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:user-37&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;User&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2014-04-02T20:40:08Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;replyTo&quot;: 
+		 null</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-7092&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;content&quot;: 
+		 &quot;Does this idea really fit our market?&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;creator&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:user-85&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;User&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2014-04-02T20:40:00Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;replyTo&quot;: 
+		 null</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-7094&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;content&quot;: 
+		 &quot;I know of a client who could use it right now!&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;creator&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:user-37&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;User&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2014-04-02T20:40:23Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;replyTo&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-7092&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Comment&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p>Notice that the third comment, _ds:node-7094, is in reply to comment 
+ _ds:node-7092, which is the second comment. &#160;The <span style="font-style: italic;"><i>comments</i></span> 
+ property of a discussion includes all comments in the thread, including 
+ all replies. &#160;The &quot;top level&quot; comments are the ones that 
+ are not in reply to anything, in other words the ones whose <span style="font-style: italic;"><i>replyTo</i></span> 
+ property has no value or is <span style="font-style: italic;"><i>null</i></span>.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

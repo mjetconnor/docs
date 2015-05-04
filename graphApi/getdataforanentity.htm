@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Get Data for an Entity</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorial\nGet Data for an Entity");
+addAvenueInfo("Basic Sequence","getaccesstoken.htm","WalkTheGraph.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"tutorial.htm\">Tutorial<\/a> &nbsp;&gt; Get Data for an Entity<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Get Data for an Entity</span></h1>
+<p><span class="rvts6">Every REST query in the MindjetGraph API is authenticated 
+ by specifying your access token in the &quot;Authorization&quot; HTTP 
+ header. &#160;The value of that header must be the literal text &quot;Bearer 
+ &quot; (the word &quot;Bearer&quot; followed by a single blank space character) 
+ followed by your access token. &#160;For example:</span></p>
+<table class="Mindjet_invisible" style="left: 0px; top: 134px; height: 24px; 
+		 margin-left: 24px; margin-right: 19px;" width="693" cellspacing="0">
+	<col style="width: 18.064%;" />
+	<col style="width: 81.936%;" />
+	<tr>
+		<td><p><span class="rvts24">Authorization</span></p></td>
+		<td><p><span class="rvts24">Bearer 914a9b4d83fa7333d3b517643a30bac2</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">The authentication response from the</span> <a class="rvts14" 
+	 href="getaccesstoken.htm" style="font-family: 'Arial Unicode MS', sans-serif; 
+	 font-size: 9pt;">previous tutorial step</a> <span class="rvts6">gave 
+ us two starting points for the exploration of your MindjetGraph data. 
+ &#160;The</span> <span class="rvts13" style="font-style: italic; font-weight: bold;"><i>userId</i></span> 
+ <span class="rvts6">value is the &quot;entity ID&quot; of the user that 
+ was just authenticated. &#160;The</span> <span class="rvts13" style="font-style: italic; 
+												 font-weight: bold;"><i>communityId</i></span> 
+ <span class="rvts6">value is the entity ID of the community that was the 
+ basis for the authentication.</span></p>
+<p><span class="rvts6">The value for communityId from the previous step 
+ was </span><span class="rvts6" style="color: #008080;"><font color="teal" >&quot;https://www.example.mindjet.com/api/ds1/comm-1&quot;</font></span><span 
+	 class="rvts6">.</span></p>
+<p><span class="rvts6">To get the data for an entity, any MindjetGraph 
+ entity, simply execute an HTTP GET request using the entity's ID as the 
+ URL of the query.</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/comm-1</span></p>
+<p><span class="rvts6">Don't forget the &quot;Authorization&quot; HTTP 
+ header. &#160;Otherwise the request will be rejected with an access-denied 
+ error.</span></p>
+<p><span class="rvts6">The response is in JSON format. &#160;The following 
+ is a (somewhat abbreviated) example of what you might expect to get. &#160;It 
+ starts with some managerial information -- the response version, a repeat 
+ of the query URL, and relevant namespace bindings. &#160;Then there is 
+ the data of the requested entity.</span></p>
+<p><span class="rvts6">Let's look a little closer at this entity's first 
+ two properties,</span> <span class="rvts19" style="font-weight: bold; 
+								 font-style: italic;"><i>eid</i></span> <span 
+	 class="rvts6">and</span> <span class="rvts19" style="font-weight: bold; 
+									 font-style: italic;"><i>type</i></span><span 
+	 class="rvts6">. &#160;The</span> <span class="rvts13" style="font-style: italic;"><i>eid</i></span> 
+ <span class="rvts6">value is the entity's ID, which we are happy to see 
+ matches what we asked for. &#160;Well, almost. &#160;The value in the 
+ response uses the XML namespace prefix &quot;_ds&quot;, whose mapped value 
+ is given earlier in the response. &#160;If you replace the &quot;_ds:&quot; 
+ prefix with the its corresponding value, you get exactly the URI we used 
+ to make the query in the first place: &quot;_ds&quot; + &quot;comm-1&quot; 
+ = &quot;https://www.example.mindjet.com/api/ds1/comm-1&quot;.</span></p>
+<p><span class="rvts6">The</span> <span class="rvts13" style="font-style: italic;"><i>type</i></span> 
+ <span class="rvts6">value is &quot;Community&quot;. &#160;This tells us 
+ that the datatype for the entity is the MindjetGraph class</span> <a class="rvts14" href="communityclass.htm" style="font-family: 'Arial Unicode MS', sans-serif; 
+	 font-size: 9pt;">Community</a><span class="rvts6">. &#160;Look up 
+ that class in the</span> <a class="rvts14" href="alphaclass_index.htm" style="font-family: 'Arial Unicode MS', sans-serif; 
+							 font-size: 9pt;">Reference</a> <span class="rvts6">section 
+ to find out the details about what properties may be expected for this 
+ kind of object.</span></p>
+<p style="margin-left: 48px;"><span class="rvts30" style="font-style: italic;"><i>It 
+ is really important to note that the key value in the entity ID, in this 
+ case &quot;comm-1&quot;, does not tell you what kind of object this is, 
+ even though it may look like it sometimes. &#160;To know the type of a 
+ particular MindjetGraph entity, you</i></span><span style="font-style: italic;"><i> 
+ </i></span><span class="rvts32" style="font-style: italic;"><i>must</i></span><span 
+	 style="font-style: italic;"><i> get its data and </i></span><span class="rvts30" 
+	 style="font-style: italic;"><i>look at its</i></span><span style="font-style: italic;"><i> 
+ </i></span><span class="rvts31" style="font-style: italic;"><i>type</i></span><span 
+	 style="font-style: italic;"><i> </i></span><span class="rvts30" style="font-style: italic;"><i>property. 
+ &#160;It cannot be inferred from the entity's ID.</i></span><span class="rvts6"><br />
+</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/comm-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:comm-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Community&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;title&quot;: 
+		 &quot;Your Example Community&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;description&quot;: 
+		 &quot;Leader in collaborative idea management and prediction markets.&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;creator&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:user-59&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;User&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2013-03-12T17:15:21.000Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;participants&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:grp-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Group&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;inquiries&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;data&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:q-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;SuggestionBox&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:q-816&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Challenge&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:q-819&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Challenge&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;paging&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;next&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/comm-1/inquiries?after=2&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;status&quot;: 
+		 &quot;open&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&quot;totalSize&quot;: 
+		 7</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p class="rvps12">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

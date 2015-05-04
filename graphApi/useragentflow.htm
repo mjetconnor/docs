@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>User Agent Flow</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nAuthentication with OAuth 2.0\nOAuth 2.0 Authorization Flows\nUser Agent Flow");
+addAvenueInfo("Basic Sequence","WebApplicationFlow.htm","nativeapplicationflow.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"authenticationwithoauth20.htm\">Authentication with OAuth 2.0<\/a> &nbsp;&gt; <a href=\"oath_2.0_authorization_flows.htm\">OAuth 2.0 Authorization Flows<\/a> &nbsp;&gt; User Agent Flow<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>User Agent Flow</h1>
+<p><span class="rvts6">From the</span> <a class="rvts14" href="http://tools.ietf.org/html/draft-ietf-oauth-v2-20">OAuth 
+ 2.0 v20 specification</a><span class="rvts6">:</span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>A 
+ user-agent-based application is a public client in which the client code 
+ is downloaded from a web server and executes within a user-agent on the 
+ resource owner's device. &#160;Protocol data and credentials are easily 
+ accessible (and often visible) to the resource owner. &#160;Since such 
+ applications reside within the user-agent, they can make seamless use 
+ of the user-agent capabilities when requesting authorization.</i></span></p>
+<p><span class="rvts6">In other words, use this flow if your application 
+ is implemented as something that executes within your user's user agent, 
+ for instance as JavaScript in their browser. &#160;This flow is distinct 
+ from the</span> <a class="rvts14" href="webapplicationflow.htm">Web Application 
+ Flow</a> <span class="rvts6">in that the access token never leaves the 
+ user agent. &#160;It is retrieve by, and only used in, the user agent.</span></p>
+<p><span class="rvts6">You can of course cheat by using the flow to get 
+ the access token in the user agent and then somehow send the token back 
+ to an application server. &#160;It is best not to do that because it opens 
+ your application up to being sniffed and hacked. &#160;Better to use the 
+ &#160;</span><a class="rvts14" href="webapplicationflow.htm">Web Application 
+ Flow</a> <span class="rvts6">if that really is the nature of your application.</span></p>
+<p><span class="rvts6"><br />
+This flow strings the OAuth 2.0 requests together in the following way.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 1.</span><span 
+	 class="rvts17">&#160;</span>&#160;<span class="rvts6">From your application, 
+ running in your user's user agent, execute an</span> <span style="font-family: 'Courier New', monospace; 
+															 color: #0000ff;"><font color="blue" ><a 
+	 href="oauthauthorize.htm">/oauth/authorize?response_type=token</a></font></span> 
+ <span class="rvts6">request to an appropriate MindjetGraph authentication 
+ URI. &#160;Specify a redirect URI that is handled by your application. 
+ &#160;Use the</span> <span class="rvts13" style="font-style: italic;"><i>state</i></span> 
+ <span class="rvts6">parameter if necessary to coordinate responses to 
+ requests.</span></p>
+<p><span class="rvts6">As mentioned in the Step 1 for</span> <a class="rvts14" href="webapplicationflow.htm">Web Application Flow</a><span class="rvts6">, 
+ there may be interim redirects to take care of user login and authentication.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 2.</span><span 
+	 class="rvts17">&#160;</span>&#160;<span class="rvts6">The final redirect 
+ is made, hash tagged with an</span> <a class="rvts14" href="accesstokenresponse.htm">access 
+ token response.</a> <span class="rvts6">&#160;The hash tag insures that 
+ that part of the redirect URI does not go beyond 
+ the user agent, i.e.. the user's browser.</span></p>
+<p><span class="rvts6">In the case of the User Agent Flow, the page targeted 
+ by that redirection must be the page that implements the application. 
+ &#160;The &quot;onLoad&quot; script for the 
+ page should get the hash tag, for instance from &quot;window.location.hash&quot; 
+ in browser JavaScript, and parse out the response elements.</span></p>
+<p><span class="rvts6">Note that if the page has some server-side components, 
+ for instance is a .jsp that is constructed by your server, the hash tag, 
+ and therefore the access token in it, will not be shared with the server. 
+ &#160;Only script code running in the user agent can see those values. 
+ &#160;This is how OAuth 2.0 guards against prying eyes for this kind of 
+ flow.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 3.</span> <span 
+	 class="rvts6">&#160;Get the access token from the response to Step 
+ 2. &#160;Make REST requests by specifying that access token the &quot;Authorization&quot; 
+ header of each request.</span></p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

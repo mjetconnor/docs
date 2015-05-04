@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Get a List of Ideas</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorial\nGet a List of Ideas");
+addAvenueInfo("Basic Sequence","GetaListofInquiries.htm","getthecommentsonanidea.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"tutorial.htm\">Tutorial<\/a> &nbsp;&gt; Get a List of Ideas<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Get a List of Ideas</span></h1>
+<p><span class="rvts6">Let's walk a little deeper into the graph by looking 
+ at the ideas associated with one of the inquiries. &#160;We know from 
+ the description of the</span> <a class="rvts14" href="inquiryclass.htm">Inquiry</a> 
+ <span class="rvts6">class, and also from the more general</span> <a class="rvts14" href="inquiryconcepts.htm">Inquiry Concepts</a> <span class="rvts6">discussion, 
+ that inquiries have an</span> <span class="rvts13" style="font-style: italic;"><i>ideaSet</i></span> 
+ <span class="rvts6">property. &#160;And</span> <a class="rvts14" href="ideasetclass.htm">IdeaSets</a> 
+ <span class="rvts6">have an</span> <span class="rvts13" style="font-style: italic;"><i>ideas</i></span> 
+ <span class="rvts6">property that is the collection of all</span> <a class="rvts14" href="ideaclass.htm">Ideas</a> <span class="rvts6">participating in 
+ that inquiry.</span></p>
+<p><span class="rvts6">Let's pick the first inquiry in the community that 
+ we have been looking at so far - &quot;_ds:q-1&quot;. &#160;As it happens, 
+ that one is a</span> <a class="rvts14" href="suggestionboxclass.htm">SuggestionBox</a><span 
+	 class="rvts6">, but that does not matter for what we are about to 
+ do. &#160;All inquiries regardless of their specific type have</span> 
+ <span class="rvts13" style="font-style: italic;"><i>ideaSets</i></span><span 
+	 class="rvts6">.</span></p>
+<p><span class="rvts6">Let's get the</span> <span class="rvts13" style="font-style: italic;"><i>ideaSet</i></span> 
+ <span class="rvts6">property of q-1 by using q-1's URI with the property 
+ name in an added path segment:</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/q-1/ideaSet</span></p>
+<p><span class="rvts6">which returns:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/q-1/ideaSet&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: &quot;_ds:iset-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;IdeaSet&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;ideas&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;data&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: &quot;_ds:node-75501&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: &quot;_ds:node-75500&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;paging&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;next&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/iset-1/ideas?after=2&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;totalSize&quot;: 
+		 149</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2013-03-12T17:15:21.000Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;community&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:comm-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Community&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;... 
+		 more properties ...</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">It so happens that the value of this inquiry's</span> 
+ <span class="rvts13" style="font-style: italic;"><i>ideaSet</i></span> <span 
+	 class="rvts6">property is another entity, one whose</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>eid</i></span> <span class="rvts6">is &quot;_ds:iset-1&quot; 
+ and has type</span> <a class="rvts14" href="ideasetclass.htm">IdeaSet</a><span 
+	 class="rvts6">. &#160;(We knew that already from</span> <a class="rvts14" href="inquiryclass.htm">Inquiry Class</a><span class="rvts6">.) &#160;It 
+ has a bunch of properties. &#160;One of them is the</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>ideas</i></span> <span class="rvts6">property, 
+ which apparently is a collection that has 149 elements. &#160;We can see 
+ the first three elements in this response, all of them</span> <a class="rvts14" href="ideaclass.htm">Ideas</a><span class="rvts6">.</span></p>
+<p><span class="rvts6">Just to play a little bit with the query forms we 
+ have already seen, we could have gotten just the ideas in this inquiry 
+ in a couple of ways. &#160;Let's start with:</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/q-1/ideaSet/ideas</span></p>
+<p><span class="rvts6">This form starts with the inquiry's URI -- the part 
+ up to &quot;.../ds1/q-1&quot; &#160;-- then appends &quot;/ideaSet&quot; 
+ to select that property from the inquiry, and then appends &quot;/ideas&quot; 
+ to select that property from the resulting ideaSet. &#160;See how the 
+ path segments can be cascaded? &#160;Again, this is just like using a 
+ dot operator in a scripting language.</span></p>
+<p><span class="rvts6">Or, since we now know the entity ID of the ideaSet 
+ (&quot;_ds:iset-1&quot;), we can query for it directly, but still appending 
+ the &quot;/ideas&quot; segment:</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/iset-1/ideas</span></p>
+<p><span class="rvts6">Both of these queries will return exactly the same 
+ response (except for the &quot;query&quot; element at the top of course):</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/q-1/ideaSet/ideas&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;data&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75501&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75500&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75488&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75482&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75476&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75475&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;</span>&#160;<span 
+		 class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+		 class="rvts24">... up to the 20th idea ...</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;paging&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;next&quot;: 
+		 &quot;https://www.dev36api.mindjet.com/api/ds1/iset-1/ideas?after=19&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;totalSize&quot;: 
+		 149</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">Just for fun, let's look at one of those ideas:</span></p>
+<p class="Code" style="color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/node-75494</span></p>
+<p><span class="rvts6">gets the response:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;... 
+		 a whole bunch of stuff !!! ...</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">Really, the default response includes a</span> <span 
+	 class="rvts13" style="font-style: italic;"><i>lot</i></span> <span class="rvts6">of 
+ information that we cut away here for brevity. &#160;You could make your 
+ request a bit more targetted by specifying exactly which properties you 
+ are interested in, using the</span> <span class="rvts13" style="font-style: italic;"><i>fields</i></span> 
+ <span class="rvts6">query parameter:</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">GET</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/node-75494?fields=title,creator,created,status,stage,inquiry,subjects</span></p>
+<p><span class="rvts6">gets:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;GET https://www.example.mindjet.com/api/ds1/node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-75494&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;title&quot;: 
+		 &quot;A better mousetrap&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;creator&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:user-92&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;User&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2013-11-05T16:59:52.000Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;status&quot;: 
+		 &quot;open&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;stage&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:j-1-0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Stage&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;inquiry&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:q-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;SuggestionBox&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;subjects&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;data&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-603&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Concept&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p class="rvps2">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

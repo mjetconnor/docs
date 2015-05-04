@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Fields Syntax Summary</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nResponse Format\nEntity Result Elements\nFields Syntax Summary");
+addAvenueInfo("Basic Sequence","fieldsmacros.htm","PUTQueries.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"responseformat.htm\">Response Format<\/a> &nbsp;&gt; <a href=\"entityresultelements.htm\">Entity Result Elements<\/a> &nbsp;&gt; Fields Syntax Summary<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Field Syntax Summary</h1>
+<table style="border-color: #ffffff; border-style: solid; left: 0px; top: 94px;" 
+		 cellspacing="0">
+	<col />
+	<col />
+	<col />
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="224"><p class="rvps47"><span class="rvts6">fieldsQueryParam</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="40"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps2"><span class="rvts6">&quot;</span><span 
+		 class="rvts17" style="font-weight: bold;">fields</span><span class="rvts17">=</span><span 
+		 class="rvts6">&quot; fieldList</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="161"><p class="rvps47"><span class="rvts6">fieldList</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="26"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps2"><span class="rvts6">fieldPhrase 
+		 [</span> <span class="rvts17">&quot;</span><span class="rvts17" 
+															 style="font-weight: bold;">,</span><span 
+		 class="rvts17">&quot;</span> <span class="rvts6">fieldPhrase ... 
+		 ]</span></p>
+		<p class="rvps48" style="margin-left: 48px; font-style: italic;"><span 
+		 class="rvts13">A</span> <span class="rvts6" style="font-style: normal;">field 
+		 list</span> <span class="rvts13">is a comma-delimited list of</span> 
+		 <span class="rvts6" style="font-style: normal;">field phrases</span><span 
+		 class="rvts13">.</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="161"><p class="rvps47"><span class="rvts6">fieldPhrase</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="15"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps2"><span class="rvts6">propertyExpr 
+		 | macroName | macroDef</span></p>
+		<p class="rvps48" style="margin-left: 48px; font-style: italic;"><span 
+		 class="rvts13">A</span> <span class="rvts6" style="font-style: normal;">field 
+		 phrase</span> <span class="rvts13">can be any one of a</span> 
+		 <span class="rvts6" style="font-style: normal;">property expression</span><span 
+		 class="rvts13">, a</span> <span class="rvts6" style="font-style: normal;">macro 
+		 name</span> <span class="rvts13">or a</span> <span class="rvts6" 
+															 style="font-style: normal;">macro 
+		 definition</span><span class="rvts13">.</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="161"><p class="rvps47"><span class="rvts6">propertyExpr</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="15"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps2"><span class="rvts6">propertyName 
+		 &#160;&#160;[ &quot;</span><span class="rvts17" style="font-weight: bold;">:</span><span 
+		 class="rvts6">&quot; ( &quot;</span><span class="rvts17" style="font-weight: bold;">[</span><span 
+		 class="rvts6">&quot; fieldList &quot;</span><span class="rvts17" 
+															 style="font-weight: bold;">]</span><span 
+		 class="rvts6">&quot; | macroName ) ] &#160;&#160;[ &quot;</span><span 
+		 class="rvts17" style="font-weight: bold;">*</span><span class="rvts6">&quot; 
+		 pageSize ]</span></p>
+		<p class="rvps48" style="font-style: italic;"><span class="rvts13">A</span> 
+		 <span class="rvts6" style="font-style: normal;">property expression</span> 
+		 <span class="rvts13">is a</span> <span class="rvts6" style="font-style: normal;">property 
+		 name</span><span class="rvts13">,</span><br />
+		<span class="rvts13">an optional</span> <span class="rvts6" style="font-style: normal;">field 
+		 list</span> <span class="rvts13">after a colon and surrounded 
+		 by square brackets,</span><br />
+		<span class="rvts13">and an optional</span> <span class="rvts6" 
+															 style="font-style: normal;">page 
+		 size</span> <span class="rvts13">after an asterisk.</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="161"><p class="rvps47"><span class="rvts6">propertyName</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="15"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps2" style="font-style: italic;"><span 
+		 class="rvts13">name</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="161"><p class="rvps47"><span class="rvts6">pageSize</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="15"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps2" style="font-style: italic;"><span 
+		 class="rvts13">integer</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="161"><p class="rvps47"><span class="rvts6">macroName</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="15"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps2"><span class="rvts6">&quot;</span><span 
+		 class="rvts17" style="font-weight: bold;">@</span><span class="rvts6">&quot;</span> 
+		 <span class="rvts13" style="font-style: italic;"><i>name</i></span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+			 padding-bottom: 2px; border-top-style: solid; border-top-color: #ffffff; 
+			 border-right-style: solid; border-right-color: #ffffff; border-bottom-style: solid; 
+			 border-bottom-color: #ffffff; border-left-style: solid; border-left-color: #ffffff;" 
+			 width="161"><p class="rvps47"><span class="rvts6">macroDef</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="15"><p class="rvps47"><span class="rvts6">=</span></p></td>
+		<td style="border-color: #ffffff; border-style: solid; padding-left: 2px; 
+			 padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" 
+			 width="806"><p class="rvps47"><span class="rvts6">macroName 
+		 &quot;</span><span class="rvts17" style="font-weight: bold;">=[</span><span 
+		 class="rvts6">&quot; fieldList &quot;</span><span class="rvts17" 
+															 style="font-weight: bold;">]</span><span 
+		 class="rvts6">&quot;</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

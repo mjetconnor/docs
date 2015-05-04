@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>IdeaScore Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nIdea Datatypes\nIdeaScore Class");
+addAvenueInfo("Basic Sequence","IdeaClass.htm","IdeaSetClass.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"ideadatatypes.htm\">Idea Datatypes<\/a> &nbsp;&gt; IdeaScore Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">IdeaScore Class</span></h1>
+<p><span class="rvts6">A facet used for tracking the metrics and status 
+ information related to an idea.</span></p>
+<p><span class="rvts6">Take special note that all of these properties, 
+ except for &quot;base&quot;, are marked only that they</span> <a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a> <span class="rvts6">be 
+ provided. &#160;This values tend to be tightly related to specific application 
+ usages, implementations and configurations.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Subclass of</span><span 
+	 class="rvts6">:</span> <a class="rvts14" href="facetclass.htm">Facet</a></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 0pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="95" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 0pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="53" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 0pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="344" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">base</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="ideaclass.htm">Idea</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The</span> <a class="rvts14" href="facetclass.htm">Facet</a> 
+			 <span class="rvts6">class defines the</span> <span class="rvts13">base</span> 
+			 <span class="rvts6">property. &#160;For IdeaScores, this MUST 
+			 be an</span> <a class="rvts14" href="ideaclass.htm">Idea</a><span 
+			 class="rvts6">.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;">context</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a href="rdfandowldatatypes.htm">Thing</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The</span> <a class="rvts14" href="facetclass.htm">Facet</a> 
+			 <span class="rvts6">class defines the</span> <span class="rvts13">context</span> 
+			 <span class="rvts6">property.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">upVotes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Integer</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Number of up votes made against this idea, in 
+			 the manner of a</span> <a class="rvts14" href="likeballotclass.htm">LikeBallot</a> 
+			 <span class="rvts6">or</span> <a class="rvts14" href="updownballotclass.htm">UpDownBallot</a><span 
+			 class="rvts6">.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">downVotes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Integer</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Number of down votes made against this idea, 
+			 in the manner of an</span> <a class="rvts14" href="updownballotclass.htm">UpDownBallot</a><span 
+			 class="rvts6">.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">viewCount</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Integer</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Number of views made of this idea. &#160;The 
+			 definition of &quot;view&quot; depends on application details.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">commentCount</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Integer</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The number of comments made, including replies, 
+			 with this idea as the topic.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">approvalRating</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Decimal</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A metric that digests the vote counts against 
+			 this idea, as compared to votes against related ideas, into 
+			 a single number. &#160;The exact algorithm used to calculate 
+			 this number may vary, for instance across tenants, communities 
+			 or inquiries. &#160;It should at least be consistent across 
+			 a related set of ideas, which in particular means it should 
+			 be consistent at least within a given inquiry.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">starVotes{X}</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="95"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">Integer</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A set of properties where the suffix of the 
+			 property name - the {X} - indicates a particular star vote 
+			 value. &#160;A typical star voting scheme uses a rating range 
+			 of 1 to 5. &#160;The associated ideaScore properties would 
+			 then be named:</span></p>
+			<p style="margin-top: 0pt; margin-bottom: 4.5pt; margin-left: 24px;"><span 
+			 class="rvts6">starVotes1</span><br />
+			<span class="rvts6">starVotes2</span><br />
+			<span class="rvts6">starVotes3</span><br />
+			<span class="rvts6">starVotes4</span><br />
+			<span class="rvts6">starVotes5</span></p>
+			<p style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The value of each of these properties is the 
+			 total count of votes at that star rating.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px; " width="98"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;">predictionResult</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px; " width="95"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a href="formdataclass.htm">FormData</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px; " width="53"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px; " width="344"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">If 
+			 the idea has received prediction votes, this property will 
+			 be included. &#160;In typical fashion for FormData objects, 
+			 the elements of the <span style="font-style: italic;"><i>data</i></span> 
+			 property correspond to the fields defined by the <span style="font-style: italic;"><i>form</i></span>. 
+			 &#160;The data elements are objects that contain these properties:</p>
+			<table cellspacing="0" width="100%" border="1">
+				<col style="width: 18.108%;" />
+				<col style="width: 81.892%;" />
+				<tr>
+					<td>mean</td>
+					<td>The current prediction value for this property 
+					 for this idea.</td>
+				</tr>
+				<tr>
+					<td>deviation</td>
+					<td>A measurement of the narrowness of the range of 
+					 prediction.</td>
+				</tr>
+			</table>
+			<p style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;">&#160;</p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<p><img alt="" src="newitem93.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts6"><br />
+</span></p>
+<p><img alt="" src="newitem94.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

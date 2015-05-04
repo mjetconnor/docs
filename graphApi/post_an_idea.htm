@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="NOODP" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Post an Idea</title>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorial\nPost an Idea");
+addAvenueInfo("Basic Sequence","Get_a_Leaderboard.htm","Post_an_Idea_with_Template_Fields.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"tutorial.htm\">Tutorial<\/a> &nbsp;&gt; Post an Idea<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Post an Idea</span></h1>
+<p><span class="rvts6">There is more involved with posting ideas than posting 
+ comments or votes. &#160;We will start with the simplest case and then 
+ delve into some variations.</span></p>
+<p><span class="rvts6">Let's post a new idea to an inquiry. &#160;As with 
+ the previous POST examples, the URL of the query will be the identifier 
+ of the thing we are posting to, in this case the inquiry's URI. &#160;The 
+ body of the POST request describes what we want to post. &#160;The</span> 
+ <span class="rvts6" style="font-style: italic;"><i>type</i></span> <span class="rvts6">property 
+ with value &quot;Idea&quot; indicates that we want to post an idea, as 
+ opposed to a comment or vote or whatnot. &#160;The</span> <span class="rvts6" 
+	 style="font-style: italic;"><i>title</i></span> <span class="rvts6">and</span> 
+ <span class="rvts6" style="font-style: italic;"><i>description</i></span> <span 
+	 class="rvts6">gives those initial values we want for our &#160;new 
+ idea.</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;"><span class="rvts25">POST</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/q-1</span></p>
+<p><span class="rvts6">with the usual headers, and this request body:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;type: 
+		 &quot;Idea&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;title: 
+		 &quot;Buy low, sell high&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;description: 
+		 &quot;This is a sure-fire way to make lots of money!&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">The response contains the data for the newly created 
+ idea.</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 color: #003f00;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;version&quot;: 
+		 &quot;1.0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;query&quot;: 
+		 &quot;POST https://www.example.mindjet.com/api/ds1/q-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;xmlns&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;sief&quot;: 
+		 &quot;http://purl.org/sief/2013/10/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_ds&quot;: 
+		 &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&quot;_host&quot;: 
+		 &quot;https://www.example.mindjet.com/api/&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&quot;results&quot;: 
+		 [</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;{</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:node-89523&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Idea&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;creator&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:user-523&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;User&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;created&quot;: 
+		 &quot;2013-12-01T09:41:52.000Z&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;status&quot;: 
+		 &quot;open&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;title&quot;: 
+		 &quot;Buy low, sell high&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;description&quot;: 
+		 &quot;This is a sure-fire way to make lots of money!&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;stage&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:j-1-0&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;Stage&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;},</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&quot;inquiry&quot;: 
+		 {</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;eid&quot;: 
+		 &quot;_ds:q-1&quot;,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+		 &quot;SuggestionBox&quot;</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;&#160;&#160;}</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">&#160;]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 color: #003f00;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p class="Code_table">&#160;</p>
+<p>This example will not work with all SpigitEngage inquiries because there 
+ may be additional required properties in the post body. &#160;In particular, 
+ a SpigitEngage community or challenge may be configured with an &quot;idea 
+ template&quot; that defines certain extension properties as being required 
+ for ideas in that space. &#160;Likewise, the community or challenge may 
+ have been configured with &quot;categories&quot;. &#160;If so, the posted 
+ idea must identify which category it belongs to.</p>
+<p>The next pages explore those cases more closely.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

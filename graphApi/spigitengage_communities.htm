@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>SpigitEngage Communities</title>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("SpigitEngage\nSpigitEngage Communities");
+addAvenueInfo("Basic Sequence","SpigitEngageUsers.htm","SupportedContentTypeFormats.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"spigitengageandmindjetgraph.htm\">SpigitEngage<\/a> &nbsp;&gt; SpigitEngage Communities<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>SpigitEngage Communities</h1>
+<p>SpigitEngage communities wear two hats when it comes to the MindjetGraph 
+ data model. &#160;Some aspects of SpigitEngage communities are exposed 
+ as <a href="communityclass.htm">Community</a> entities and their properties. 
+ &#160;Other aspects are exposed as <a class="rvts14" href="suggestionboxclass.htm">SuggestionBox</a> 
+ <span class="rvts6">or</span> <a class="rvts14" href="challengeclass.htm">Challenge</a> 
+ entities and their properties.</p>
+<p>In SpigitEngage terms, there are &quot;regular&quot; and &quot;challenge&quot; 
+ communities.</p>
+<p>Regular communities appear in MindjetGraph as&#160;<a href="communityclass.htm">Community</a> 
+ entities. &#160;The <span style="font-style: italic;"><i>communities</i></span> 
+ property of the tenant entity contains all of the communities in the tenant 
+ that are accessibly to the currently authenticated user. &#160;Regular 
+ communities may form parent-child relationships with each other, forming 
+ a hierarchical tree, as represented by the <span style="font-style: italic;"><i>parent</i></span> 
+ and <span style="font-style: italic;"><i>children</i></span> properties of the 
+ <a href="communityclass.htm">Community</a> entities.</p>
+<p><a href="communityclass.htm">Community</a> entities have an <span style="font-style: italic;"><i>inquiries</i></span> 
+ property. &#160;The value of this property lists all of the inquiries 
+ contained within the community. &#160;The first such inquiry in every 
+ community is a <a class="rvts14" href="suggestionboxclass.htm">SuggestionBox</a>. 
+ &#160;This entity represents that aspect of the SpigitEngage community 
+ where ideation takes place, where ideas are posted directly to the community.</p>
+<p>SpigitEngage challenge communities appear in MindjetGraph as&#160;<a class="rvts14" href="challengeclass.htm">Challenge</a> entities within 
+ their parent community's &#160;<span style="font-style: italic;"><i>inquiries</i></span> 
+ property, usually following the initial suggestionBox that is associated 
+ with every community. &#160;Note that these challenge communities are 
+ not represented as&#160;<a href="communityclass.htm">Community</a> entities 
+ but instead as&#160;<a class="rvts14" href="challengeclass.htm">Challenge</a>s. 
+ &#160;Challenges are not included in the tenant's list of communities. 
+ &#160;They only appear in the parent community's list of inquiries.</p>
+<p>The main difference between suggestionBoxes and challenges is that challenges 
+ have a time structure, start and end dates and sometimes phases, whereas 
+ suggestionBoxes are open-ended. &#160;Beyond that, most of the data and 
+ function of these two kinds of inquiries are the same.</p>
+<p>SpigitEngage communities may be configured to have special idea templates, 
+ idea stages, and idea graduation criteria. &#160;These values are all 
+ exposed in the MindjetGraph data model as properties in the relevant inquiry, 
+ and repeated as properties on individual idea entities. &#160;Idea templates 
+ may be found in the <span style="font-style: italic;"><i>uiForm</i></span> property 
+ of inquiries and ideas. &#160;Idea stages may be found in LifeCycle entities.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

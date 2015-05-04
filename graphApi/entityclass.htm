@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Entity Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nInfrastructure Datatypes\nEntity Class");
+addAvenueInfo("Basic Sequence","DataSpaceClass.htm","EntityStatusClass.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"infrastructuredatatypes.htm\">Infrastructure Datatypes<\/a> &nbsp;&gt; Entity Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Entity Class</h1>
+<p><span class="rvts17">Concepts:</span> <a class="rvts14" href="entityconcepts.htm">Entity 
+ Concepts</a></p>
+<p><span class="rvts6">Everything that is persisted in the Mindjet Platform 
+ is an entity. &#160;Put another way, anything that has a persistent ID, 
+ and can be retrieved by that ID at a later time, is an entity.</span></p>
+<p><span class="rvts6">Mindjet entities are a kind of RDF resource. &#160;In 
+ essence, entities are how the Mindjet Platform represents RDF resources. 
+ &#160;The Mindjet Platform can (in theory - coming soon-ish!) handle resources 
+ that are served by applications external to Mindjet. &#160;In these specifications, 
+ those are referred to by the more general class “rdf:Resource”.</span></p>
+<p><span class="rvts6">The URI identifier for the entity is the value of 
+ the &quot;eid&quot; property. &#160;The form of this URI is:</span></p>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts52" style="font-style: italic;"><i>gatewayUrl</i></span> 
+ <span class="rvts53">/</span> <span class="rvts52" style="font-style: italic;"><i>dataSpaceKey</i></span> 
+ <span class="rvts53">/</span> <span class="rvts52" style="font-style: italic;"><i>entityKey</i></span></p>
+<p><span class="rvts6">Mindjet Entities always have a set of basic managerial 
+ properties such as “creator”, “created” and “status”. &#160;This is not 
+ a requirement of RDF resources. &#160;In fact it is perfectly legal for 
+ a resource to have no properties at all, or just one or two simple properties. 
+ &#160;But when a resource is a Mindjet Entity, we commit to it having 
+ the basic set of properties defined below.<br />
+</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Subclass of</span><span 
+	 class="rvts6">:</span> <a class="rvts14" href="rdfandowldatatypes.htm">Resource</a></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="203" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="101" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="774" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">eid</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">URI</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The ID as a URI. &#160;This value is always 
+			 constructed according to this form:</span></p>
+			<p style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts52">gatewayUrl</span> <span class="rvts53">/</span> 
+			 <span class="rvts52">dataSpaceKey</span> <span class="rvts53">/</span> 
+			 <span class="rvts52">entityKey</span></p>
+			<p style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The</span> <span class="rvts13">gatewayUrl</span> 
+			 <span class="rvts6">and</span> <span class="rvts13">dataSpaceKey</span> 
+			 <span class="rvts6">both come from the entity's dataSpace. 
+			 &#160;The</span> <span class="rvts13">dataspaceKey</span> 
+			 <span class="rvts6">is the dataSpace's entity key.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">dataSpace</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="dataspaceclass.htm">DataSpace</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The dataSpace that contains the entity.</span></p></td>
+		</tr>
+		
+			
+			
+			
+		
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">type</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="rdfandowldatatypes.htm">Class</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Equivalent to: rdf:type. &#160;The class of 
+			 the entity object.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">status</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="entitystatusclass.htm">EntityStatus</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">The 
+			 status of the entity.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">created</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">DateTime</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">When 
+			 the entity was originally created.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">creator</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="agentclass.htm">Agent</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">Who 
+			 (or what) created the entity.</p></td>
+		</tr>
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">team</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">teams</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="groupclass.htm">Group</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a href="requirementlevelsandmultiplicity.htm">RULE</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">All 
+			 groups whose <span style="font-style: italic;"><i>inSupportOf</i></span> 
+			 property is this entity. &#160;&#160;In other words, all groups 
+			 formed with the purpose of supporting this entity.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">follower</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">followers</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="agentclass.htm">Agent</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">[ 
+			 * ]</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">All 
+			 agents who are following this entity.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">reference</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;">r<a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">eferences</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="referenceclass.htm">Reference</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">[ 
+			 * ]</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">Objects 
+			 registered as supporting material for the entity.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">subject</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">subjects</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="conceptclass.htm">Concept</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">[ 
+			 * ]</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">Subject 
+			 categories that are relevant to the entity. &#160;Subjects 
+			 are like tags but more formally defined.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">tag</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">tags</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">SimpleText</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">[ 
+			 * ]</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">Tags 
+			 that are relevant to the entity. &#160;Tags are like subjects, 
+			 but are just free-form text with no formal definition.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">discussion</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">discussions</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="discussionclass.htm">Discussion</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a href="requirementlevelsandmultiplicity.htm">RULE</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">All 
+			 discussions whose <span style="font-style: italic;"><i>topic</i></span> 
+			 property is this entity. &#160;In other words, all discussions 
+			 that are discussing this entity.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">assignment</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">assignments</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="assignmentclass.htm">Assignment</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a href="requirementlevelsandmultiplicity.htm">RULE</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">All 
+			 assignments whose <span style="font-style: italic;"><i>inSupportOf</i></span> 
+			 property is this entity. &#160;&#160;In other words, all assignments 
+			 made with the purpose of advancing or improving this entity.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="190"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">assessment</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">assessments</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="203"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="assessmentclass.htm">Assessment</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="101"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a href="requirementlevelsandmultiplicity.htm">RULE</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="774"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">All 
+			 assessments whose <span style="font-style: italic;"><i>object</i></span> 
+			 property is this entity. &#160;&#160;In other words, all assessments 
+			 made about this entity.</p></td>
+		</tr>
+		
+			
+			
+			
+		
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<p><img src="image1.gif" alt="" style="border: none;" border="0" /></p>
+<p><span class="rvts6"><img alt="" src="newitem75.png" style="padding: 1px;" border="0" /><br />
+</span></p>
+<p class="rvps2">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

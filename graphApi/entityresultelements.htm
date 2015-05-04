@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Entity Result Elements</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nResponse Format\nEntity Result Elements");
+addAvenueInfo("Basic Sequence","collectionresultelements.htm","FieldsQueryParameter1.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"responseformat.htm\">Response Format<\/a> &nbsp;&gt; Entity Result Elements<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Entity Results Elements</h1>
+<p><span class="rvts6">Because entities are persistent and clearly identified 
+ by their entity IDs (aka their &quot;eid&quot;), we have some options 
+ about which properties to include in a response. &#160;If you ever need 
+ more data related to an entity, you can always do another GET query using 
+ the entity's</span> <span class="rvts13" style="font-style: italic;"><i>eid</i></span><span 
+	 class="rvts6">.</span></p>
+<p><span class="rvts6">With this in mind, there are three rules that apply 
+ to determine which property values are included in the response to a query 
+ --</span> <span class="rvts17" style="font-weight: bold;">full</span><span 
+	 class="rvts6">,</span> <span class="rvts17" style="font-weight: bold;">summary</span><span 
+	 class="rvts6">, and</span> <span class="rvts17" style="font-weight: bold;">fields</span><span 
+	 class="rvts6">.</span></p>
+<p><span class="rvts6">One of two rules apply by default depending only 
+ on the level of the entity within the hierarchy of the response. &#160;For 
+ the top entity in the result, the</span> <span class="rvts19" style="font-weight: bold;">full</span> 
+ <span class="rvts6">inclusion rule applies. &#160;For all other entities, 
+ in other words all nested entities, the</span> <span class="rvts19" style="font-weight: bold;">summary</span> 
+ <span class="rvts6">inclusion rule applies. &#160;Nested entities are 
+ those entities that are included in a response because they are a property 
+ value or element of something else in the same response.</span></p>
+<p><span class="rvts6">When the</span> <span class="rvts19" style="font-weight: bold; 
+											 font-style: italic;"><i>full</i></span> 
+ <span class="rvts6">rule applies (for top level entities), every property 
+ that has a value for the entity is included in the response. &#160;All 
+ properties that have a value, whether or not they are documented, are 
+ included. &#160;Conversely, no property is included if it has no value, 
+ in other words if its value is null, whether or not they are documented 
+ as potential properties of that entity. &#160;Consequently, if a property 
+ does not appear in a</span> <span class="rvts19" style="font-weight: bold; 
+									 font-style: italic;"><i>full</i></span> <span 
+	 class="rvts6">response context, it may safely be concluded that the 
+ entity has no value for that property. &#160;And conversely, it is always 
+ legal for property values that you may not expect to appear in a</span> 
+ <span class="rvts19" style="font-weight: bold; font-style: italic;"><i>full</i></span> 
+ <span class="rvts6">response. &#160;If you don't need them, just ignore 
+ them.</span></p>
+<p><span class="rvts6">When the</span> <span class="rvts19" style="font-weight: bold; 
+											 font-style: italic;"><i>summary</i></span> 
+ <span class="rvts6">rule applies (for nested entities), the response only 
+ includes the entity's</span> <span class="rvts13">eid</span> <span class="rvts6">and</span> 
+ <span class="rvts13">type</span> <span class="rvts6">properties, and at 
+ most one of these also --</span> <span class="rvts13" style="font-style: italic;"><i>title</i></span><span 
+	 class="rvts6">,</span> <span class="rvts13" style="font-style: italic;"><i>name</i></span> 
+ <span class="rvts6">or</span> <span class="rvts13" style="font-style: italic;"><i>url</i></span><span 
+	 class="rvts6">. The precedence order is the one given here,</span> 
+ <span class="rvts13">title</span> <span class="rvts6">being the most preferred 
+ and</span> <span class="rvts13">url</span> <span class="rvts6">being the 
+ least.</span></p>
+<p><span class="rvts6">Regardless of the rule or context, the result data 
+ for every entity will include the</span> <span class="rvts13" style="font-style: italic;"><i>eid</i></span> 
+ <span class="rvts6">and</span> <span class="rvts13" style="font-style: italic;"><i>type</i></span> 
+ <span class="rvts6">properties. &#160;Always. &#160;You can always tell 
+ if a value in a response is an entity or non-entity object by whether 
+ there is an</span> <span class="rvts13" style="font-style: italic;"><i>eid</i></span> 
+ <span class="rvts6">property. &#160;If there is no</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>eid</i></span> <span class="rvts6">property, 
+ it is not an entity.</span></p>
+<p><span class="rvts6">If a query specifies the</span> <span class="rvts15">fields</span> 
+ <a class="rvts14" href="fieldsqueryparameter1.htm">query parameter</a><span 
+	 class="rvts6">, the response is constructed accordingly. &#160;This 
+ is the</span> <span class="rvts19" style="font-style: italic; font-weight: bold;"><i>fields</i></span> 
+ <span class="rvts6">inclusion rule. &#160;The &quot;fields&quot; query 
+ parameter is used to declare exactly how a response should be denormalized. 
+ &#160;At its simplest, the value of this parameter is a comma delimited 
+ list of property names. &#160;The top level entity in the response will 
+ include those properties exactly. &#160;(The </span><span class="rvts13" 
+															 style="font-style: italic;"><i>eid</i></span><span 
+	 class="rvts6"> and </span><span class="rvts13" style="font-style: italic;"><i>type</i></span><span 
+	 class="rvts6"> &#160;properties are also included, as they always 
+ are for entities.)</span></p>
+<p>&#160;</p>
+<p><span class="rvts6"><a href="fieldsqueryparameter1.htm">Fields Query 
+ Parameter</a></span></p>
+<p><span class="rvts6"><a href="propertyexpressions.htm">Property Expressions</a></span></p>
+<p><span class="rvts6"><a href="fieldsmacros.htm">Fields Macros</a></span></p>
+<p><span class="rvts6"><a href="fieldssyntaxsummary.htm">Fields Syntax 
+ Summary</a></span></p>
+<p class="rvps2">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

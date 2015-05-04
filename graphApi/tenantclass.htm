@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Tenant Class</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nInfrastructure Datatypes\nTenant Class");
+addAvenueInfo("Basic Sequence","EventClass.htm","VerbClass.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"infrastructuredatatypes.htm\">Infrastructure Datatypes<\/a> &nbsp;&gt; Tenant Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Tenant Class</h1>
+<p><span class="rvts17">Concepts:</span> <a class="rvts14" href="communityandtenantconcepts.htm">Community 
+ and Tenant Concepts</a></p>
+<p><span class="rvts6">Tenants correspond to business entities that are 
+ clients of the Mindjet system. &#160;All entities belong to a single dataSpace, 
+ and all dataSpaces belong to a single tenant.</span></p>
+<p><span class="rvts6">A tenant may have a specified home community. &#160;This 
+ can be used to inform a UI what to do if a user enters the Mindjet system 
+ with no specified information other than a tenant ID.</span><a class="rvts14" href="entityclass.htm"><br />
+</a></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="84" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0in; margin-top: 0px; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="46" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0in; margin-top: 0px; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="347" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p 
+				 style="margin-left: 0in; margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">homeCommunity</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="communityclass.htm">Community</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="46"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="347"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;">If 
+			 a tenant has a primary community, it is indicated by this 
+			 property.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p 
+				 style="margin-left: 0in; margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">community</span></p>
+			<p class="plurals" style="margin-top: 0px; margin-bottom: 4.5pt; 
+				 margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">communities</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="communityclass.htm">Community</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="46"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a href="requirementlevelsandmultiplicity.htm">RULE</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="347"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;">All 
+			 communities in this tenant, as indicated by the community's 
+			 dataSpace.</p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span><img alt="" src="newitem79.png" style="padding: 1px;" border="0" /></p>
+<p class="rvps2"><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

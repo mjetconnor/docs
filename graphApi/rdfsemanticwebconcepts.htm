@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>RDF (Semantic Web) Concepts</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Concept Overviews\nRDF (Semantic Web) Concepts");
+addAvenueInfo("Basic Sequence","Concepts_Overview.htm","EntityConcepts.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"concepts_overview.htm\">Concept Overviews<\/a> &nbsp;&gt; RDF (Semantic Web) Concepts<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">RDF (Semantic Web Concepts)</span></h1>
+<p><span class="rvts6">MindjetGraph is based on the standard data model 
+ of the Semantic Web, the</span> <span class="rvts17" style="font-weight: bold;">R</span><span 
+	 class="rvts6">esource</span><span style="font-weight: bold;"> </span><span 
+	 class="rvts17" style="font-weight: bold;">D</span><span class="rvts6">escription</span> 
+ <span class="rvts17" style="font-weight: bold;">F</span><span class="rvts6">ramework 
+ (</span><span class="rvts6" style="font-weight: bold;">RDF</span><span 
+	 class="rvts6">). &#160;RDF is the Internet's data architecture. &#160;It 
+ has been a W3C (World Wide Web Consortium) recommendation since 1999.</span></p>
+<p><span class="rvts6">A</span> <span class="rvts18" style="font-weight: bold;">Resource</span> 
+ <span class="rvts6">is any kind of identifiable thing. &#160;Because this 
+ is the Internet data model, those identities are (surprise!) nothing other 
+ than URIs. &#160;You can think of a resource as being nothing other than 
+ its URI, together with all the things that relate to it.</span></p>
+<p><span class="rvts18" style="font-weight: bold;">Statements</span> <span 
+	 class="rvts6">define those relationships.&#160;Every statements has 
+ three parts:</span></p>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts37">[ 
+ subject, predicate, object ]</span></p>
+<p><span class="rvts6">or similarly:</span></p>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts37">[ 
+ subject, property, object ]</span></p>
+<p><span class="rvts6">Subjects are always resources, in other words URIs. 
+ &#160;Properties are also identified by URIs. &#160;Objects may be resources 
+ (URIs) or they may be literal values such as text strings, numbers or 
+ dates. &#160;&#160;For the obvious reason, statements are often called</span> 
+ <span class="rvts18" style="font-weight: bold;">triples</span><span class="rvts6">.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">XML namespace prefixes</span> 
+ <span class="rvts6">are often used to represent those bulky URIs more 
+ concisely. &#160;For example, RDF's own vocabulary is defined in the &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; 
+ namespace, typically using the prefix &quot;rdf:&quot;. &#160;So instead 
+ of referring to the property whose full URI is &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&quot;, 
+ we usually talk about &quot;rdf:type&quot; instead.</span></p>
+<p><span class="rvts6">&quot;rdf:type&quot; is an interesting property 
+ to take note of. &#160;In RDF, the type of a resource is indicated by 
+ its &quot;rdf:type&quot; property, or more precisely by a statement where 
+ the subject is the resource's URI, the property is &quot;rdf:type&quot;, 
+ and the object is the URI of a datatype. &#160;In other words, the type 
+ of a resource is a property of the resource.</span></p>
+<p><span class="rvts6">A group of statements taken together are called 
+ a</span> <span class="rvts18" style="font-weight: bold;">graph</span><span 
+	 class="rvts6">. &#160;A picture of an RDF graph typically looks like 
+ a bunch of dots that represent resources or literals, with arrows between 
+ them that represent properties. &#160;Note that in an RDF graph those 
+ arrows have a direction, pointing from subject to object.</span></p>
+<p><span class="rvts6">RDF has several commonly recognized serialization 
+ formats. &#160;The W3C has declared an XML standard known as</span> <span 
+	 class="rvts17" style="font-weight: bold;">RDF-XML</span><span class="rvts6">. 
+ &#160;Other frequently used representations are</span> <span class="rvts17" 
+	 style="font-weight: bold;">Turtle</span> <span class="rvts6">and</span><span 
+	 style="font-weight: bold;"> </span><span class="rvts17" style="font-weight: bold;">N-Triples</span><span 
+	 class="rvts6">. &#160;There is also a proposed JSON standard format.</span></p>
+<p><span class="rvts6">The vocabulary defined in &quot;rdf:&quot; provides 
+ just the barest basics to represent a graph of resources. &#160;The sister 
+ vocabulary &quot;rdfs:&quot; (</span><span class="rvts17" style="font-weight: bold;">RDF</span><span 
+	 style="font-weight: bold;"> </span><span class="rvts17" style="font-weight: bold;">S</span><span 
+	 class="rvts6">chema) adds definitions for &quot;Class&quot; and &quot;Resource&quot;, 
+ and very basic notions such as &quot;subClassOf.&quot; &#160;The</span> 
+ <span class="rvts17" style="font-weight: bold;">W</span><span class="rvts6">eb</span> 
+ <span class="rvts17" style="font-weight: bold;">O</span><span class="rvts6">ntology</span> 
+ <span class="rvts17" style="font-weight: bold;">L</span><span class="rvts6">anguage 
+ (</span><span class="rvts17" style="font-weight: bold;">OWL</span><span 
+	 class="rvts6">), typically prefixed as &quot;owl:&quot;, provides 
+ a much richer way of adding structure to a graph, such as declaring that 
+ two properties are the inverse of each other.</span></p>
+<h3><span class="rvts17">Resources:</span></h3>
+<p><a class="rvts14" href="http://www.w3.org/RDF/">http://www.w3.org/RDF/</a></p>
+<p><a class="rvts14" href="http://en.wikipedia.org/wiki/Resource_Description_Framework">http://en.wikipedia.org/wiki/Resource_Description_Framework</a></p>
+<p><a class="rvts14" href="http://www.w3schools.com/webservices/ws_rdf_intro.asp">http://www.w3schools.com/webservices/ws_rdf_intro.asp</a></p>
+<p><a class="rvts14" href="http://www.rdfabout.com/quickintro.xpd">http://www.rdfabout.com/quickintro.xpd</a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

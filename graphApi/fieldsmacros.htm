@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Fields Macros</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nResponse Format\nEntity Result Elements\nFields Macros");
+addAvenueInfo("Basic Sequence","PropertyExpressions.htm","FieldsSyntaxSummary.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"responseformat.htm\">Response Format<\/a> &nbsp;&gt; <a href=\"entityresultelements.htm\">Entity Result Elements<\/a> &nbsp;&gt; Fields Macros<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Field Macros</h1>
+<p><span class="rvts6">There may be a need to repeat complex field lists 
+ in a query. &#160;For instance, you may want a certain set of properties 
+ to be returned for user entities, and there may be several different properties 
+ in a response that have user values. &#160;It would be helpful to not 
+ have to repeat that list in the fields query parameter. &#160;We have</span> 
+ <span class="rvts19">macros</span> <span class="rvts6">for that.</span></p>
+<p><span class="rvts6">A macro name is any name with an &quot;@&quot; at 
+ the beginning. &#160;A macro definition correlates a macro name with a 
+ field list. &#160;The macro name can then be used as a reference to that 
+ list in place of the full value.</span></p>
+<p><span class="rvts6">Example:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 margin-left: 0px;"><span class="rvts37">fields=</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">description,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">@userProps=[name,givenName,mbox,gender],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">creator:@userProps,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">inquiries:[creator:@userProps,title]*20</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">In this example the</span> <span class="rvts13" 
+														 style="font-family: 'Courier New', monospace; 
+														 font-style: italic;"><i>@userProps</i></span> 
+ <span class="rvts6">macro is defined and then used in two places. &#160;This 
+ fields value is identical to this expanded variation:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 margin-left: 0px;"><span class="rvts37">fields=</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">description,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">creator:[name,givenName,mbox,gender],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">inquiries:[creator:[name,givenName,mbox,gender],title]*20</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">To be sure, the second case of this example is no 
+ longer than the first. &#160;It is actually a little bit shorter. &#160;But 
+ it does help to make clear that the exact same inclusion rule is used 
+ for both creator properties. &#160;As field lists get more complex, this 
+ feature becomes all the more useful.</span></p>
+<p><span class="rvts6">Macro definitions may appear at any position in 
+ the list. &#160;In particular, they do not have to appear before their 
+ first reference. &#160;For readability, you may choose to group of all 
+ your macro definitions at the beginning or end of the fields list, or 
+ anywhere in between:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 margin-left: 0px;"><span class="rvts37">fields=</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">description,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">creator:@userProps,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">inquiries:[creator:@userProps,title]*20,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">@userProps=[name,givenName,mbox,gender]</span></p></td>
+	</tr>
+</table>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts37"><br />
+</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 margin-left: 0px;"><span class="rvts37">fields=</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">@userProps=[name,givenName,mbox,gender],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">description,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">creator:@userProps,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">inquiries:[creator:@userProps,title]*20</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">Here is a more involved example that uses some nested 
+ PEs as well:</span></p>
+<p><span class="rvts6">Example:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 margin-left: 0px;"><span class="rvts37">fields=</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">description,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">creator:@userProps,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">inquiries:@inquiryProps*20,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">@userProps=[name,givenName,mbox,gender],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">@inquiryProps=[creator:@userProps,title,ideaSet:[ideas:@ideaProps*3]],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">@ideaProps=[creator:@userProps,title]</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">The equivalent fully expanded variation is:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 margin-left: 0px;"><span class="rvts37">fields=</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">description,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">creator:[name,givenName,mbox,gender],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">inquiries:[</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">creator:[name,givenName,mbox,gender],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">ideaSet:[</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 72px;"><span class="rvts37">ideas:[</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 96px;"><span class="rvts37">creator:[name,givenName,mbox,gender],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 96px;"><span class="rvts37">title</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 72px;"><span class="rvts37">]*3</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">]*20</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">Use whichever form works best for you.</span></p>
+<h2><span class="rvts6"><br />
+</span><span class="rvts17">Scope of nested macro definitions</span></h2>
+<p><span class="rvts6">Macro definitions are a kind of</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>field phrase</i></span><span class="rvts6">, 
+ just like property expressions. &#160;They may appear anywhere that a 
+ property expression might appear. &#160;In particular, they do not have 
+ to be elements in the top level fields list but may be elements in a nested 
+ field list. &#160;When that is the case, the scope of the macro definition 
+ is limited to the fields list that it appears in.</span></p>
+<p><span class="rvts6">Example:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 margin-left: 0px;"><span class="rvts37">fields=</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">inquiries:[</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">@user=[name,description],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">creator:@user,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">ideaSet:[</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 72px;"><span class="rvts37">@user=[name,givenName,mbox],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 72px;"><span class="rvts37">ideas:[creator:@user,title]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 48px;"><span class="rvts37">]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 margin-left: 24px;"><span class="rvts37">]</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

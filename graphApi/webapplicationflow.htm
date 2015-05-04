@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Web Application Flow</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nAuthentication with OAuth 2.0\nOAuth 2.0 Authorization Flows\nWeb Application Flow");
+addAvenueInfo("Basic Sequence","OAth_2.0_Authorization_Flows.htm","UserAgentFlow.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"authenticationwithoauth20.htm\">Authentication with OAuth 2.0<\/a> &nbsp;&gt; <a href=\"oath_2.0_authorization_flows.htm\">OAuth 2.0 Authorization Flows<\/a> &nbsp;&gt; Web Application Flow<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Web Application Flow</span></h1>
+<p><span class="rvts6">From the</span> <a class="rvts14" href="http://tools.ietf.org/html/draft-ietf-oauth-v2-20">OAuth 
+ 2.0 v20 specification</a><span class="rvts6">:</span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>A 
+ web application is a confidential client running on a web server. &#160;Resource 
+ owners access the client via an HTML user interface rendered in a user-agent 
+ on the resource owner's device. The client credentials as well as any 
+ access token issued to the client are stored on the web server and are 
+ not exposed to or accessible by the resource owner.</i></span></p>
+<p><span class="rvts6">In other words, use this flow if your application 
+ is a web application that executes in a server under your control, but 
+ where the ultimate consumer is a user acting through a user agent like 
+ a web browser. &#160;What signifies this kind of flow is that the access 
+ token is ultimately going to your application server, but it flows through 
+ the user's browser. &#160;Despite this long-winded explanation, this is 
+ probably the most common and familiar use case.</span></p>
+<p>&#160;</p>
+<p><span class="rvts6">This flow strings the OAuth 2.0 requests together 
+ in the following way.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 1.</span><span 
+	 class="rvts17">&#160;</span>&#160;<span class="rvts6">From your end-user's 
+ user agent, execute an</span> <span style="color: #0000ff; font-family: 'Courier New', monospace;"><font color="blue" ><a 
+	 href="oauthauthorize.htm">/oauth/authorize?response_type=code</a></font></span> 
+ <span class="rvts6">request to an appropriate MindjetGraph authentication 
+ URI. &#160;Specify a redirect URI that is handled by your application 
+ server. &#160;Use the</span> <span class="rvts13" style="font-style: italic;"><i>state</i></span> 
+ <span class="rvts6">parameter if necessary to coordinate responses to 
+ requests.</span></p>
+<p><span class="rvts6">The execution of this request may itself redirect 
+ once or even twice through the user agent, if there is a need to bring 
+ up login and authorization screens. &#160;If the user does not have an 
+ active Mindjet session, they will be asked to log in. &#160;Then, if the 
+ user has not already authorized your application to run on their behalf, 
+ they will be asked to do so. &#160;Once there is an active session and 
+ authorization in place, the final redirect with the authorization code 
+ is sent. &#160;Note that if there is already an active session, and the 
+ user has already authorized your app -- the most common case -- none of 
+ these interim redirects are required, and the redirect to your app is 
+ sent immediately.</span></p>
+<p><span class="rvts6">Lastly, the hostname in that redirect URI is checked 
+ against the value that has been registered with the application. &#160;This 
+ is done to protect against spoofing of requests.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 2.</span><span 
+	 class="rvts17">&#160;</span>&#160;<span class="rvts6">An authorization 
+ code is returned to your application by way of the redirect URI in Step 
+ 1. &#160;Using this code, your application code, running on your server, 
+ executes an</span> <a class="rvts14" href="oauthtoken.htm" style="font-family: 'Courier New', monospace;">/oauth/token</a> 
+ <span class="rvts6">request, specifying the grant_type=authorization_code 
+ parameter in the request body. &#160;Note that you specify the client 
+ secret in this request, but that's OK because the request is encrypted 
+ by virtue of using https:.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 3</span><span class="rvts17">.</span> 
+ <span class="rvts6">&#160;Get the access token from the response to Step 
+ 2. &#160;Make REST requests by specifying that access token in the &quot;Authorization&quot; 
+ header of each request.</span></p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

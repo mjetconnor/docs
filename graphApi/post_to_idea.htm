@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="NOODP" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Post to Idea</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("SpigitEngage\nPosting in SpigitEngage\nPosts to Ideas");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"spigitengageandmindjetgraph.htm\">SpigitEngage<\/a> &nbsp;&gt; <a href=\"posting_to_spigitengage.htm\">Posting in SpigitEngage<\/a> &nbsp;&gt; Posts to Ideas<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Posts to Idea Entities</span></h1>
+<p>Post requests are handled as defined here when the target is an entity 
+ of type <a href="ideaclass.htm">Idea</a>. &#160;The appropriate response 
+ is determined by the action and type post properties.</p>
+<p style="font-weight: bold; font-size: 12pt; color: #008080;"><span style="font-weight: bold; 
+	 font-size: 12pt; color: #008080;"><font size="3" color="teal" style="font-size:12.000000pt;">Post a comment</font></span></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Post property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="92" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="53" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="375" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt; 
+				 font-weight: bold;">action</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RDFandOWLDatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a 
+			 href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RequirementLevelsandMultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 style="font-weight: bold;">&quot;post&quot;</span> or undefined</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt; 
+				 font-weight: bold;"><span class="rvts6">type</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RDFandOWLDatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt; 
+														 font-weight: bold;"><span 
+			 class="rvts6">&quot;Comment&quot;</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">content</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="rdfandowldatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">The 
+			 text of the comment.</p></td>
+		</tr>
+	</table>
+</div>
+<p><span style="font-size: 10pt; font-weight: bold; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">Returns</font></span><span 
+	 style="color: #800080; font-size: 10pt; font-weight: bold;"><font size="2" color="purple" style="font-size:10.000000pt;">:</font></span> 
+ &#160;The created <a href="commentclass.htm">Comment</a> entity.</p>
+<p>Post a new comment to the idea's comment thread, in other words the 
+ idea's discussion.</p>
+<p>&#160;</p>
+<p style="font-weight: bold; font-size: 12pt; color: #008080;"><span style="font-weight: bold; 
+	 font-size: 12pt; color: #008080;"><font size="3" color="teal" style="font-size:12.000000pt;">Post a vote</font></span></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Post property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="92" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="53" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="375" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt; 
+				 font-weight: bold;">action</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RDFandOWLDatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a 
+			 href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RequirementLevelsandMultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 style="font-weight: bold;">&quot;post&quot;</span> or undefined</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt; 
+				 font-weight: bold;"><span class="rvts6">type</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RDFandOWLDatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt; 
+														 font-weight: bold;"><span 
+			 class="rvts6">&quot;Vote&quot;</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">value</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RDFandOWLDatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a 
+			 class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RequirementLevelsandMultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">Appropriate 
+			 value depends on the configured voting style for this idea's 
+			 inquiry. &#160;That value may be retrieved by looking at:</p>
+			<p style="margin-bottom: 4.5pt; margin-top: 0pt; margin-left: 24px;">&#160;<span 
+			 style="font-family: 'Courier New', monospace;">thisIdea.inquiry.ballot.type</span></p>
+			<p style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;">(Get 
+			 the inquiry for this idea, the preferred ballot for that inquiry, 
+			 and the type of that ballot.)</p>
+			<p style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;">If 
+			 ballot type is <a href="updownballotclass.htm">UpDownBallot</a>:</p>
+			<p style="margin-bottom: 4.5pt; margin-top: 0pt; margin-left: 24px;">value 
+			 may be: &quot;up&quot;, &quot;down&quot;, -1, 1, 0</p>
+			<p style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;">If 
+			 ballot type is <a href="starballotclass.htm">StarBallot</a>:</p>
+			<p style="margin-bottom: 4.5pt; margin-top: 0pt; margin-left: 24px;">value 
+			 may be a number in the star range, usually 1 to 5</p></td>
+		</tr>
+	</table>
+</div>
+<p><span style="font-size: 10pt; font-weight: bold; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">Returns</font></span><span 
+	 style="color: #800080; font-size: 10pt; font-weight: bold;"><font size="2" color="purple" style="font-size:10.000000pt;">:</font></span> 
+ &#160;The created <a href="voteclass.htm">Vote</a> object.</p>
+<p>Post a vote against the comment. &#160;Votes can only be posted for 
+ the current user, in other words the user represented by the current access 
+ token. &#160;It is not possible to post a vote on behalf of someone else.</p>
+<p>The expected value depends on the ballot being used by the idea's inquiry. 
+ &#160;If it is an <a href="updownballotclass.htm">UpDownBallot</a>, the 
+ value may be &quot;up&quot; or 1 to register a &quot;thumbs up&quot; vote, 
+ &#160;&quot;down&quot; or -1 both register a &quot;thumbs down&quot; vote, 
+ or 0 clears the previous vote. &#160;If it is a <a href="starballotclass.htm">StarBallot</a>, 
+ the value should be a number in the star range, in other words between 
+ 1 and 5.</p>
+<p>&#160;</p>
+<p style="font-weight: bold; font-size: 12pt; color: #008080;"><span style="font-weight: bold; 
+	 font-size: 12pt; color: #008080;"><font size="3" color="teal" style="font-size:12.000000pt;"><span style="font-weight: bold; 
+											 font-size: 12pt; color: #008080;"><font size="3" color="teal" style="font-size:12.000000pt;">Post 
+ a prediction review</font></span></font></span></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Post property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="92" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="53" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-bottom: 4.5pt; 
+				 margin-top: 0pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="375" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt; 
+				 font-weight: bold;">action</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RDFandOWLDatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a 
+			 href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RequirementLevelsandMultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 style="font-weight: bold;">&quot;post&quot;</span> or undefined</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt; 
+				 font-weight: bold;"><span class="rvts6">type</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts14"><a class="rvts14" href="Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/Users/mconnor/Google Drive/Engage Platform/Engage Platform Docs/MindjetGraph API 3_5_6--WC/RDFandOWLDatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt; 
+														 font-weight: bold;"><span 
+			 class="rvts6">&quot;Review&quot;</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts6">benchmark</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a href="questionnaireclass.htm">Questionnaire</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">This 
+			 SHOULD be the questionnaire object value that was returned 
+			 by an earlier &#160;&quot;<span class="rvts6">getPredictionQuestionnaire&quot;</span> 
+			 post query to the idea's inquiry. &#160;It is critical that 
+			 the <span style="font-style: italic;"><i>basis</i></span> property 
+			 of that questionnaire is included in the questionnaire value 
+			 given as the <span style="font-style: italic;"><i>benchmark here. 
+			 &#160;</i></span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="77"><p 
+				 style="margin-left: 0pt; margin-bottom: 4.5pt; margin-top: 0pt;">values</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="92"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a href="plainobject_class.htm">PlainObject</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="53"><p style="margin-left: 0pt; 
+													 margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="375"><p style="margin-left: 0pt; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;">The 
+			 properties of this plain object correspond to the fields in 
+			 the questionnaire's form. &#160;For prediction reviews, these 
+			 fields will all have a <a href="promptstyleclass.htm">promptStyle</a> 
+			 value of &quot;higherLower&quot;. &#160;This means that the 
+			 properties in this <span style="font-style: italic;"><i>values</i></span> 
+			 plain object MUST all have one of the two text values:</p>
+			<p style="margin-bottom: 4.5pt; margin-top: 0pt; margin-left: 24px;">&quot;higher&quot; 
+			 or &quot;lower&quot;</p>
+			<p style="margin-bottom: 4.5pt; margin-top: 0pt; margin-left: 0px;">These 
+			 values are understood to be relative to the corresponding 
+			 values in the questionnaire's basis.</p></td>
+		</tr>
+	</table>
+</div>
+<p><span style="font-size: 10pt; font-weight: bold; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">Returns</font></span><span 
+	 style="color: #800080; font-size: 10pt; font-weight: bold;"><font size="2" color="purple" style="font-size:10.000000pt;">:</font></span> 
+ &#160;The created <a href="reviewclass.htm">Review</a> object.</p>
+<p>This posts a prediction review to an idea in response to a prediction 
+ questionnaire that was retrieved by an earlier &quot;<span class="rvts6">getPredictionQuestionnaire&quot;</span> 
+ post query to the idea's inquiry.</p>
+<p>&#160;</p>
+
+
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

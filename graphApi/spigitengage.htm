@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="NOODP" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>SpigitEngage</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Welcome to the Mindjet Graph Developers Guide\nSpigitEngage in The Graph");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"welcometomindjetgraphdevelopersg.htm\">Welcome to the Mindjet Graph Developers Guide<\/a> &nbsp;&gt; SpigitEngage in The Graph<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>SpigitEngage in The Graph</h1>
+<p><span class="rvts6">The Mindjet Graph data model is designed to cover 
+ a broad range of current and future social innovation applications. &#160;The 
+ stand-out application in that space at this time is SpigitEngage. &#160;You 
+ are probably reading this doc right now with an eye towards creating your 
+ own apps that interact with SpigitEngage instances.</span></p>
+<p><span class="rvts6">It is important to remember that the Mindjet Graph 
+ data model covers a broader use case than SpigitEngage. &#160;</span></p>
+<p style="margin-left: 48px;"><img src="image6.jpg" style="border: none;" 
+									 alt="" border="0" /></p>
+<p><span class="rvts6">Many of the concepts and specifics in The Graph 
+ are designed with an eye towards extensions and innovations that may come 
+ along later, either in future versions of SpigitEngage or in entirely 
+ new application stacks. &#160;This is what makes it possible for you to 
+ write applications that are not constantly upended by the latest SpigitEngage 
+ additions. &#160;We will continue to create industry-leading innovations 
+ in SpigitEngage while your applications continue to reliably deliver their 
+ special sauce.</span></p>
+<p><span class="rvts6">As you become more familiar with the Graph data 
+ model, you will find that some things are rigidly prescribed while other 
+ parts retain quite a bit of flexibility. &#160;For instance, some properties 
+ are defined to require values of a certain class, but that class may be 
+ a super-class with some interesting child classes. &#160;Where the Graph 
+ model speaks of one class, SpigitEngage may commonly return data belonging 
+ to a different child class. &#160;For example, properties in the Graph 
+ model are frequently declared to be of type <a href="agentclass.htm">Agent</a>, 
+ whereas these are almost always <a href="userclass.htm">Users</a>, a kind 
+ of Agent, when coming from SpigitEngage. &#160;Similarly, where the Graph 
+ model talks about <a href="inquiryclass.htm">Inquiries</a>, these are 
+ usually actually <a href="challengeclass.htm">Challenges</a> (sometimes 
+ <a href="suggestionboxclass.htm">SuggestionBoxes</a>) when coming from 
+ SpigitEngage.</span></p>
+<p style="margin-left: 48px;"><img src="image9.jpg" style="border: none;" 
+									 alt="" border="0" /></p>
+<p><span class="rvts6">Also, take note of the &quot;<a href="requirementlevelsandmultiplicity.htm">Req</a>&quot; 
+ column in the class definition topics. &#160;Many properties are defined 
+ as <a href="requirementlevelsandmultiplicity.htm">MAY</a> or <a href="requirementlevelsandmultiplicity.htm">[ 
+ * ]</a>, which means that it is legal for the property to have a value 
+ or not have a value (or have multiple values in the later case),</span><span 
+	 class="rvts6"> depending on context such as the details of the SpigitEngage 
+ instance your app is interacting with. &#160;In the <a href="spigitengageandmindjetgraph.htm">section 
+ that details SpigitEngage behavior</a>, the rules may be more specific 
+ for certain class properties. &#160;Some will be known to always have 
+ values of a certain type, others may be known to never be returned by 
+ SpigitEngage.</span><span class="rvts6">&#160;&#160;No matter what though, 
+ data returned from SpigitEngage will never contradict the rules declared 
+ by Mindjet Graph.</span></p>
+<p><span class="rvts6">And, it is always legal for an entity to have more 
+ properties than the documented ones. &#160;That just means that those 
+ properties are, well, undocumented. &#160;Just be aware that if your application 
+ uses those properties, it may not be compatible with future versions of 
+ SpigitEngage or future non-Engage applications.</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

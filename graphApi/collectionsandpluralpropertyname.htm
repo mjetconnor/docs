@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Collections and Plural Property Names</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Concept Overviews\nCollections and Plural Property Names");
+addAvenueInfo("Basic Sequence","ProcessManagementConcepts.htm","SpigitEngageandMindjetGraph.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"concepts_overview.htm\">Concept Overviews<\/a> &nbsp;&gt; Collections and Plural Property Names<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Collections and Plural Property Names</span></h1>
+<p><span class="rvts6">Some properties are defined with a multiplicity 
+ greater than 1. &#160;This means that a given object having that type 
+ may have more than one value for that property. &#160;Another way of looking 
+ at this is that the object has exactly one value for that property, and 
+ that value is a collection of those otherwise distinct properties. &#160;</span></p>
+<p><span class="rvts6">Take for example the</span> <a class="rvts14" href="groupclass.htm">Group</a> 
+ <span class="rvts6">class, that has the</span> <span class="rvts13" style="font-style: italic;"><i>member</i></span> 
+ <span class="rvts6">property, defined with a requirement level of &quot;[ 
+ * ]&quot;, or &quot;0..*&quot; in UML terms. &#160;From a graph or</span> 
+ <a class="rvts14" href="rdfsemanticwebconcepts.htm">RDF perspective</a><span 
+	 class="rvts6">, this means that a given resource, one of type Group, 
+ might have multiple</span> <span class="rvts13" style="font-style: italic;"><i>member</i></span> 
+ <span class="rvts6">properties defined on it. &#160;More precisely, there 
+ may be multiple RDF statements in the graph that have that Group resource 
+ as the subject,</span> <span class="rvts13" style="font-style: italic;"><i>sief:member</i></span> 
+ <span class="rvts6">as the property, and only differ by the agent resources 
+ that are the objects for each statement. &#160;The following diagram attempts 
+ to illustrate this:</span></p>
+<p><img alt="" src="newitem131.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts6">In RDF N-Triple syntax, this might look like this:</span></p>
+<p style="margin-left: 48px; margin-top: 2pt; margin-bottom: 2pt;"><span 
+	 class="rvts6">_ds:aGroup &#160;sief:member &#160;_ds:agent-1 .</span></p>
+<p style="margin-left: 48px; margin-top: 2pt; margin-bottom: 2pt;"><span 
+	 class="rvts6">_ds:aGroup &#160;sief:member &#160;_ds:agent-2 .</span></p>
+<p style="margin-left: 48px; margin-top: 2pt; margin-bottom: 2pt;"><span 
+	 class="rvts6">_ds:aGroup &#160;sief:member &#160;_ds:agent-3 .</span></p>
+<p style="margin-left: 48px; margin-top: 2pt; margin-bottom: 2pt;"><span 
+	 class="rvts6">_ds:aGroup &#160;sief:member &#160;_ds:agent-4 .</span></p>
+<p><span class="rvts6">This can be quiet inconvenient for APIs like REST 
+ queries, especially those that use JSON format, because JSON (or similar 
+ syntaxes) cannot handle having multiple instances of a property for a 
+ single object. &#160;It is more convenient to think of the object as having 
+ a single property value, but the value of the property is a collection 
+ of all of the individual property values, as illustrated here:</span></p>
+<p><img alt="" src="newitem132.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts6">This collection is not a physical object in the 
+ system, but only an artifact created for generating query responses.</span></p>
+<p><span class="rvts6">Notice in that last diagram that we used the property 
+ name &quot;members&quot;, the plural of &quot;member&quot;. &#160;This 
+ is how we keep these two ways of viewing the graph in order. &#160;When 
+ the singular form of a property name is used, the value of that property 
+ will be a single object. &#160;When the plural form is used, the value 
+ will be a collection made by aggregating together all of the individual 
+ properties that have the matching singular name.</span></p>
+<p><span class="rvts6">The table in</span> <a class="rvts14" href="propertiesindex.htm">Properties 
+ Index</a> <span class="rvts6">delineates all of the singular and plural 
+ name combinations used in MindjetGraph.</span></p>
+<p><span class="rvts6">It is typically the case that when operating in 
+ an RDF or SPARQL environment, the plural form is never used.</span></p>
+<p><span class="rvts6">In REST queries, the plural form of property names 
+ is very important. &#160;Queries that specify the plural form indicate 
+ that a collection is expected in the result. &#160;The greatly simplifies 
+ the job of the developer to know what to expect in a response and how 
+ to handle it. &#160;See the</span> <a class="rvts14" href="pluralandsingularpropertynames.htm">chapter 
+ on plural property names</a> <span class="rvts6">in the REST API reference 
+ for more details about that.</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

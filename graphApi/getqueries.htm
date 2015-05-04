@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>GET Queries</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nGET Queries");
+addAvenueInfo("Basic Sequence","errormessages1.htm","EntityIDsandcommonprefixes.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; GET Queries<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">GET Queries</span></h1>
+<p><span class="rvts6">Sub-topics:</span></p>
+<p class="rvps29" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><a href="entityidsandcommonprefixes.htm">Entity IDs and Common Prefixes</a></p>
+<p class="rvps29" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><a href="extendedqueryurl.htm">Extended Query URL</a></p>
+<p class="rvps29" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><a href="pluralandsingularpropertynames.htm">Plural and Singular Property 
+ Names</a></p>
+<p class="rvps29" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><a href="queryparameters.htm">Query Parameters</a></p>
+<p>&#160;</p>
+<p><span class="rvts6">All MindjetGraph</span> <a class="rvts14" href="entityconcepts.htm">entities</a> 
+ <span class="rvts6">have identifiers that are</span> <a class="rvts14" href="entityconcepts.htm">URIs</a><span 
+	 class="rvts6">. &#160;The simplest way to get the data for an entity 
+ is to execute an HTTP GET request directly on that URI. &#160;The only 
+ missing piece is to be sure to include your</span> <a class="rvts14" href="authenticationwithoauth20.htm">OAuth 
+ 2.0 access token</a> <span class="rvts6">in the &quot;Authorization&quot; 
+ header of the query.</span></p>
+<p><span class="rvts6">Remember that when you got an access token from 
+ an OAuth 2.0 request, the response also included the entity IDs for the 
+ authenticated user and home community. &#160;These IDs are excellent URIs 
+ to use as starting points to navigate the graph.</span></p>
+<h3><span class="rvts17">HTTP Headers</span></h3>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="118" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Header</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="72" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 0pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Required</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="483" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="118"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Authorization</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="72"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">yes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="483"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Value MUST be &quot;Bearer: &lt;your-access-token-here&gt;&quot;</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="118"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Content-Type</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="72"><p style="margin-left: 0pt; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">no</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="483"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Specifies the desired response format. &#160;If 
+			 not specified, the default is &quot;application/json&quot;.</span></p>
+			</td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6">The response can be in various formats, as requested 
+ by the Content-Type header. &#160;Examples in these Help Docs will generally 
+ use JSON.</span></p>
+<p><span class="rvts6">See</span> <a class="rvts14" href="responseformat.htm">Response 
+ Format</a> <span class="rvts6">for a complete description of the structure 
+ of responses. &#160;Regardless of content type, kind of query or HTTP 
+ method, all responses have a common structure.</span></p>
+<p><span class="rvts17">Example:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts6">GET https://www.example.mindjet.com/api/ds1/tenant-1</span></p>
+<p><span class="rvts17">Response:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">{</span></p>
+		<p class="Code" style="margin-left: 24px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;version&quot;: &quot;1.0&quot;,</span></p>
+		<p class="Code" style="margin-left: 24px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;query&quot;: &quot;GET https://www.example.mindjet.com/api/ds1/tenant-1&quot;,</span></p>
+		<p class="Code" style="margin-left: 24px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;xmlns&quot;: {</span></p>
+		<p class="Code" style="margin-left: 48px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;_ds&quot;: &quot;https://www.example.mindjet.com/api/ds1/&quot;,</span></p>
+		<p class="Code" style="margin-left: 48px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;_host&quot;: &quot;https://www.example.mindjet.com/api/&quot;,</span></p>
+		<p class="Code" style="margin-left: 48px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;_sief&quot;: &quot;http://purl.org/sief/2013/10/&quot;</span></p>
+		<p class="Code" style="margin-left: 24px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">},</span></p>
+		<p class="Code" style="margin-left: 24px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;results&quot;: [</span></p>
+		<p class="Code" style="margin-left: 48px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">{</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;eid&quot;: &quot;_ds:tenant-1&quot;,</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;type&quot;: &quot;Tenant&quot;,</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;created&quot;: &quot;2013-03-12T17:15:21.000-0500&quot;,</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;status&quot;: &quot;open&quot;,</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;communities&quot;: {</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;data&quot;: [</span></p>
+		<p class="Code" style="margin-left: 120px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">{</span></p>
+		<p class="Code" style="margin-left: 144px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;eid&quot;: &quot;_ds:comm-1&quot;,</span></p>
+		<p class="Code" style="margin-left: 144px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;type&quot;: &quot;Community&quot;</span></p>
+		<p class="Code" style="margin-left: 120px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">},</span></p>
+		<p class="Code" style="margin-left: 120px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">{</span></p>
+		<p class="Code" style="margin-left: 144px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;eid&quot;: &quot;_ds:comm-505&quot;,</span></p>
+		<p class="Code" style="margin-left: 144px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;type&quot;: &quot;Community&quot;</span></p>
+		<p class="Code" style="margin-left: 120px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">},</span></p>
+		<p class="Code" style="margin-left: 120px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">{</span></p>
+		<p class="Code" style="margin-left: 144px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;eid&quot;: &quot;_ds:comm-543&quot;,</span></p>
+		<p class="Code" style="margin-left: 144px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;type&quot;: &quot;Community&quot;</span></p>
+		<p class="Code" style="margin-left: 120px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">}</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">],</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;paging&quot;: {</span></p>
+		<p class="Code" style="margin-left: 120px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;next&quot;: &quot;https://www.example.mindjet.com/api/ds1/tenant-1/communities?after=2&quot;</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">},</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;totalSize&quot;: 16</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">},</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;homeCommunity&quot;: {</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;eid&quot;: &quot;_ds:comm-1&quot;,</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;type&quot;: &quot;Community&quot;</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">},</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;dataSpace&quot;: {</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;eid&quot;: &quot;_ds:ds1&quot;,</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;type&quot;: &quot;DataSpace&quot;</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">},</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;creator&quot;: {</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;eid&quot;: &quot;_ds:user-system&quot;,</span></p>
+		<p class="Code" style="margin-left: 96px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">&quot;type&quot;: &quot;User&quot;</span></p>
+		<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">}</span></p>
+		<p class="Code" style="margin-left: 48px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">}</span></p>
+		<p class="Code" style="margin-left: 24px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">]</span></p>
+		<p class="Code" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts6">}</span></p>
+		<p class="Code" style="margin-top: 0pt; margin-bottom: 0pt;">&#160;</p></td>
+	</tr>
+</table>
+<p class="rvps29">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

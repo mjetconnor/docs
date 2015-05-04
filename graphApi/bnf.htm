@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>BNF</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nBNF");
+addAvenueInfo("Basic Sequence","postqueries.htm","SpigitEngage_API_Terms.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; BNF<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>BNF</h1>
+<h3><span class="rvts17">Entity IDs</span></h3>
+<table style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 16.721%;" />
+	<col style="width: 3.04%;" />
+	<col style="width: 80.239%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">entityURI</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">gatewayUrl &quot;/&quot; dataspaceKey [ &quot;/&quot; 
+		 entityKey ]</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">dataspaceKey</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">entityKey</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">entityKey</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">1*( ALPHA / DIGIT / &quot;.&quot; / &quot;-&quot; 
+		 / &quot;_&quot; / &quot;$&quot; )</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6"><br />
+</span></p>
+<h3><span class="rvts17">Query URLs</span></h3>
+<table style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 16.721%;" />
+	<col style="width: 3.04%;" />
+	<col style="width: 80.239%;" />
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">queryURL</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">entityURL &#160;[ &quot;/&quot; selectorPath ] 
+		 &#160;[ queryString ]</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">queryString</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;?&quot; queryParam *( &quot;&amp;&quot; queryParam 
+		 )</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">queryParam</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">fieldsParam / sortParam / formatParam / langParam 
+		 / maxArrayParam</span></p></td>
+	</tr>
+</table>
+<p class="Code_table">&#160;</p>
+<table style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 16.721%;" />
+	<col style="width: 3.04%;" />
+	<col style="width: 80.239%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">fieldsParam</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;fields=&quot; selectorPath *( &quot;,&quot; 
+		 selectorPath )</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">sortParam</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;sort=&quot; selectorPath *( &quot;,&quot; 
+		 selectorPath )</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">formatParam</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;format=&quot; ( &quot;json&quot; / &quot;xml&quot; 
+		 )</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">langParam</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;lang=&quot; iso639code</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">maxArrayParam</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;maxArray=&quot; 1*DIGIT</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 16.721%;" />
+	<col style="width: 3.04%;" />
+	<col style="width: 80.239%;" />
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">selectorPath</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">selectorSegment *( &quot;/&quot; selectorSegment 
+		 )</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">selectorSegment</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">propertyName *( &quot;;&quot; patternExpr )</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">patternExpr</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">propertyName &quot;=&quot; value</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">propertyName</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">1*ALPHA</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">value</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">percent-encoded String value. &#160;See conversion 
+		 notes for appropriate value formats.</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3><span class="rvts17">Fields Parameter</span></h3>
+<table style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 16.721%;" />
+	<col style="width: 3.04%;" />
+	<col style="width: 80.239%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">fieldsQueryParam</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;fields=&quot; plist</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">plist</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;&quot; | ( prule * ( &quot;,&quot; prule 
+		 ) )</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">bracketedList</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;[&quot; plist &quot;]&quot;</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">prule</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">( pdef | ruleName | ruleDef</span>  
+		 <span class="rvts29">)</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 16.721%;" />
+	<col style="width: 3.04%;" />
+	<col style="width: 80.239%;" />
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">pdef</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">propertyName</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">[ &quot;:&quot; ( bracketedList | ruleName | derivation 
+		 ) ]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">[ &quot;*&quot; pageSize ]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">[ ( &quot;!&quot; | &quot;orderby&quot; ) sortDef 
+		 * ( &quot;;&quot; sortDef ) ]</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">propertyName</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">1*ALPHA</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">pageSize</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;">=</p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">int</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">sortDef</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">=</span></p></td>
+		<td style="vertical-align: Top;"><p class="Code_table" style="margin-top: 0pt; 
+											 margin-bottom: 0pt;"><span 
+		 class="rvts29">( &quot;-&quot; ) propertyName</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 16.721%;" />
+	<col style="width: 3.04%;" />
+	<col style="width: 80.239%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">ruleName</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">&quot;@&quot; propertyName</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">ruleDef</span></p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;">=</p></td>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts29">rulename &quot;=&quot; ( bracketedList | derivation 
+		 &#160;)</span></p></td>
+	</tr>
+</table>
+
+
+
+
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

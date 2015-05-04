@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>POST Queries</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nPOST Queries");
+addAvenueInfo("Basic Sequence","PUTQueries.htm","bnf.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; POST Queries<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">POST Queries</span></h1>
+<p><span class="rvts6">Use the HTTP POST method to create new entities 
+ in the MindjetGraph.</span></p>
+<p><span class="rvts6">The syntax and usage of the POST method builds on 
+ the PUT method. &#160;The same query URL still applies, as defined for 
+ the GET method. &#160;The simplest form is just a straight-up MindjetGraph 
+ entity ID, but the URL may be extended with property segments and matrix 
+ parameters.</span></p>
+<p><span class="rvts6">The classic way to understand a POST is as a request 
+ whose body somehow describes a new entity to be created, and then that 
+ entity is added to the target, specified by the URL, which is a collection 
+ of some sort. &#160;The response to the query contains details of the 
+ entity actually created by the process.</span></p>
+<p><span class="rvts6">Of course, application logic as a lot to say about 
+ exactly how that happens, and so POSTs do not operate quite so simply 
+ as just described. &#160;A cleaner way of understanding a POST request 
+ is as a request to an entity (or selected object) acting as a kind of 
+ &quot;posting authority&quot;. &#160;The body of the POST is essentially 
+ argument values that inform the &quot;posting authority&quot; how to do 
+ the job. &#160;In the broadest sense, this is akin to a remote function 
+ call, where the target object is the function, the body specifies the 
+ arguments to the function, and the response returns the result of executing 
+ the function.</span></p>
+<p><span class="rvts6">At least in structure and format then, the body 
+ of a POST is just like the body of a PUT. &#160;It is a set of name/value 
+ pairs in the format specified by the Content-Type header. &#160;The only 
+ difference is that these values act like inputs to the POST operation 
+ (in the way we just discussed), rather than as property-name/property-value 
+ settings as with PUT.</span></p>
+<p><span class="rvts6">Because of the deep relationship of application 
+ logic with posting, the MindjetGraph data model does not have a lot of 
+ guidance about the details of what is supported for different target entities. 
+ &#160;You must consult application documentation for that.</span></p>
+<p><span class="rvts6">Despite all those disclaimers, there are two common 
+ patterns that apply to POST bodies.</span></p>
+<h2><span class="rvts17">Pattern 1: New Entity Properties</span></h2>
+<p><span class="rvts6">In this pattern, the POST body is very much like 
+ a PUT body in that it is a collection of property names and values that 
+ essentially act as the initial values for a new entity. &#160;A new entity 
+ is instantiated based on those values, and it is added either to the target 
+ object, which is a collection, or an appropriate constituent collection. 
+ &#160;As always, this is at best an approximation. &#160;Exactly how the 
+ specified properties and their values translate to a new entity has a 
+ lot to do with related application logic.</span></p>
+<p><span class="rvts6">In this pattern, there typically must be a setting 
+ for the</span> <span class="rvts13">type</span> <span class="rvts6">property 
+ in the POST body. &#160;Its value should be the name of a MindjetGraph 
+ class. &#160;This is an important cue to the target entity as to what 
+ kind of object to create.</span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts25">POST</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/node-75494</span></p>
+<p><span class="rvts6">with headers:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+				 margin-bottom: 0pt;"><span class="rvts24">Content-Type: 
+		 application/x-www-form-urlencoded</span></p>
+		<p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts24">Authorization: Bearer 
+		 914a9b4d83fa7333d3b517643a30bac2</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">and request body:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts24">type=Comment&amp;content=I+really+love+this+idea%21</span></p>
+<p><span class="rvts6">This posts a comment to node-75494. Let's assume 
+ that node-75494 is an</span> <a class="rvts14" href="ideaclass.htm">Idea</a><span 
+	 class="rvts6">. &#160;What this is really going to do is find the 
+ primary</span> <a class="rvts14" href="discussionclass.htm">Discussion</a> 
+ <span class="rvts6">in the idea and create a new comment in that thread 
+ using the supplied content. &#160;The creator of the new comment will 
+ be taken as the user indicated by the Authorization access token.</span></p>
+<h2><span class="rvts17">Pattern 1: ID of an existing entity</span></h2>
+<p><span class="rvts6">In this pattern, the body of the POST is the ID 
+ of an existing entity. &#160;It may be abbreviated to just the entity 
+ key - the part usually following &quot;_ds:&quot; - or the dataspace/entity 
+ key combo - the part usually following &quot;_host:&quot;. &#160;If this 
+ is the case, the missing part of the entity ID is taken from the URI of 
+ the target entity.</span></p>
+<p><span class="rvts6">If the body of the POST is in a format appropriate 
+ for a set of name/value pairs, such as &quot;application/x-www-form-urlencoded&quot;, 
+ a single entry is specified where the name is</span> <span class="rvts13" 
+															 style="font-style: italic;"><i>value</i></span> 
+ <span class="rvts6">and the value is an entity ID as just described.</span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts25">POST</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/q-1</span></p>
+<p><span class="rvts6">with headers:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts24">Authorization: 
+ Bearer 914a9b4d83fa7333d3b517643a30bac2</span></p>
+<p><span class="rvts6">and request body:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts24">node-75494</span></p>
+<p><span class="rvts6">The value &quot;node-75494&quot; is taken to mean 
+ &quot;_ds:node-75494&quot;, which in this case fully expands to &quot;https://www.example.mindjet.com/api/ds1/node-75494&quot;. 
+ &#160;That ID is for an</span> <a class="rvts14" href="ideaclass.htm">Idea</a><span 
+	 class="rvts6">, in keeping with our example. &#160;That idea is added 
+ to the target entity of the query - &quot;_ds:q-1&quot; - which for this 
+ example is an</span> <a class="rvts14" href="inquiryclass.htm">Inquiry</a><span 
+	 class="rvts6">. &#160;In a similar manner to the comment example above, 
+ the inquiry is not itself a collection. &#160;The idea is added in an 
+ appropriate manner to the</span> <span class="rvts13" style="font-style: italic;"><i>ideaSet</i></span> 
+ <span class="rvts6">of the inquiry, possibly checking for redundancy, 
+ appropriate context, write privileges, etc.</span></p>
+<p><span class="rvts6">The exact same request could be formed this way:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts25">POST</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/q-1</span></p>
+<p><span class="rvts6">with headers:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+				 margin-bottom: 0pt;"><span class="rvts24">Content-Type: 
+		 application/json</span></p>
+		<p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts24">Authorization: Bearer 
+		 914a9b4d83fa7333d3b517643a30bac2</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">and request body:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts24">{value:&quot;node-75494&quot;}</span></p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

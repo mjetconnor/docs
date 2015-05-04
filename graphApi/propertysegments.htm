@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Property Segments</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nGET Queries\nExtended Query URL\nProperty Segments");
+addAvenueInfo("Basic Sequence","ExtendedQueryURL.htm","matrixparameters.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"getqueries.htm\">GET Queries<\/a> &nbsp;&gt; <a href=\"extendedqueryurl.htm\">Extended Query URL<\/a> &nbsp;&gt; Property Segments<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Property Segments</h1>
+<p><span class="rvts6">The query URL may be extended by adding a path segment 
+ made up of a slash (&quot;/&quot;) and a property name. &#160;You can 
+ think of this as being like a dot operator in a script language. &#160;The 
+ query's result will be the value of the property as derived from the identified 
+ root entity.</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span class="rvts39" 
+	 style="font-weight: bold;">/</span><span class="rvts38" style="font-style: italic;"><i>propertyName</i></span></p>
+<p><span class="rvts6">(Remember that entity URIs always look like this:</span><span 
+	 style="font-family: 'Courier New', monospace;"> </span><span class="rvts38" 
+	 style="font-family: 'Courier New', monospace; font-style: italic;"><i>gatewayURI</i></span><span 
+	 class="rvts39" style="font-family: 'Courier New', monospace;">/</span><span 
+	 class="rvts38" style="font-family: 'Courier New', monospace; font-style: italic;"><i>dataspaceKey</i></span><span 
+	 class="rvts39" style="font-family: 'Courier New', monospace;">/</span><span 
+	 class="rvts38" style="font-family: 'Courier New', monospace; font-style: italic;"><i>entityKey</i></span><span 
+	 class="rvts38">.)</span></p>
+<p><span class="rvts6"><br />
+Example:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts29">GET https://www.example.mindjet.com/api/ds1/tenant-1</span><span 
+	 class="rvts58">/</span><span class="rvts58" style="color: #008080;"><font color="teal" >homeCommunity</font></span></p>
+<p><span class="rvts6">where</span></p>
+<table style="left: 0px; top: 1189px; margin-left: 32px;" cellspacing="0" 
+		 width="548">
+	<col style="width: 23.626%;" />
+	<col style="width: 76.374%;" />
+	<tr>
+		<td><span class="rvts6">entity URI</span></td>
+		<td><span class="rvts43" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">https://www.example.mindjet.com/api/ds1/tenant-1</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">property name</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #008080;"><font size="2" color="teal" style="font-size:10.000000pt;">homeCommunity</font></span></td>
+	</tr>
+</table>
+<p><span class="rvts37"><br />
+</span><span class="rvts6">The result of this query will be not the value 
+ for the tenant entity but rather the value of the</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>homeCommunity</i></span> <span class="rvts6">property 
+ of the tenant entity.</span></p>
+<p><span class="rvts6">This construct may be cascaded by tagging another 
+ property name segment onto the query URL, again in the same manner as 
+ a series of dot operators.</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span class="rvts39">/</span><span 
+	 class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">/</span><span class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">/...</span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts29">GET https://www.example.mindjet.com/api/ds1/tenant-1</span><span 
+	 class="rvts58">/</span><span class="rvts58" style="color: #008080;"><font color="teal" >homeCommunity</font></span><span 
+	 class="rvts57">/</span><span class="rvts57" style="color: #800080;"><font color="purple" >title</font></span></p>
+<p><span class="rvts6">where</span></p>
+<table style="left: 0px; top: 1189px; margin-left: 32px;" cellspacing="0" 
+		 width="548">
+	<col style="width: 23.626%;" />
+	<col style="width: 76.374%;" />
+	<tr>
+		<td><span class="rvts6">entity URI</span></td>
+		<td><span class="rvts43" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">https://www.example.mindjet.com/api/ds1/tenant-1</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">property name</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #008080;"><font size="2" color="teal" style="font-size:10.000000pt;">homeCommunity</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">property name</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #800080;"><font size="2" color="purple" style="font-size:10.000000pt;">title</font></span></td>
+	</tr>
+</table>
+<p><span class="rvts6">The result of this query will be the title of the 
+ home community of the tenant entity.</span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts29">GET https://www.example.mindjet.com/api/ds1/tenant-1</span><span 
+	 class="rvts58">/</span><span class="rvts58" style="color: #008080;"><font color="teal" >homeCommunity</font></span><span 
+	 class="rvts57">/</span><span class="rvts57" style="color: #800080;"><font color="purple" >img</font></span><span 
+	 class="rvts59">/</span><span class="rvts59" style="color: #f47321;"><font color="#f47321" >url</font></span></p>
+<p><span class="rvts6">where</span></p>
+<table style="left: 0px; top: 1189px; margin-left: 32px;" cellspacing="0" 
+		 width="548">
+	<col style="width: 23.626%;" />
+	<col style="width: 76.374%;" />
+	<tr>
+		<td><span class="rvts6">entity URI</span></td>
+		<td><span class="rvts43" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">https://www.example.mindjet.com/api/ds1/tenant-1</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">property name</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #008080;"><font size="2" color="teal" style="font-size:10.000000pt;">homeCommunity</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">property name</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #800080;"><font size="2" color="purple" style="font-size:10.000000pt;">img</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">property name</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #f47321;"><font size="2" color="#f47321" style="font-size:10.000000pt;">url</font></span></td>
+	</tr>
+</table>
+<p><span class="rvts6">The result of this query will be the url of the 
+ logo of the home community of the tenant entity. &#160;Note by the way 
+ that images are usually not entities. &#160;This example shows that queries 
+ with property selection is not limited to just entities, although of course 
+ the initial URI must be for an entity.</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

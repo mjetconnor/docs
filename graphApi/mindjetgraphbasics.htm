@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>MindjetGraph Basics</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Welcome to the Mindjet Graph Developers Guide\nMindjetGraph Basics");
+addAvenueInfo("Basic Sequence","TheSemanticWeb1.htm","Tutorial.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"welcometomindjetgraphdevelopersg.htm\">Welcome to the Mindjet Graph Developers Guide<\/a> &nbsp;&gt; MindjetGraph Basics<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>MindjetGraph Basics</h1>
+<p><a class="rvts22" href="rdfsemanticwebconcepts.htm" style="font-weight: bold; 
+		 font-style: italic;">Resources</a> <span class="rvts6">are the 
+ atoms of the Semantic Web. &#160;A resource is any kind of identifiable 
+ thing. &#160;It's the internet, so of course those identifiers are URIs.</span></p>
+<p><a class="rvts22" href="entityconcepts.htm" style="font-weight: bold; 
+		 font-style: italic;">Entities</a> <span class="rvts6">are what 
+ we call resources when they come out of MindjetGraph.</span></p>
+<p><span class="rvts19" style="font-weight: bold; font-style: italic;"><i>Properties</i></span> 
+ <span class="rvts6">are what we call the relationships between things 
+ in MindjetGraph. &#160;The Mindjet Graph is made up of entities related 
+ to each other by their properties.</span></p>
+<p><span class="rvts19" style="font-weight: bold; font-style: italic;"><i>SIEF</i></span> 
+ <span class="rvts6">(</span><span class="rvts17" style="font-weight: bold;">S</span><span 
+	 class="rvts6">ocial</span><span style="font-weight: bold;"> </span><span 
+	 class="rvts17" style="font-weight: bold;">I</span><span class="rvts6">nnovation</span> 
+ <span class="rvts17" style="font-weight: bold;">E</span><span class="rvts6">nterprise</span> 
+ <span class="rvts17" style="font-weight: bold;">F</span><span class="rvts6">ramework) 
+ is the name of the MindjetGraph vocabulary. &#160;It defines exactly what 
+ the various class and property names mean. &#160;The class and property 
+ names described in this document are all defined in the context of the 
+ &quot;http://purl.org/sief/2013/10/terms/&quot; namespace.</span></p>
+<p><span class="rvts6">Use the</span> <a class="rvts22" href="getqueries.htm" style="font-weight: bold; font-style: italic;">REST 
+ API</a> <span class="rvts6">to get the properties for an entity. &#160;Since 
+ all MindjetGraph entity's have a URI identifier, an HTTP GET request using 
+ that URI will get the entity's data.</span></p>
+<p><span class="rvts6">The MindjetGraph API uses</span> <a class="rvts22" href="authenticationwithoauth20.htm" style="font-weight: bold; 
+															 font-style: italic;">OAuth 
+ 2.0</a> <span class="rvts6">as its authentication scheme.</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Get an Access Token</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorial\nGet an Access Token");
+addAvenueInfo("Basic Sequence","GetaRESTappforyourbrowser.htm","GetDataforanEntity.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"tutorial.htm\">Tutorial<\/a> &nbsp;&gt; Get an Access Token<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Get an Access Token</span></h1>
+<p><span class="rvts6">Before you can do anything else, you have to get 
+ an </span><span class="rvts6" style="font-style: italic;"><i>access token</i></span><span 
+	 class="rvts6">. &#160;Every REST query to the MindjetGraph API needs 
+ an access token in order to authenticate the query. &#160;MindjetGraph 
+ uses the OAuth 2.0 protocol to get it to you. &#160;</span></p>
+<p><span class="rvts6">To try out the queries in this tutorial for yourself 
+ (please do!), you will need to have your own login to a SpigitEngage community 
+ somewhere. &#160;We use the &quot;www.example.mindjet.com&quot; community 
+ in these examples. &#160;Replace that domain name with the one for your 
+ own SpigitEngage community.</span></p>
+<p><span class="rvts6">Let's get going by using the following query to 
+ get an access token. &#160;Simply cut-and-paste it into your browser address 
+ bar, being sure to replace &quot;www.example.mindjet.com&quot; with your 
+ community's domain name.</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;">https://www.example.mindjet.com/oauth/authorize?response_type=token&amp;client_id=BeX5vrNVW7vq&amp;redirect_uri=https://www.example.mindjet.com/html/api/testOauthRedirectPage.html</p>
+<p><span class="rvts6">This is just one line. &#160;Ignore any text wrapping 
+ that might appear in the display.</span></p>
+<p><span class="rvts6">This is an example of using &#160;OAuth 2's</span> 
+ <a class="rvts14" href="useragentflow.htm">User Agent Flow</a>. &#160;&#160;<span 
+	 class="rvts6">A request is sent to the &quot;/oauth/authorize&quot; 
+ endpoint for your SpigitEngage community. &#160;It has three query parameters:</span></p>
+<div class="rvps2">
+	<table class="Mindjet_invisible" style="border-width: 0px; left: 0px; 
+			 top: 0px;" width="742" cellspacing="0">
+		<col width="113" />
+		<col width="361" />
+		<col width="238" />
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt; font-weight: bold; 
+											 font-size: 9pt;"><span class="rvts6"><font size="1" style="font-size:9pt;">response_type</font></span></p></td>
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt; font-weight: bold; 
+											 font-family: 'Courier New CE', monospace;"><span 
+			 class="rvts29">token</span></p></td>
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt;">Identifies 
+			 the OAuth 2 flow</p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt; font-weight: bold; 
+											 font-size: 9pt;"><span class="rvts6"><font size="1" style="font-size:9pt;">client_id</font></span></p></td>
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt; font-weight: bold; 
+											 font-family: 'Courier New CE', monospace;"><span 
+			 class="rvts28">BeX5vrNVW7vq</span></p></td>
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The ID for the universal &#160;tutorial application</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt; font-weight: bold; 
+											 font-size: 9pt;"><span class="rvts6"><font size="1" style="font-size:9pt;">redirect_uri</font></span></p></td>
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt; font-family: 'Courier New CE', monospace;"><span 
+			 class="rvts13" style="font-style: italic; color: #008080;"><font color="teal" ><i>yourCommunityURL 
+			 </i></font></span><span class="rvts6" style="font-weight: bold;">/html/api/testOauthRedirectPage.html</span></p></td>
+			<td style="padding-left: 4px; padding-top: 4px; padding-right: 4px; 
+				 padding-bottom: 4px;"><p style="margin-left: 0pt; margin-top: 0pt; 
+											 margin-bottom: 4.5pt;">The 
+			 access token is sent here by way of a 302 redirection</p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6">&gt;&gt; To make your own application ID (aka &quot;client_id&quot;), 
+ see <a href="applications.htm">SpigitEngage in the Graph :: Registered 
+ Applications</a>.</span></p>
+<p><span class="rvts6">If you are not already logged into that SpigitEngage 
+ instance, you will be redirected to the login page appropriate for that 
+ community. &#160;The normal SpigitEngage login sequence will apply in 
+ accordance with how that community is set up.</span></p>
+<p><span class="rvts6">Then, if you have never authenticated using this 
+ app before, which will surely be the case the first time you try this, 
+ you will be redirected to a page that asks if it is OK for this app, namely 
+ your tutorial queries, to execute under your name and with your permission.</span></p>
+<p><span class="rvts6">After those hurdles are cleared, your browser is 
+ finally redirected to the &quot;redirect_uri&quot; that we specified in 
+ the original request. &#160;The access token, and some other useful info, 
+ is appended as the hash tag part of that URI (</span><a href="oauthauthorize.htm">reference 
+ details here</a><span class="rvts6">). &#160;</span></p>
+<p><span class="rvts6" style="font-weight: bold;">&quot;/html/api/testOauthRedirectPage.html&quot;</span><span 
+	 class="rvts6"> is a page that we include in your SpigitEngage instance 
+ just to make it easy for you to manually try out OAuth 2 requests. &#160;This 
+ page simply grabs the values that come to it in the hashtag part of the 
+ request and displays them in a way that is easy for you to see. &#160;Your 
+ app will do something else. &#160;This information is just for your app. 
+ &#160;End-users really don't want to see this stuff.</span></p>
+<p><span class="rvts6">The final redirected URL will look something like 
+ this:</span></p>
+<p class="Code" style="margin-left: 48px; color: #003f00;">https://www.example.mindjet.com/html/api/testOauthRedirectPage.html#issued_at=1385422189287&amp;userId=https%3A%2F%2Fwww.example.mindjet.com%2Fapi%2Fds1%2Fuser-523&amp;refresh_token=basIJZuxSdzh&amp;access_token=914a9b4d83fa7333d3b517643a30bac2&amp;&amp;communityId=https%3A%2F%2Fwww.example.mindjet.com%2Fapi%2Fds1%2Fcomm-1</p>
+<p><span class="rvts6">and &quot;testOauthRedirectPage.html&quot; 
+ will render on your screen like this:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="font-weight: bold; font-size: 12pt;"><span 
+		 class="rvts26">OAuth Response</span></p>
+		<p class="Code_table" style="font-weight: bold;"><span class="rvts27">Query 
+		 Parameters</span></p>
+		<p class="Code_table" style="font-weight: bold;"><span class="rvts27">Hashtag Parameters</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts25">&#160;&#160;&#160;&#160;issued_at</span> <span 
+		 class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;1385422189287</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts25">&#160;&#160;&#160;&#160;userId</span> <span class="rvts24">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;https://www.example.mindjet.com/api/ds1/user-523</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts25">&#160;&#160;&#160;&#160;refresh_token</span> <span 
+		 class="rvts24">&#160;&#160;&#160;basIJZuxSdzh</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts25">&#160;&#160;&#160;&#160;access_token</span> <span 
+		 class="rvts24">&#160;&#160;&#160;&#160;914a9b4d83fa7333d3b517643a30bac2</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt;"><span 
+		 class="rvts25">&#160;&#160;&#160;&#160;communityId</span> <span 
+		 class="rvts24">&#160;&#160;&#160;&#160;&#160;https://www.example.mindjet.com/api/ds1/comm-1</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">Pay special attention to the values for</span> <span 
+	 class="rvts19" style="font-weight: bold; font-style: italic;"><i>access_token</i></span> 
+ <span class="rvts6">and</span> <span class="rvts19" style="font-weight: bold; 
+										 font-style: italic;"><i>communityId</i></span><span 
+	 class="rvts6">. &#160;The next step in this tutorial will use those 
+ values. &#160;You will need to include the access token in all of your 
+ REST queries as the value of the &quot;Authorization&quot; HTTP header.</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

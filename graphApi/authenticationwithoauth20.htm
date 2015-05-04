@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Authentication with OAuth 2.0</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nAuthentication with OAuth 2.0");
+addAvenueInfo("Basic Sequence","REST_API.htm","applicationregistration.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; Authentication with OAuth 2.0<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Authentication with OAuth 2.0</span></h1>
+<p><span class="rvts6">Sub-topics:</span></p>
+<p class="rvps2" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+	 class="rvts6"><a href="applicationregistration.htm"><span class="rvts6">A</span>pplication 
+ Registration</a></span></p>
+<p class="rvps2" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+	 class="rvts6"><a href="oauth20requestendpoints.htm">OAth 2.0 Request 
+ Endpoints</a></span></p>
+<p class="rvps2" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+	 class="rvts6"><a href="oath_2.0_authorization_flows.htm">OAth 2.0 
+ Request Flows</a></span></p>
+<p class="rvps2" style="margin-left: 24px; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+	 class="rvts6"><a href="errormessages1.htm">Error Messages</a><br />
+</span></p>
+<p><span class="rvts6">MindjetGraph REST queries are authenticated using 
+ the OAuth 2.0 regime. &#160;All queries must be tagged with an &quot;Authorization&quot; 
+ HTTP header whose value is &quot;Bearer</span> <span class="rvts13" style="font-style: italic;"><i>accessToken</i></span><span 
+	 class="rvts6">&quot;.</span></p>
+<p><span class="rvts6">That part is pretty easy. &#160;The fun is in getting 
+ that access token.</span></p>
+<p><span class="rvts6">The MindjetGraph REST OAuth 2.0 implementation religiously 
+ follows the</span> <a class="rvts14" href="http://tools.ietf.org/html/draft-ietf-oauth-v2-20">OAuth 
+ 2.0 v20 specification.</a> &#160;<span class="rvts6">If you check out 
+ that document, you may want to keep in mind this terminology:</span></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold;"><span 
+			 class="rvts17">Query Parameter</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="406" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p><span 
+			 class="rvts6">client</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p><span class="rvts6">This 
+			 is what OAuth 2.0 calls your application. &#160;This is not 
+			 the user.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p><span 
+			 class="rvts6">resource owner</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p><span class="rvts6">An 
+			 end-user, acting in tandem with a MindjetGraph authorization 
+			 endpoint. &#160;In these Help Docs, we call this the</span> 
+			 <span class="rvts52" style="font-style: italic;"><i>authorizationServiceURL</i></span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p><span 
+			 class="rvts6">resource server</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p><span class="rvts6">For 
+			 us, this will be a</span> <span class="rvts38" style="font-style: italic;"><i>gatewayURI</i></span><span 
+			 class="rvts6">, as discussed in</span> <a class="rvts14" href="entityidsandcommonprefixes.htm">Rest 
+			 API Entity IDs</a><span class="rvts6">. &#160;This is implicit 
+			 in each MindjetGraph entity's identifying URI.</span></p></td>
+		</tr>
+	</table>
+</div>
+<p class="rvps2">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

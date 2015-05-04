@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Property Expressions</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nResponse Format\nEntity Result Elements\nProperty Expressions");
+addAvenueInfo("Basic Sequence","FieldsQueryParameter1.htm","fieldsmacros.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"responseformat.htm\">Response Format<\/a> &nbsp;&gt; <a href=\"entityresultelements.htm\">Entity Result Elements<\/a> &nbsp;&gt; Property Expressions<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Property Expressions</h1>
+<p><span class="rvts6">Entries in the fields list can be</span> <span class="rvts17" 
+	 style="font-style: italic; font-weight: bold;"><i>property expressions 
+ (PE)</i></span><span class="rvts6">. &#160;The simplest PEs are just property 
+ names as we have already seen. &#160;In addition, a PE may contain an 
+ optional</span> <span class="rvts13" style="font-style: italic;"><i>field</i></span><span 
+	 style="font-style: italic;"><i> </i></span><span class="rvts13" style="font-style: italic;"><i>list</i></span> 
+ <span class="rvts6">of its own, after the property name and a colon and 
+ surrounded by square brackets.</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts37">propertyName : [ nestedPE1, nestedPE2, nestedPE3, ...]</span></p>
+<p><span class="rvts6">This list identifies the properties of the nested 
+ entity that should be included in the response. &#160;Remember that by 
+ default, nested entities are returned in summary form. &#160;This is how 
+ you can get different properties returned for nested elements.</span></p>
+<p><span class="rvts6">Examples:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38">...?</span><span class="rvts37">fields=title,creator</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38">...?</span><span class="rvts37">fields=title,creator:[name,mbox,phone]</span></p>
+<p><span class="rvts6">In the first example, the response will include 
+ the &quot;eid&quot;, &quot;type&quot;, &quot;title&quot; and &quot;creator&quot; 
+ properties of the result entity. &#160;For the creator, let's assume it's 
+ a User entity, the &quot;eid&quot;, &quot;type&quot; and &quot;name&quot; 
+ properties are included in the response.</span></p>
+<p><span class="rvts6">In the second example, the same property values 
+ are included for the top-level entity - &#160;&quot;eid&quot;, &quot;type&quot;, 
+ &quot;title&quot; and &quot;creator&quot; . &#160;But this time, the value 
+ for the creator property will be comprised of the &quot;eid&quot;, &quot;type&quot;, 
+ &quot;name&quot;, &quot;mbox&quot; and &quot;phone&quot; properties.</span></p>
+<p><span class="rvts6">A PE may also have an optional page size phrase, 
+ which is an asterisk followed by a number.</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts37">propertyName * 5</span></p>
+<p><span class="rvts6">This specifies the number of elements to return, 
+ assuming that the value of the named property is a collection.</span></p>
+<p><span class="rvts6">Examples:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38">...?</span><span class="rvts37">fields=title,ideaScores*20,userScores*30</span></p>
+<p>&#160;</p>
+<p><span class="rvts6">These phrases may be combined. &#160;Any one property 
+ expression is made up of a property name, an optional fields phrase, and 
+ an optional page size phrase.</span></p>
+<p><span class="rvts6">These elements may also be nested. &#160;A property 
+ expression in a field list may contain its own field list, which contains 
+ other property expressions that have their own field lists. &#160;And 
+ so on.</span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38">...?</span><span class="rvts37">fields=title,description,ideas:[title,creator:[name,givenName],discussion:[comments*2]]*50</span></p>
+<p><span class="rvts6">This may be easier to visualize written this way:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+				 background-color: #e4e4e4; margin-left: 0px;"><span style="background-color: #e4e4e4;"><span 
+		 class="rvts37">fields=</span></span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 24px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 24px;"><span class="rvts37">description,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 24px;"><span class="rvts37">ideas:[</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 48px;"><span class="rvts37">title,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 48px;"><span class="rvts37">creator:[</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 72px;"><span class="rvts37">name,</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 72px;"><span class="rvts37">givenName</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 48px;"><span class="rvts37">],</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 48px;"><span class="rvts37">discussion:[comments*2]</span></p>
+		<p class="Code_table" style="margin-top: 0pt; margin-bottom: 0pt; 
+			 background-color: #e4e4e4; margin-left: 24px;"><span class="rvts37">]*50</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">This request is asking for the response to include 
+ the &quot;title&quot;, &quot;description&quot; and &quot;ideas&quot; properties 
+ of the top-level result entity. &#160;As always, the &quot;eid&quot; and 
+ &quot;type&quot; properties are also included. &#160;The value for the 
+ &quot;ideas&quot; property will use a page size of 50. &#160;For each 
+ entry in that collection, the &quot;title&quot;, &quot;creator&quot; and 
+ &quot;discussion&quot; (and &quot;eid&quot; and &quot;type&quot;) properties 
+ are returned. &#160;For each idea's creator, their &quot;name&quot; and 
+ &quot;givenName&quot; &#160;(and &quot;eid&quot; and &quot;type&quot;) 
+ properties are returned. &#160;And lastly, for each idea's discussion, 
+ the first two comments are returned.</span></p>
+<p class="rvps2">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Idea Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nIdea Datatypes\nIdea Class");
+addAvenueInfo("Basic Sequence","GovernorClass.htm","IdeaScoreClass.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"ideadatatypes.htm\">Idea Datatypes<\/a> &nbsp;&gt; Idea Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts17">Idea Class</span></h1>
+<p><span class="rvts17" style="font-weight: bold;">Concepts</span><span 
+	 class="rvts17">:</span> <a class="rvts14" href="ideaconcepts.htm">Idea 
+ Concepts</a></p>
+<p><span class="rvts6" style="font-style: italic;"><i>An explicit description 
+ of an invention or problem solution with the intention of implementation 
+ as a new or improved product, service, or process within an organization.</i></span> 
+ <span class="rvts6">&#160;(<a href="http://home.in.tum.de/~riedlc/res/RiedlEtAl2009-preprint.pdf">Riedl 
+ et al</a>)</span></p>
+<p><span class="rvts6">The primary purpose of the Mindjet System is to 
+ manage, organize, evaluate and implement ideas.</span></p>
+<p>Many commonly used properties for ideas are defined by the inherited 
+ <a class="rvts14" href="entityclass.htm">Entity</a> class, such as <span 
+	 style="font-style: italic;"><i>teams</i></span>, <span style="font-style: italic;"><i>discussions</i></span>, 
+ <span style="font-style: italic;"><i>followers</i></span> and <span style="font-style: italic;"><i>assessments</i></span>.</p>
+<p>&#160;</p>
+<p><span class="rvts17" style="font-weight: bold;">Subclass of</span><span 
+	 class="rvts6">:</span> <a class="rvts14" href="entityclass.htm">Entity</a></p>
+<p><span class="rvts17" style="font-weight: bold;">Subclass of</span><span 
+	 class="rvts6">: foaf:Document</span></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="112" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="85" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0in; margin-top: 0pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="501" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">title</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="112"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">String</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0in; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MUST</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="501"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">The 
+			 display label of the idea.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">description</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="112"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="rdfandowldatatypes.htm">Thing</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0in; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="501"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">A 
+			 longer description of the idea. &#160;</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">governor</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="112"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="governorclass.htm">Governor</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0in; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="501"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">The 
+			 governor that applies to this idea. &#160;The governor defines 
+			 how the evolution of the idea is managed, such as its stages 
+			 and graduation rules. &#160;The governor is set when the idea 
+			 is created.</p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;">inquiry</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="112"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a href="inquiryclass.htm" style="text-decoration: none; ">Inquiry</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0in; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="501"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">The 
+			 inquiry to which the idea was originally posted.</p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">stage</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="112"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="stageclass.htm">Stage</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0in; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="501"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">The 
+			 idea's current stage of development.</p></td>
+		</tr>
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">uiForm</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="112"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="formclass.htm">Form</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0in; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="501"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;">The 
+			 uiForm that applies to this idea. &#160;This i<span class="rvts6">nforms 
+			 displays of this idea as to how non-standard properties (aka 
+			 “templated properties”) should be rendered in displays or 
+			 prompt forms.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="157"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">score</span></p>
+			<p class="plurals" style="margin-bottom: 4.5pt; margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">scores</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="112"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="ideascoreclass.htm">IdeaScore</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="85"><p style="margin-left: 0in; 
+													 margin-top: 0pt; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">RULE</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="501"><p style="margin-left: 0in; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The collection of all ideaScores whose</span> 
+			 <span class="rvts13">base</span> <span class="rvts6">is this 
+			 idea. &#160;In other words, if this property exists:</span><br />
+			<span class="rvts6">&#160;&#160;&#160;[ scoreX</span> <span 
+			 class="rvts13">base</span> <span class="rvts6">ideaY ]</span><br />
+			<span class="rvts6">then this property exists:</span><br />
+			<span class="rvts6">&#160;&#160;&#160;[ ideaY</span> <span 
+			 class="rvts13">score</span> <span class="rvts6">scoreX ].</span></p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<p><img alt="" src="newitem157.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

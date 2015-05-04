@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Common Namespaces</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nPreface\nCommon Namespaces");
+addAvenueInfo("Basic Sequence","RequirementLevelsandMultiplicity.htm","UMLConventions.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"preface.htm\">Preface<\/a> &nbsp;&gt; Common Namespaces<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Common Namespaces</h1>
+<p>These XML namespace prefixes have broad usage throughout the Internet:</p>
+<div class="rvps2">
+	<table style="border: solid 1px #000000;" cellspacing="0" width="100%">
+		<tr style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Common Prefix</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="327" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Full URI</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="558" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">xsd</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://www.w3.org/TR/xmlschema-2/</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">XML standard datatypes</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">dc</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://dublincore.org/documents/dcmi-terms/</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Dublin Core terms</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">rdf</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Resource Description Framework core concept 
+			 terms</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">rdfs</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://www.w3.org/2000/01/rdf-schema#</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">RDF schema terms</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">owl</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://www.w3.org/TR/owl-ref/</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Web Ontology Language</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">foaf</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://xmlns.com/foaf/spec/</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Friend Of A Friend</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">skos</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://www.w3.org/TR/skos-reference/</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Simple Knowledge Organization System</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">sioc</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">http://sioc-project.org/ontology</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Semantically Interlinked Online Communities</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;">sief</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;">http://purl.org/sief/2013/10/</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;">Social 
+			 Innovation Enterprise Framework - The MindjetGraph vocabulary</p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<p>The vocabulary defined for MindjetGraph:</p>
+<div class="rvps2">
+	<table style="border: solid 1px #000000;" cellspacing="0" width="100%">
+		<tr style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70" bgcolor="#D7D7D7"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Prefix</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="327" 
+				 bgcolor="#D7D7D7"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Example Value</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="558" 
+				 bgcolor="#D7D7D7"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;">sief</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;">http://purl.org/sief/2013/10/</p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;">Social 
+			 Innovation Enterprise Framework</p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<p>These prefixes are commonly used in REST API responses:</p>
+<div class="rvps2">
+	<table style="border: solid 1px #000000;" cellspacing="0" width="100%">
+		<tr style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70" bgcolor="#D7D7D7"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Prefix</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="327" 
+				 bgcolor="#D7D7D7"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Example Value</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="558" 
+				 bgcolor="#D7D7D7"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;">_<span 
+			 style="font-weight: bold;">host</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">https://www.example.mindjet.com/api/</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Refers to the gatewayURI used in the query</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="70"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">_ds</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="327"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">https://www.example.mindjet.com/api/ds1/</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="558"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Refers to the combination of gatewayURI and 
+			 dataspace key from the query, in other words everything except 
+			 the entity key</span></p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

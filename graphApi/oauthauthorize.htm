@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>/oauth/authorize</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nAuthentication with OAuth 2.0\nOAuth 2.0 Request Endpoints\n/oauth/authorize");
+addAvenueInfo("Basic Sequence","OAuth20RequestEndpoints.htm","oauthtoken.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"authenticationwithoauth20.htm\">Authentication with OAuth 2.0<\/a> &nbsp;&gt; <a href=\"oauth20requestendpoints.htm\">OAuth 2.0 Request Endpoints<\/a> &nbsp;&gt; /oauth/authorize<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">/oauth/authorize</span></h1>
+<p><span class="rvts6">Execute an HTTP GET request to this URL:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts52" style="font-style: italic;"><i>authorizationServiceURL</i></span><span 
+	 class="rvts53" style="font-weight: bold;">/oauth/authorize</span><span 
+	 class="rvts53">?</span><span class="rvts52">queryParam&amp;...</span></p>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts6"><br />
+</span></p>
+<div class="rvps2">
+	<table class="Mindjet_ref" style="border: solid 1px #000000;" cellspacing="0px" width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113" 
+				 bgcolor="#CEE0F2"><p style="margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Query Parameter</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="67" bgcolor="#CEE0F2"><p 
+				 style="margin-bottom: 4.5pt; margin-top: 0pt;"><span class="rvts17">Required</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="406" 
+				 bgcolor="#CEE0F2"><p style="margin-bottom: 4.5pt; margin-top: 0pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p 
+				 style="margin-bottom: 4.5pt; margin-top: 0pt;"><span class="rvts6">client_id</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="67"><p style="margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts6">yes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p style="margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">The key of the application that is making this 
+			 call.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p 
+				 style="margin-bottom: 4.5pt; margin-top: 0pt;"><span class="rvts6">redirect_uri</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="67"><p style="margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts6">yes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p style="margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">The response to this authentication request 
+			 will be sent by way of a 302 redirect to this URI. &#160;The 
+			 request will be rejected if this redirect URI is not compatible 
+			 with the application's registration information.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p 
+				 style="margin-bottom: 4.5pt; margin-top: 0pt;"><span class="rvts6">response_type</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="67"><p style="margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts6">yes</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p style="margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">Must be either &quot;code&quot; or &quot;token&quot;. 
+			 &#160;See below for details.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p 
+				 style="margin-bottom: 4.5pt; margin-top: 0pt;"><span class="rvts6">scope</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="67"><p style="margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts6">no</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p style="font-style: italic; 
+														 margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts13"><i>Currently not supported.</i></span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="113"><p 
+				 style="margin-bottom: 4.5pt; margin-top: 0pt;"><span class="rvts6">state</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="67"><p style="margin-bottom: 4.5pt; 
+													 margin-top: 0pt;"><span 
+			 class="rvts6">no</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="406"><p style="margin-bottom: 4.5pt; 
+														 margin-top: 0pt;"><span 
+			 class="rvts6">A value that is echoed back in the response 
+			 without modification.</span></p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+Authorization requests sent to this URI always respond by way of 302 redirects. 
+ &#160;Nothing is returned directly in the responses to these queries, 
+ other than error messages such as a missing or rejected redirect URI.</span></p>
+<p>&#160;</p>
+<div class="rvps2">
+	<table class="Mindjet_ref" style="border: solid 1px #000000;" cellspacing="0px" width="100%">
+		<col width="154" />
+		<col width="654" />
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" bgcolor="#CEE0F2"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 6px;"><span 
+			 class="rvts17">response_type</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" bgcolor="#CEE0F2"><p 
+				 style="margin-left: 0in; margin-top: 0pt; margin-bottom: 6px;"><span 
+			 class="rvts17">Description of Response</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;"><p style="margin-left: 0in; 
+				 margin-top: 0pt; margin-bottom: 6px;"><span class="rvts6">response_type=</span><span 
+			 class="rvts17" style="font-weight: bold;">code</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;"><p style="margin-left: 0in; margin-top: 0pt; 
+											 margin-bottom: 6px;"><span 
+			 class="rvts6">The redirected URL is extended to include an</span> 
+			 <span class="rvts17">authorization code</span> <span class="rvts6">to 
+			 be used in a subsequent request to a /oauth/token URI. &#160;The 
+			 redirected URI will have this format:</span></p>
+			<p class="Code_table" style="margin-top: 0pt; margin-bottom: 6px; 
+				 margin-left: 24px;"><span class="rvts52" style="font-style: italic;"><i>redirectUri</i></span><span 
+			 class="rvts53" style="font-weight: bold;">?code=</span><span 
+			 class="rvts52" style="font-style: italic;"><i>authorizationCode</i></span> 
+			 <span class="rvts29">[</span> <span class="rvts53" style="font-weight: bold;">&amp;state=</span><span 
+			 class="rvts52" style="font-style: italic;"><i>stateValue</i></span> 
+			 <span class="rvts29">]</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px; "><p style="margin-left: 0in; 
+				 margin-top: 0pt; margin-bottom: 6px;"><span class="rvts6">response_type=</span><span 
+			 class="rvts17" style="font-weight: bold;">token</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px; "><p style="margin-left: 0in; margin-top: 0pt; 
+											 margin-bottom: 6px;"><span 
+			 class="rvts6">The redirected URL is extended to include query 
+			 parameters that represent an</span> <a class="rvts14" href="accesstokenresponse.htm">access 
+			 token response</a><span class="rvts6">. &#160;The redirected 
+			 URI will have this format:</span></p>
+			<p class="Code_table" style="margin-top: 0pt; margin-bottom: 6px; 
+				 margin-left: 24px;"><span class="rvts52" style="font-style: italic;"><i>redirectUri</i></span><span 
+			 class="rvts53" style="font-weight: bold;">#access_token=</span><span 
+			 class="rvts52" style="font-style: italic;"><i>accessToken</i></span><span 
+			 class="rvts52">&amp;</span><a class="rvts56" href="accesstokenresponse.htm" 
+											 style="font-style: italic;">...other 
+			 response parameters</a></p>
+			<p style="margin-left: 0in; margin-top: 0pt; margin-bottom: 6px;"><span 
+			 class="rvts6">Note that the response parameters are included 
+			 after a hash tag (&quot;#&quot;). &#160;This insures that 
+			 these values do not travel any further than the browser or 
+			 user agent that is receiving the 302 response.</span></p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Process Management Concepts</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Concept Overviews\nProcess Management Concepts");
+addAvenueInfo("Basic Sequence","AssessmentConcepts.htm","CollectionsandPluralPropertyName.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"concepts_overview.htm\">Concept Overviews<\/a> &nbsp;&gt; Process Management Concepts<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Process Management Concepts</span></h1>
+<p><span class="rvts6">The root element for process management in MindjetGraph 
+ is the</span> <a class="rvts14" href="assignmentclass.htm">Assignment</a><span 
+	 class="rvts6">. &#160;(These are sometimes called &quot;tasks&quot; 
+ in other vocabularies, but that term can be overloaded with many conflicting 
+ meanings. &#160;In MindjetGraph, we go with the safer term &quot;assignment&quot;.)</span></p>
+<p><span class="rvts6">All assignments have</span> <span class="rvts13">creator</span> 
+ <span class="rvts6">and</span> <span class="rvts13">created</span> <span 
+	 class="rvts6">properties. &#160;When assignments are entities, these 
+ will be those properties that are already defined in that way. &#160;</span><span 
+	 class="rvts13">status</span> <span class="rvts6">is also defined to 
+ have values that indicate the status of the assignment, such as &quot;pending&quot;, 
+ &quot;open&quot; or &quot;closed&quot;.</span></p>
+<p><img alt="" src="newitem166.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts19">Classes in this diagram:</span> <a class="rvts14" href="agentclass.htm">Agent</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="assignmentclass.htm">Assignment</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="xmlbaseddatatypes.htm">DateTime</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="entitystatusclass.htm">EntityStatus</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="rdfandowldatatypes.htm">Thing</a></p>
+<p><span class="rvts6">Every assignment also has a</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>dateDue</i></span> <span class="rvts6">and</span> 
+ <span class="rvts13" style="font-style: italic;"><i>assignedTo</i></span> <span 
+	 class="rvts6">property. &#160;The</span> <span class="rvts13" style="font-style: italic;"><i>dateCompleted</i></span> 
+ <span class="rvts6">property is added when the assignment is completed.</span></p>
+<p><span class="rvts6">If an assignment has an</span> <span class="rvts13" 
+															 style="font-style: italic;"><i>inSupportOf</i></span> 
+ <span class="rvts6">property, this indicates that completion of the assignment 
+ somehow furthers the development of that thing. &#160;If that value is 
+ an Idea, completion of the assignment relates to that idea’s evolution, 
+ possibly impacting its lifecycle.</span></p>
+<p><span class="rvts13" style="font-style: italic;"><i>assignedTo</i></span> <span 
+	 class="rvts6">and</span> <span class="rvts13" style="font-style: italic;"><i>inSupportOf</i></span> 
+ <span class="rvts6">both have defined inverse properties, to help track 
+ who has assignments.</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

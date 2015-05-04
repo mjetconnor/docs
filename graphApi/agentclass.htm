@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Agent Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nAgent Datatypes\nAgent Class");
+addAvenueInfo("Basic Sequence","AgentDatatypes.htm","ApplicationClass.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"agentdatatypes.htm\">Agent Datatypes<\/a> &nbsp;&gt; Agent Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Agent Class</h1>
+<p><span class="rvts17" style="font-weight: bold;">Concepts</span><span 
+	 class="rvts17">:</span> <a class="rvts14" href="agentconcepts.htm">Agent 
+ Concepts</a></p>
+<p><span class="rvts6">The Friend-Of-A-Friend ontology (“FOAF”) is a broadly 
+ accepted, not to mention W3C approved, data model that describes data 
+ concepts related to users. &#160;The FOAF specification describes “Agent” 
+ this way:</span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>The</i></span> 
+ <span class="rvts54">Agent</span> <span class="rvts13">class is the class 
+ of agents; things that do stuff. A well known sub-class is</span> <span 
+	 class="rvts54">Person</span><span class="rvts13">, representing people. 
+ Other kinds of agents include</span> <span class="rvts54">Organization</span> 
+ <span class="rvts13">and</span> <span class="rvts54">Group</span><span 
+	 class="rvts13">.</span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>The</i></span> 
+ <span class="rvts54">Agent</span> <span class="rvts13">class is useful 
+ in a few places in FOAF where</span> <span class="rvts54">Person</span> 
+ <span class="rvts13">would have been overly specific. For example, the 
+ IM chat ID properties such as jabberID are typically associated with people, 
+ but sometimes belong to software bots.</span><span class="rvts17"><br />
+</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Equivalent to</span><span 
+	 class="rvts17">:</span> <span class="rvts6">foaf:Agent</span></p>
+<div class="rvps2">
+	<table class="TopRow" style="border: solid 1px #000000;" cellspacing="0" 
+			 width="100%">
+		<tr class="t1st" style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="103" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Property</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="103" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="71" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0in; margin-top: 0px; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Req</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="313" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0in; 
+										 margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="103"><p 
+				 style="margin-left: 0in; margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">name</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="103"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><a class="rvts14" href="xmlbaseddatatypes.htm">SimpleText</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="313"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The agent's full display name.</span></p></td>
+		</tr>
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="103"><p 
+				 style="margin-left: 0in; margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">img</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="103"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6"><a href="imageclass.htm">Image</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">SHOULD</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="313"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">An avatar image.</span></p></td>
+		</tr>
+		<tr class="t2Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="103"><p 
+				 style="margin-left: 0in; margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">description</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="103"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6"><a href="xmlbaseddatatypes.htm">String</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="313"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;">&#160;</p></td>
+		</tr>
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="103"><p 
+				 style="margin-left: 0in; margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">mbox</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="103"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6"><a href="emailaddressclass.htm">EmailAddress</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="313"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">This agent’s primary email address. &#160;&#160;&#160;This 
+			 value may also be an entry in this agent’s contactPoints.</span></p></td>
+		</tr>
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		<tr class="t1Row" style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="103"><p 
+				 style="margin-left: 0in; margin-top: 0px; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">score</span></p>
+			<p class="plurals" style="margin-top: 0px; margin-bottom: 4.5pt; 
+				 margin-left: 12px;"><a class="rvts51" href="collectionsandpluralpropertyname.htm" style="font-style: italic;">scores</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="103"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6"><a href="userscoreclass.htm">UserScore</a></span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="71"><p style="margin-left: 0in; 
+													 margin-top: 0px; margin-bottom: 4.5pt;"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">RULE</a></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="313"><p style="margin-left: 0in; 
+														 margin-top: 0px; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">The collection of all</span> <a class="rvts14" href="userscoreclass.htm">UserScore</a> 
+			 <span class="rvts6">entities whose</span> <span class="rvts13">base</span> 
+			 <span class="rvts6">property value is this agent. &#160;In 
+			 other words, all of my scores.</span></p></td>
+		</tr>
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+		
+			
+			
+			
+		
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

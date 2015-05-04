@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>PUT Queries</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nPUT Queries");
+addAvenueInfo("Basic Sequence","FieldsSyntaxSummary.htm","postqueries.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; PUT Queries<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>PUT Queries</h1>
+<p><span class="rvts6">Use the HTTP PUT request method to modify the properties 
+ of an existing MindjetGraph entity.</span></p>
+<p><span class="rvts6">The URL to be used for HTTP PUT requests is exactly 
+ the same described for the GET method. &#160;As with GET queries, the 
+ basic URL is simply an entity ID. &#160;That URL may be extended with 
+ property segments and matrix parameters to indicate an object that is 
+ somehow derived from the entity of the root URL.</span></p>
+<p><span class="rvts6">GET requests have no request body. &#160;PUT requests 
+ do. &#160;The request body is simply a set of name/value pairs in the 
+ format specified by the Content-Type header, that provides updated property 
+ values for the entity identified by the query URL. &#160;The name of a 
+ name/value pair is the name of a property for that entity. &#160;The value 
+ is the new value to set for that property, overriding the old value if 
+ necessary.</span></p>
+<p><span class="rvts6">Application logic always applies to update operations 
+ like this. &#160;The setting of a property may be rejected for access 
+ or logic reasons, or may trigger side-effects beyond that one simple action. 
+ &#160;PUT requests are atomically transactional, meaning that all of the 
+ property updates embodied in the request will either be successful or 
+ rejected together as a unit.</span></p>
+<p><span class="rvts6">The W3C defines the PUT method as being &quot;idempotent&quot;, 
+ and so it is with the MindjetGraph REST API. &#160;Idempotency means that 
+ the operation is one that has no additional effect if it is called more 
+ than once with the same input parameters. &#160;In the case of a PUT in 
+ MindjetGraph REST, that just means that the same value will be reassigned 
+ to a given property. &#160;If there are side-effects, they will not be 
+ replicated beyond the initial setting.</span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts25">PUT</span> 
+ <span class="rvts24">https://www.example.mindjet.com/api/ds1/node-75494</span></p>
+<p><span class="rvts6">with headers:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+				 margin-bottom: 0pt;"><span class="rvts24">Content-Type: 
+		 application/json</span></p>
+		<p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts24">Authorization: Bearer 
+		 914a9b4d83fa7333d3b517643a30bac2</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">and request body:</span></p>
+<table class="Code" style="margin-left: 40px;" cellspacing="0" width="100%" 
+		 align="center">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+				 margin-bottom: 0pt;"><span class="rvts24">{</span></p>
+		<p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts24">&#160;&#160;&#160;&quot;title&quot;:&quot;This 
+		 is my new title&quot;,</span></p>
+		<p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts24">&#160;&#160;&#160;&quot;img&quot;:&quot;http://mystuff.example.com/images/24393310.jpg&quot;</span></p>
+		<p class="Code_table" style="margin-left: 12px; margin-top: 0pt; 
+			 margin-bottom: 0pt;"><span class="rvts24">}</span></p></td>
+	</tr>
+</table>
+<p><span class="rvts6">sets new values for the</span> <span class="rvts13" 
+															 style="font-style: italic;"><i>title</i></span> 
+ <span class="rvts6">and</span> <span class="rvts13" style="font-style: italic;"><i>img</i></span> 
+ <span class="rvts6">properties of the entity &quot;_ds:node-75494&quot;.</span></p>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

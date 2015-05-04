@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>XML-Based Datatypes</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nPrimitive Datatypes\nXML-Based Datatypes");
+addAvenueInfo("Basic Sequence","Primitive_Datatypes.htm","RDFandOWLDatatypes.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"primitive_datatypes.htm\">Primitive Datatypes<\/a> &nbsp;&gt; XML-Based Datatypes<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">XML-Based Datatypes</span></h1>
+<p><span class="rvts6">These datatypes correlate directly to types defined 
+ for XML by the XSD standard &#160;[</span> <a class="rvts14" href="http://www.w3.org/TR/xmlschema-2/">http://www.w3.org/TR/xmlschema-2/</a> <span class="rvts6">].<br />
+</span></p>
+<div class="rvps2">
+	<table style="border: solid 1px #000000;" cellspacing="0" width="100%">
+		<tr style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">MindjetGraph 
+			 Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="84" bgcolor="#CEE0F2"><p 
+				 style="font-weight: bold; margin-left: 0pt; margin-top: 4.5pt; 
+				 margin-bottom: 4.5pt;"><span class="rvts17">Equivalent 
+			 XML Datatype</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="434" 
+				 bgcolor="#CEE0F2"><p style="font-weight: bold; margin-left: 0pt; 
+										 margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts17">Description</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">String</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:string</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Typical free-text value that may contain any 
+			 content, including all kinds of HTML markup</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Integer</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:integer</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">An integer value. &#160;For the purposes of 
+			 this specification, integers do not have size limitations, 
+			 akin to &quot;decimal&quot; types in SQL.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Decimal</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:decimal</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A number. &#160;Similar to Integer but with 
+			 the addition of a scale, which means that there may be &#160;fractional 
+			 part.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Boolean</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:boolean</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A boolean value:</span> <span class="rvts19" 
+														 style="font-weight: bold; 
+														 font-style: italic;"><i>true</i></span> 
+			 <span class="rvts6">or</span> <span class="rvts19" style="font-weight: bold; 
+												 font-style: italic;"><i>false</i></span><span 
+			 class="rvts6">.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">DateTime</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:dateTime</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A date-time value with a precision of 1 millisecond.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Date</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:date</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A date value with no time component.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Time</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:time</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A time value with no date component.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">URI</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:anyURI</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A URI value. &#160;URLs are a kind of URI.</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="88"><p 
+				 style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">SimpleText</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="84"><p style="margin-left: 0pt; 
+													 margin-top: 4.5pt; 
+													 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">xsd:token</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="434"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">A free-text value that contains no HTML markup 
+			 or rich text elements. &#160;It is used to identify text values 
+			 that will never have rich text features or embedded mark-up 
+			 elements. &#160;The</span> <span class="rvts13" style="font-style: italic;"><i>SimpleText</i></span> 
+			 <span class="rvts6">datatype should be used sparingly. &#160;It 
+			 should be used instead of</span> <span class="rvts13" style="font-style: italic;"><i>String</i></span> 
+			 <span class="rvts6">only if the use of rich text elements 
+			 is inherently inappropriate to the value.</span></p>
+			<p style="margin-left: 0pt; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">This datatype does not directly correspond to 
+			 any XML type. &#160;Its base class is xsd:token. &#160;xsd:string 
+			 is too broad, and xsd:Name is too limited in that that type imposes a limit on the character set 
+			 in a way that </span><span class="rvts6" style="font-style: italic;"><i>SimpleText</i></span><span 
+			 class="rvts6"> does not.</span></p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

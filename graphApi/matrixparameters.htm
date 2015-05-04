@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Matrix Parameters</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nGET Queries\nExtended Query URL\nMatrix Parameters");
+addAvenueInfo("Basic Sequence","PropertySegments.htm","PluralandSingularPropertyNames.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"getqueries.htm\">GET Queries<\/a> &nbsp;&gt; <a href=\"extendedqueryurl.htm\">Extended Query URL<\/a> &nbsp;&gt; Matrix Parameters<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Matrix Parameters</h1>
+<p><span class="rvts6">We can extend queries a little bit more by adding 
+ matrix parameters to a property segment in the query URL, using this syntax:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span class="rvts39">/</span><span 
+	 class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>selectionExpr</i></span></p>
+<p><span class="rvts6">The value of the property named by</span> <span 
+	 class="rvts13">propertyName</span> <span class="rvts6">is assumed 
+ to be a collection of some sort. &#160;The part of the path segment after 
+ the semicolon (&quot;;&quot;) is a rule for selecting a subset of elements 
+ from that collection. &#160;This simplest kind of rule is an equals comparison, 
+ expressed this way:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span class="rvts39">/</span><span 
+	 class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>pname</i></span><span 
+	 class="rvts38" style="font-weight: bold;">=</span><span class="rvts38" 
+															 style="font-style: italic;"><i>value</i></span></p>
+<p><span class="rvts6">Read this as follows: &#160;Get the value of</span> 
+ <span class="rvts13" style="font-style: italic;"><i>propertyName</i></span> <span 
+	 class="rvts6">from the</span> <span class="rvts13" style="font-style: italic;"><i>entityURI</i></span> 
+ <span class="rvts6">entity. &#160;It will be a collection. &#160;For each 
+ element in that collection, find the elements that have a</span> <span 
+	 class="rvts13" style="font-style: italic;"><i>pname</i></span> <span class="rvts6">property, 
+ and whose value for that property matches the requested</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>value</i></span><span class="rvts6">. &#160;The 
+ result of the query is a collection whose elements are all the matching 
+ elements.</span></p>
+<p><span class="rvts6">Collection entries that do not have a property value 
+ for</span> <span class="rvts13">pname</span> <span class="rvts6">will 
+ not match, and therefore will not be included in the response.</span></p>
+<p><span class="rvts6">The other comparison operators also work:</span></p>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span 
+	 class="rvts39">/</span><span class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>pname</i></span><span 
+	 class="rvts38">&gt;</span><span class="rvts38" style="font-style: italic;"><i>value</i></span></p>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span 
+	 class="rvts39">/</span><span class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>pname</i></span><span 
+	 class="rvts38">&lt;</span><span class="rvts38" style="font-style: italic;"><i>value</i></span></p>
+<p class="Code_table" style="margin-left: 40px;"><span class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span 
+	 class="rvts39">/</span><span class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>pname</i></span><span 
+	 class="rvts38">&gt;=</span><span class="rvts38" style="font-style: italic;"><i>value</i></span></p>
+<p class="Code_table" style="margin-left: 40px; margin-bottom: 13.5pt;"><span 
+	 class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span class="rvts39">/</span><span 
+	 class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>pname</i></span><span 
+	 class="rvts38">&lt;=</span><span class="rvts38" style="font-style: italic;"><i>value</i></span></p>
+<p><span class="rvts6">There may be multiple selection expressions, aka 
+ matrix parameters, in the same property segment. &#160;The more complete 
+ syntax is:</span></p>
+<p class="Code_table" style="margin-left: 40px; margin-bottom: 13.5pt; 
+	 background-color: #e4e4e4;"><span class="rvts38" style="font-style: italic;"><i>entityURI</i></span><span 
+	 class="rvts39">/</span><span class="rvts38" style="font-style: italic;"><i>propertyName</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>selectionExpr</i></span><span 
+	 class="rvts38">;</span><span class="rvts38" style="font-style: italic;"><i>selectionExpr</i></span><span 
+	 class="rvts38">;...</span></p>
+<p><span class="rvts6">The selection expressions are effectively AND'd 
+ together to create a single selection criterion. &#160;For example:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38">http://example.mindjet.com/api/ds1/comm-1</span><span 
+	 class="rvts39">/</span><span class="rvts38">inquiries;type=Challenge;title&gt;=c;title&lt;d</span></p>
+<p><span class="rvts6">where</span></p>
+<table style="left: 0px; top: 1189px; margin-left: 32px;" cellspacing="0" 
+		 width="678">
+	<col style="width: 21.751%;" />
+	<col style="width: 78.249%;" />
+	<tr>
+		<td><span class="rvts37">entityURI:</span></td>
+		<td><span class="rvts38" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt;"><font size="2" style="font-size:10pt;">http://example.mindjet.com/api/ds1/comm-1</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts37">propertyName</span><span class="rvts40" 
+															 style="font-family: 'Courier New', monospace; 
+															 font-size: 10pt;"><font size="2" style="font-size:10pt;">:</font></span></td>
+		<td><span class="rvts38" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt;"><font size="2" style="font-size:10pt;">inquiries</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts37">matrix parameters:</span></td>
+		<td><span class="rvts38" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt;"><font size="2" style="font-size:10pt;">type=Challenge (AND) title&gt;=c 
+		 (AND) title&lt;d</font></span></td>
+	</tr>
+</table>
+<p><span class="rvts6">This will return all of the inquiries in comm-1 
+ that are challenges and have a title in the range of &quot;c&quot;..&quot;d&quot; 
+ (case insensitive).</span></p>
+<p><span class="rvts6">These matrix parameters are part of the property 
+ segment. &#160;The whole thing can be repeated again, with yet another 
+ property segment following a matrix parameter, and that property segment 
+ may include matrix parameters of its own.</span></p>
+<p><span class="rvts6">Remember that normal URL encoding rules apply. &#160;Be 
+ sure to use percent encoding where necessary in the value expression. 
+ &#160;Also be sure to avoid whitespace like blank characters, unless of 
+ course they are encoded as %20.</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

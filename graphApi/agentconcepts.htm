@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Agent Concepts</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Concept Overviews\nAgent Concepts");
+addAvenueInfo("Basic Sequence","CommunityandTenantConcepts.htm","InquiryConcepts.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"concepts_overview.htm\">Concept Overviews<\/a> &nbsp;&gt; Agent Concepts<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Agent Concepts </span></h1>
+<p><span class="rvts6">The FOAF (Friend Of A Friend) data model is an RDF 
+ vocabulary that describes core concepts related to users, people and system 
+ actors in general. &#160;FOAF is a W3C recommended standard. &#160;It 
+ is already widely adopted by such social networking players as Facebook 
+ and Twitter. &#160;The MindjetGraph set of user and user-related classes 
+ conform very closely to FOAF with only minor additions.</span></p>
+<p><span class="rvts6">The center of this model are the</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>Agents</i></span><span class="rvts6">. &#160;Agents 
+ are actors in the system; things that do stuff. &#160;A well known sub-class 
+ is</span> <span class="rvts13" style="font-style: italic;"><i>Person</i></span><span 
+	 class="rvts6">, representing people. &#160;Other kinds of agents are</span> 
+ <span class="rvts13" style="font-style: italic;"><i>Applications</i></span><span 
+	 class="rvts6">,</span> <span class="rvts13" style="font-style: italic;"><i>Organization</i></span> 
+ <span class="rvts6">and even</span> <span class="rvts13" style="font-style: italic;"><i>Groups</i></span> 
+ <span class="rvts6">of agents. &#160;</span><span class="rvts13" style="font-style: italic;"><i>Users</i></span> 
+ <span class="rvts6">are a kind of</span> <span class="rvts13" style="font-style: italic;"><i>Person</i></span><span 
+	 class="rvts6">, specifically those persons who have</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>UserAccounts</i></span><span class="rvts6">. 
+ &#160;Note that a given account can be associated with more than one user. 
+ &#160;These can be thought of as different profiles for the same person.</span></p>
+<p><img alt="" src="newitem42.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts19">Classes in this diagram:</span> <span class="rvts6">&#160;</span><a class="rvts14" href="agentclass.htm">Agent</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="applicationclass.htm">Application</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="emailaddressclass.htm">EmailAddress</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="genderclass.htm">Gender</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="groupclass.htm">Group</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="imageclass.htm">Image</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="organizationclass.htm">Organization</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="personclass.htm">Person</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="xmlbaseddatatypes.htm">SimpleText</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="rdfandowldatatypes.htm">Thing</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="userclass.htm">User</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="useraccountclass.htm">UserAccount</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="userauthorityclass.htm">UserAuthority</a></p>
+<p><span class="rvts6">Because of the close fit, many FOAF terms (classes 
+ and properties) have directly corresponding MindjetGraph terms. &#160;In 
+ OWL terms, these elements are declared as being &quot;equivalent&quot;.</span></p>
+<h3><span class="rvts17">Equivalent classes:</span></h3>
+<div class="rvps5">
+	<table style="border: solid 1px #000000;" cellspacing="0" width="400">
+		<tr style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="146" 
+				 bgcolor="#E6E6E6"><p style="margin-left: 0pt; margin-top: 0pt; 
+										 margin-bottom: 4.5pt; font-weight: bold;"><span 
+			 class="rvts17">MindjetGraph Term</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="224" 
+				 bgcolor="#E6E6E6"><p style="margin-left: 0pt; margin-top: 0pt; 
+										 margin-bottom: 4.5pt; font-weight: bold;"><span 
+			 class="rvts17">Equivalent Term</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="146"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Agent</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="224"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:Agent</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="146"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Person</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="224"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:Person</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="146"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">UserAccount</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="224"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:OnlineAccount</span></p>
+			<p style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">sioc:UserAccount</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="146"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Group</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="224"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:Group</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="146"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Organization</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="224"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:Organization</span></p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<h3><span class="rvts17">Equivalent properties:</span></h3>
+<div class="rvps5">
+	<table style="border: solid 1px #000000;" cellspacing="0" width="400">
+		<tr style="vertical-align: top;">
+			<td style="border: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="144" 
+				 bgcolor="#E6E6E6"><p style="margin-left: 0pt; margin-top: 0pt; 
+										 margin-bottom: 4.5pt; font-weight: bold;"><span 
+			 class="rvts17">MindjetGraph Term</span></p></td>
+			<td style="border-top: solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="226" 
+				 bgcolor="#E6E6E6"><p style="margin-left: 0pt; margin-top: 0pt; 
+										 margin-bottom: 4.5pt; font-weight: bold;"><span 
+			 class="rvts17">Equivalent Term</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="144"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">name</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="226"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">dcmi:name</span></p>
+			<p style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:name</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="144"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">img</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="226"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:img</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="144"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">mbox</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="226"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:mbox</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="144"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">familyName</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="226"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:familyName</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="144"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">givenName</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="226"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:givenName</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="border-left: Solid 1px #000000; border-right: solid 1px #000000; 
+				 border-bottom: solid 1px #000000; padding-left: 6px; padding-top: 6px; 
+				 padding-right: 6px; padding-bottom: 6px;" width="144"><p 
+				 style="margin-left: 0pt; margin-top: 0pt; margin-bottom: 4.5pt;"><span 
+			 class="rvts6">accountName</span></p></td>
+			<td style="border-right: solid 1px #000000; border-bottom: solid 1px #000000; 
+				 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+				 padding-bottom: 6px;" width="226"><p style="margin-left: 0pt; 
+														 margin-top: 0pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">foaf:accountName</span></p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

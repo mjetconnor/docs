@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>ActivityLayout Class</title>
+<link type="text/css" rel="stylesheet" media="all" href="default.css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("ActivityLayout Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="topic_content">
+	<h1 class="rvps2"><span class="rvts17">ActivityLayout Class</span></h1>
+	<p><span class="rvts17" style="font-weight: bold;">Concepts</span><span 
+	 class="rvts17">:</span>&#160;<a class="rvts14" href="activityconcepts.htm">Activity 
+	 Concepts</a></p>
+	<p class="rvps2"><span class="rvts6">Activity layouts provide information 
+	 to applications that handle activity events as to how they should 
+	 be displayed. Get the set of possible layouts from the</span> <a class="rvts14" href="verbclass.htm">Verb</a> <span class="rvts6">of the activity 
+	 event. &#160;Then pick the layout that most closely matches the event 
+	 in terms of the object, target and actor types specified in the layout. 
+	 &#160;From that layout, choose the template that best corresponds 
+	 to the application's display or usage.</span></p>
+	<p class="rvps2"><span class="rvts6"><br />
+	</span></p>
+	<div class="rvps2">
+		<table class="TopRow" style="border-color: #000000; border-style: solid;" 
+				 cellspacing="0" width="100%">
+			<tr class="t1st" style="vertical-align: top;">
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="91" bgcolor="#E6E6E6"><p 
+					 class="rvps2"><span class="rvts17">Property</span></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="97" bgcolor="#E6E6E6"><p 
+					 class="rvps2"><span class="rvts17">Datatype</span></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="50" bgcolor="#E6E6E6"><p 
+					 class="rvps2"><span class="rvts17">Req</span></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="356" bgcolor="#E6E6E6"><p 
+					 class="rvps2"><span class="rvts17">Description</span></p></td>
+			</tr>
+			<tr class="t2Row" style="vertical-align: top;">
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="91"><p class="rvps2"><span 
+				 class="rvts6">objectType</span></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="97"><p class="rvps2"><a class="rvts14" href="rdfandowldatatypes.htm">Class</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="50"><p class="rvps2"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="356"><p class="rvps2"><span 
+				 class="rvts6"><br />
+				</span></p></td>
+			</tr>
+			<tr class="t1Row" style="vertical-align: top;">
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="91"><p class="rvps2"><span 
+				 class="rvts6">targetType</span></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="97"><p class="rvps2"><a class="rvts14" href="rdfandowldatatypes.htm">Class</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="50"><p class="rvps2"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="356"><p class="rvps2"><span 
+				 class="rvts6"><br />
+				</span></p></td>
+			</tr>
+			<tr class="t2Row" style="vertical-align: top;">
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="91"><p class="rvps2"><span 
+				 class="rvts6">actorType</span></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="97"><p class="rvps2"><a class="rvts14" href="rdfandowldatatypes.htm">Class</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="50"><p class="rvps2"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">MAY</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="356"><p class="rvps2"><span 
+				 class="rvts6"><br />
+				</span></p></td>
+			</tr>
+			<tr class="t1Row" style="vertical-align: top;">
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="91"><p class="rvps24"><span 
+				 class="rvts6">template</span></p>
+				<p class="rvps22"><a class="rvts51" href="collectionsandpluralpropertyname.htm">&#160;&#160;&#160;templates</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="97"><p class="rvps2"><a class="rvts14" href="rdfandowldatatypes.htm">Thing</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="50"><p class="rvps2"><a class="rvts14" href="requirementlevelsandmultiplicity.htm">[ 
+				 * ]</a></p></td>
+				<td style="border-color: #000000; border-style: solid; 
+					 padding-left: 6px; padding-top: 6px; padding-right: 6px; 
+					 padding-bottom: 6px;" width="356"><p class="rvps2"><span 
+				 class="rvts6"><br />
+				</span></p></td>
+			</tr>
+		</table>
+	</div>
+	<p class="rvps2"><span class="rvts6"><br />
+	</span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Activity Concepts</title>
+<link type="text/css" rel="stylesheet" media="all" href="default.css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("Activity Concepts<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="topic_content">
+	<p class="rvps2"><span class="rvts6">ActivityEvents 
+	 and ActivityStreams report on 
+	 significant events that occur within the application. &#160;The structure 
+	 described here is patterned heavily after the work of the</span> <a 
+	 class="rvts14" href="http://activitystrea.ms/">Activity Stream Work 
+	 Group</a><span class="rvts6">.</span></p>
+	<p class="rvps2"><span class="rvts6">The central concept is the</span> 
+	 <a class="rvts14" href="activityeventclass.htm">ActivityEvent</a><span 
+	 class="rvts6">. &#160;Every such event is characterized by an</span> 
+	 <span class="rvts13">actor</span> <span class="rvts6">(who did it), 
+	 an</span> <span class="rvts13">action</span> <span class="rvts6">(what 
+	 they did), a</span> <span class="rvts13">date</span> <span class="rvts6">(when 
+	 they did it), and an</span> <span class="rvts13">object</span> <span 
+	 class="rvts6">(what was manipulated). &#160;There may also be a</span> 
+	 <span class="rvts13">target</span> <span class="rvts6">(what got done 
+	 to).</span></p>
+	<p class="rvps2"><span class="rvts6">ActivityEvents 
+	 are also always</span> <a class="rvts14" href="entityclass.htm">Entities</a> 
+	 <span class="rvts6">(that's not the case with all</span> <a class="rvts14" href="eventclass.htm">Events</a><span class="rvts6">). &#160;That 
+	 means they also always have a globally unique ID and belong to a particular 
+	 dataSpace, and by extension a particular tenant.</span></p>
+	<p class="rvps2"><span class="rvts6">Actions are represented by</span> 
+	 <a class="rvts14" href="verbclass.htm">Verb</a> <span class="rvts6">entities. 
+	 &#160;Unlike most of the other entities we will encounter in MindjetGraph, 
+	 verbs are defined in a well-known central dataSpace: &quot;http://purl.org/sief/2013/10/activity&quot;. 
+	 &#160;The entityKeys for these entities 
+	 are well-known, published values that may be used to recognize the 
+	 action.</span></p>
+	<p class="rvps2"><span class="rvts6"><br />
+	</span></p>
+	<p class="rvps2"></p>
+	<p class="rvps2"><span class="rvts19">Classes in this diagram:</span> 
+	 <a class="rvts14" href="activityclass.htm">Activity</a><span class="rvts6">,</span> 
+	 <a class="rvts14" href="activityeventclass.htm">ActivityEvent</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="activitylayoutclass.htm">ActivityLayout</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="agentclass.htm">Agent</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="rdfandowldatatypes.htm">Class</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="conceptclass.htm">Concept</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="xmlbaseddatatypes.htm">DateTime</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="entityclass.htm">Entity</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="eventclass.htm">Event</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="xmlbaseddatatypes.htm">SimpleText</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="xmlbaseddatatypes.htm">String</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="rdfandowldatatypes.htm">Thing</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="verbclass.htm">Verb</a></p>
+	<p class="rvps2"><span class="rvts6">Verbs are a sub-class of</span> 
+	 <a class="rvts14" href="conceptclass.htm">Concept</a><span class="rvts6">, 
+	 which means that they have</span> <span class="rvts13">broader</span> 
+	 <span class="rvts6">and</span> <span class="rvts13">narrower</span> 
+	 <span class="rvts6">relationships, with other verbs. &#160;This is 
+	 analogous to the &quot;hypernym&quot; 
+	 and &quot;hyponym&quot; relationships 
+	 discussed in &#160;</span><a class="rvts14" href="http://activitystrea.ms/">Activity 
+	 Stream Work Group</a><span class="rvts6">. &#160;Beware that an activity 
+	 may have more than one broader concept (aka hypernym), although that 
+	 is rare. &#160;To be sure, it is rare to write code that dynamically 
+	 processes these kinds of relationships, but it is there if you need 
+	 it.</span></p>
+	<p class="rvps2"><span class="rvts6">ActivityEvents are delivered by 
+	 way of</span> <a class="rvts14" href="activitystreamclass.htm">ActivityStreams</a><span 
+	 class="rvts6">. &#160;A specific activityStream always has a</span> 
+	 <span class="rvts13">base</span> <span class="rvts6">property that 
+	 identifies its core organization principle for what belongs in the 
+	 stream. &#160;Application logic, and potentially complicated logic 
+	 at that, may come to play to determine which events correspond to 
+	 a particular base. &#160;ActivityStreams may additionally be associated 
+	 with a filter that further limits which events belong to the stream.</span></p>
+	<p class="rvps2"></p>
+	<p class="rvps2"><span class="rvts19">Classes in this diagram:</span> 
+	 <a class="rvts14" href="activityeventclass.htm">ActivityEvent</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="activitypatternclass.htm">ActivityPattern</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="activitystreamclass.htm">ActivityStream</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="rdfandowldatatypes.htm">Thing</a></p>
+	<p class="rvps2"><span class="rvts6">Note that order and paging are 
+	 not elements of the data model. &#160;Those features come to play 
+	 in which ever access mechanism is used, such as the REST API.</span></p>
+	<p class="rvps2"><span class="rvts6"><br />
+	</span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

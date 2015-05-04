@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Constructions</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nDataypes and Classes\nPrimitive Datatypes\nConstructions");
+addAvenueInfo("Basic Sequence","RDFandOWLDatatypes.htm","GeneralPurposeDatatypes.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"datatypesandclasses.htm\">Dataypes and Classes<\/a> &nbsp;&gt; <a href=\"primitive_datatypes.htm\">Primitive Datatypes<\/a> &nbsp;&gt; Constructions<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Object Constructions</span></h1>
+<h2><span class="rvts6">Formatted Text and Enumerations</span></h2>
+<p><span class="rvts6">The values of some datatypes are text string values 
+ that are constrained in some way by specification.</span></p>
+<p><span class="rvts6">Enumerated values are of this type, where the legal 
+ values for the datatype are delineated in some kind of list. &#160;Some 
+ enumerated types are defined by industry standard, such as the ISO 639-2 
+ standard that defines <a href="languageclass.htm">Language</a> values. 
+ &#160;Other enumerated types are defined by this model, such as for the 
+ <a href="entitystatusclass.htm">EntityStatus</a> class. &#160;</span></p>
+<p><span class="rvts6">Other formatted text types are defined more in the 
+ manner of a text pattern. &#160;Examples of this are the <a href="emailaddressclass.htm">EmailAddress</a> 
+ and <a href="phonenumberclass.htm">PhoneNumber</a> classes. &#160;Email 
+ addresses are tightly spec'd by industry standards RFC 5321 and 5322, 
+ whereas phone numbers are still largely by informal common usage.</span></p>
+<h2><span class="rvts6">Objects</span></h2>
+<p><span class="rvts6">All non-primitive values are objects. &#160;Objects 
+ are really just collections of name/value pairs, where the name is a property 
+ name and the value is the value of that property. &#160;The specific physical 
+ representation depends on the language binding. &#160;This corresponds 
+ very naturally to the JavaScript notion of objects as associative arrays, 
+ for instance.</span></p>
+<p><span class="rvts6">When objects are represented as associative arrays 
+ or name/value pairs, as with JavaScript as we just mentioned, you cannot 
+ have the same property name represented twice. &#160;This is &#160;handled 
+ by using the singular or plural form of a property name. &#160;This is 
+ discussed in more detail in <a href="collectionsandpluralpropertyname.htm">Collections 
+ and Plural Property Names</a>.</span></p>
+<p><span class="rvts6">Many of the classes defined by the Mindjet Graph 
+ &#160;data model describe kinds of objects. &#160;The job of the class 
+ definition is to describe what properties are expected to appear for objects 
+ of that particular datatype.</span></p>
+<h2><span class="rvts6">Collections</span></h2>
+<p><span class="rvts6">The MindjetGraph data model has no collection datatype 
+ per se. &#160;Collections appear as properties that may have multiple 
+ values as indicated by the <a href="requirementlevelsandmultiplicity.htm">[ 
+ * ] or [ 1 ] requirement levels</a>. &#160;The specific form that these 
+ objects take depends on the API language binding being used. &#160;The 
+ format used by the <a href="responseformat.htm">REST API</a> is discussed 
+ <a href="collectionresultelements.htm">here</a>.</span></p>
+<h2><span class="rvts6">Inheritance</span></h2>
+<p><span class="rvts6">Some classes are defined as being sub-classes of 
+ other classes. &#160;An example is the <a href="challengeclass.htm">Challenge</a> 
+ class, which is a subclass of the <a href="inquiryclass.htm">Inquiry</a> 
+ class, which itself is a subclass of both the <a href="collaborationclass.htm">Collaboration</a> 
+ and <a href="conceptschemeclass.htm">ConceptScheme</a> classes.</span></p>
+<p><span class="rvts6">Inheritance simply means that all of the property 
+ descriptions defined for the parent class also apply the child class. 
+ &#160;In some cases, a child class may re-specify a property found in 
+ the parent class in a more restrictive way, for instance by defining a 
+ tighter requirement level or by specifying a value datatype that is a 
+ subclass of the one specified in the parent. &#160;An example of this 
+ last case is the <a href="ideascoreclass.htm">IdeaScore</a> class that 
+ is a subclass of the <a href="facetclass.htm">Facet</a> class. &#160;The</span> 
+ <span class="rvts6" style="font-style: italic;"><i>base</i></span> <span class="rvts6">property 
+ is defined to be a <a href="rdfandowldatatypes.htm">Resource</a> by the 
+ <a href="facetclass.htm">Facet</a></span> <span class="rvts6">class, but 
+ is more tightly defined to be an <a href="ideaclass.htm">Idea</a> by the 
+ <a href="ideascoreclass.htm">IdeaScore</a></span> <span class="rvts6">class.</span></p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

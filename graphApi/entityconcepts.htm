@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Entity Concepts</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Concept Overviews\nEntity Concepts");
+addAvenueInfo("Basic Sequence","RDFSemanticWebConcepts.htm","CommunityandTenantConcepts.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"concepts_overview.htm\">Concept Overviews<\/a> &nbsp;&gt; Entity Concepts<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Entity Concepts</h1>
+<p><span class="rvts6">Resources in MindjetGraph are called</span> <span 
+	 class="rvts17" style="font-weight: bold; font-style: italic;"><i>entities</i></span><span 
+	 class="rvts6">. &#160;Entities are the core elements of MindjetGraph. 
+ &#160;All persisted data in MindjetGraph are either entities or properties 
+ of those entities.</span></p>
+<p><span class="rvts6">Because entities are RDF resources, they all have 
+ URI identifiers that are global and durable. &#160;This URI may be used 
+ at any time, within the limits of access controls of course, to retrieve 
+ and interact with an entity. &#160;</span></p>
+<p><span class="rvts6">This UML diagram illustrates the basic structure. 
+ &#160;Resources have &quot;eid&quot; (shorthand for &quot;entity ID&quot;) 
+ properties that are URIs. &#160;Entity is a kind of Resource (a &quot;subclass&quot;, 
+ indicated by the open arrowhead in the diagram), which means that entities 
+ also have eids. &#160;Entities additionally have &quot;type&quot; properties; 
+ their values are Classes.</span></p>
+<p><img alt="" src="newitem142.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts13">Classes in this diagram:</span> <a class="rvts14" href="rdfandowldatatypes.htm">Class,</a> 
+ <a class="rvts14" href="entityclass.htm">Entity</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="rdfandowldatatypes.htm">Resource,</a> <a class="rvts14" href="xmlbaseddatatypes.htm">URI</a></p>
+<p><span class="rvts6">You can think of the arrows</span> <img alt="" src="newitem143.png" style="padding: 1px;" border="0" /> <span class="rvts6">as either 
+ RDF statements or property relationships, whichever you prefer.</span></p>
+<h2><span class="rvts18">Data Management and Organization</span></h2>
+<p><span class="rvts6">With graph databases, it is a good idea to avoid 
+ thinking in terms of &quot;containership&quot;, as in &quot;A contains 
+ B&quot; or &quot;B belongs to A&quot;. &#160;Better to think of the many 
+ ever-changing and often non-exclusive ways that A and B relate to each 
+ other. &#160;As we have seen, these relationships are captured by RDF 
+ statements, which we also call properties.</span></p>
+<p><span class="rvts6">Nevertheless, the MindjetGraph model does impose 
+ a basic containership model on all of its elements. &#160;In short:</span></p>
+<ol style="text-indent: 0px; margin-left: 24px; list-style-position: outside; 
+		 list-style-type: decimal;">
+	<li class="rvps2"><p><span class="rvts6">Every entity</span> <span 
+	 class="rvts13" style="font-style: italic;"><i>belongs</i></span> <span class="rvts6">to 
+	 a single</span> <span class="rvts17" style="font-weight: bold; font-style: italic;"><i>dataSpace</i></span><span 
+	 class="rvts6">, and has a unique key within that dataSpace.</span></p></li>
+	<li class="rvps2"><p><span class="rvts6">Every dataSpace</span> <span 
+	 class="rvts13" style="font-style: italic;"><i>belongs</i></span> <span class="rvts6">to 
+	 a single</span> <span class="rvts17" style="font-weight: bold; font-style: italic;"><i>gateway</i></span><span 
+	 class="rvts6">, and has a unique key within that gateway.</span></p></li>
+	<li class="rvps2"><p><span class="rvts6">Every gateway is both identified 
+	 and reachable by a well-known public URL.</span></p></li>
+</ol>
+<p><img alt="" src="newitem144.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts6">DataSpaces and gateways also have a relationship 
+ to</span> <a class="rvts14" href="tenantclass.htm">tenants</a><span class="rvts6">. 
+ &#160;That is covered in more detail in</span> <a class="rvts14" href="communityandtenantconcepts.htm">Community 
+ and Tenant Concepts</a><span class="rvts6">.</span></p>
+<h2><span class="rvts18">Entity IDs</span></h2>
+<p><span class="rvts6">The URIs that identify every entity correspond to 
+ the structure just described. &#160;All MindjetGraph entity IDs look like 
+ this:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts38" style="font-style: italic;"><i>gatewayURL</i></span><span 
+	 style="font-weight: bold;"> </span><span class="rvts39" style="font-weight: bold;">/</span> 
+ <span class="rvts38" style="font-style: italic;"><i>dataspaceKey</i></span><span 
+	 style="font-weight: bold;"> </span><span class="rvts39" style="font-weight: bold;">/</span> 
+ <span class="rvts38" style="font-style: italic;"><i>entityKey</i></span></p>
+<p><span class="rvts6">Example:</span></p>
+<p class="Code" style="margin-left: 48px;"><span class="rvts43" style="color: #0000ff;"><font color="blue" >http://xyz.mindjet.com/graph</font></span><span 
+	 class="rvts37">/</span><span class="rvts42" style="color: #008000;"><font color="green" >nyc</font></span><span 
+	 class="rvts37">/</span><span class="rvts41" style="color: #ff0000;"><font color="red" >u512-312.b</font></span></p>
+<p><span class="rvts6">has these components:</span></p>
+<table style="left: 0px; top: 1189px; margin-left: 32px;" cellspacing="0" 
+		 width="548">
+	<col style="width: 23.626%;" />
+	<col style="width: 76.374%;" />
+	<tr>
+		<td><span class="rvts6">gateway URL &#160;&#160;&#160;&#160;&#160;</span></td>
+		<td><span class="rvts43" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #0000ff;"><font size="2" color="blue" style="font-size:10.000000pt;">http://xyz.mindjet.com/graph</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">dataspace key &#160;&#160;&#160;</span></td>
+		<td><span class="rvts42" style="font-family: 'Courier New', monospace; 
+					 color: #008000; font-size: 10pt;"><font size="2" color="green" style="font-size:10.000000pt;">nyc</font></span></td>
+	</tr>
+	<tr>
+		<td><span class="rvts40">entity key &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></td>
+		<td><span class="rvts41" style="font-family: 'Courier New', monospace; 
+					 font-size: 10pt; color: #ff0000;"><font size="2" color="red" style="font-size:10.000000pt;">u512-312.b</font></span></td>
+	</tr>
+</table>
+<p><span class="rvts6">The dataSpace and entity keys may be any string 
+ of unreserved URL characters (the ASCII alphanumeric characters, dash, 
+ underscore, dot and tilde). &#160;These are purely identifiers. &#160;One 
+ should never infer anything from these keys, especially not the entity's 
+ type. &#160;The way to get an entity's type is to look at its &quot;rdf:type&quot; 
+ property.</span></p>
+<p>We can now add a few more parts to our simple diagram from above:</p>
+<p><img alt="" src="newitem149.png" style="padding: 1px;" border="0" /></p>
+<p><span class="rvts19">Classes in this diagram:</span> <a class="rvts14" href="dataspaceclass.htm">DataSpace,</a> 
+ <a class="rvts14" href="entityclass.htm">Entity</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="rdfandowldatatypes.htm">Resource</a><span class="rvts6">,</span> 
+ <a class="rvts14" href="xmlbaseddatatypes.htm">SimpleText,</a> <a class="rvts14" href="xmlbaseddatatypes.htm">URI</a></p>
+<p><span class="rvts6">In addition to their eid property,</span> <a class="rvts14" href="entityclass.htm">entity</a><span class="rvts6">'s have</span> 
+ <span class="rvts13" style="font-style: italic;"><i>entityKey</i></span> <span 
+	 class="rvts6">and</span> <span class="rvts13" style="font-style: italic;"><i>dataSpace</i></span> 
+ <span class="rvts6">properties. &#160;The</span> <span class="rvts13" 
+														 style="font-style: italic;"><i>eid</i></span> 
+ <span class="rvts6">property is constructed from these in the way described 
+ above. &#160;</span><a class="rvts14" href="dataspaceclass.htm">DataSpace</a> 
+ <span class="rvts6">is itself a kind of Entity.</span></p>
+<p><span class="rvts6"><br />
+</span></p>
+<p><span class="rvts17">Common Entity Properties</span></p>
+<p><span class="rvts6">All MindjetGraph entities regardless of type maintain 
+ these properties:</span> <span class="rvts13" style="font-style: italic;"><i>eid</i></span><span 
+	 class="rvts6">,</span> <span class="rvts13" style="font-style: italic;"><i>dataSpace</i></span><span 
+	 class="rvts6">,</span> <span class="rvts13" style="font-style: italic;"><i>type</i></span><span 
+	 class="rvts6">,</span> <span class="rvts13" style="font-style: italic;"><i>creator</i></span><span 
+	 class="rvts6">,</span> <span class="rvts13" style="font-style: italic;"><i>created</i></span><span 
+	 class="rvts6">, and</span> <span class="rvts13" style="font-style: italic;"><i>status</i></span><span 
+	 class="rvts6">.</span></p>
+<p><img src="image2.gif" alt="" style="border: none;" border="0" /></p>
+<p><span class="rvts19">Classes in this diagram:</span> <a class="rvts14" href="agentclass.htm">Agent</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="rdfandowldatatypes.htm">Class</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="xmlbaseddatatypes.htm">DateTIme</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="entityclass.htm">Entity</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="entitystatusclass.htm">EntityStatus</a><span 
+	 class="rvts6">,</span> <a class="rvts14" href="xmlbaseddatatypes.htm">URI</a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

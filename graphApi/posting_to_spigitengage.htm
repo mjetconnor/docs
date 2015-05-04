@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="NOODP" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Posting to SpigitEngage</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("SpigitEngage\nPosting in SpigitEngage");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"spigitengageandmindjetgraph.htm\">SpigitEngage<\/a> &nbsp;&gt; Posting in SpigitEngage<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Posting in SpigitEngage</span></h1>
+<p>This section details the POST functions that are supported by SpigitEngage.</p>
+<p><a href="post_to_comment.htm">Posts to Comments</a></p>
+<p><a href="post_to_discussion.htm">Posts to Discussions</a></p>
+<p><a href="post_to_idea.htm">Posts to Ideas</a></p>
+<p><a href="post_to_ideaset.htm">Posts to IdeaSets</a></p>
+<p><a href="post_to_inquiry.htm">Posts to Inquiries</a> &#160;(Challenges 
+ and SuggestionBoxes)</p>
+<p>&#160;</p>
+<p>The syntax for handling POST functions in the <a href="rest_api.htm">REST 
+ API</a> is described <a href="postqueries.htm">here</a>. &#160;The same 
+ rules apply for all posts:</p>
+<ol style="list-style: decimal;">
+	<li>Posts are HTTP queries that use the POST method.</li>
+	<li>The requests are sent to a &quot;target&quot; entity. &#160;In 
+	 other words, the URL of the POST request is the entity ID of a target 
+	 entity.</li>
+	<li>The body of the post request contains name-value pairs of information 
+	 that are essentially arguments to the post.</li>
+	<li>The post body may be a single object in JSON format whose properties 
+	 are the post arguments. &#160;Or it may be in form-urlencoded format 
+	 with the form fields corresponding to the post arguments.</li>
+	<li>Posts have result values that are returned in the response to the 
+	 post request. &#160;These are represented in the standard <a href="responseformat.htm">MindjetGraph 
+	 REST response format</a>.</li>
+</ol>
+<p>The behavior of a post is determined by the type of the target entity 
+ and two key properties in the post body - <span style="font-style: italic; 
+												 font-weight: bold;"><i>action</i></span> 
+ and <span style="font-style: italic; font-weight: bold;"><i>type</i></span>. 
+ &#160;The default value for <span style="font-style: italic;"><i>action</i></span> 
+ is &quot;post&quot;. &#160;For &quot;post&quot; actions, the value of 
+ <span style="font-style: italic;"><i>type</i></span> indicates the type of thing 
+ you are trying to post.</p>
+<p>Posts are very much like method calls in object orientation. &#160;The 
+ target entity is just like the target object of methods. &#160;The <span 
+	 style="font-style: italic;"><i>action</i></span> value is the method name. 
+ &#160;The other post body values are the arguments to the method. &#160;The 
+ response contains the result of executing the method.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

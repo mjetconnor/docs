@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Fields Query Parameter</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nResponse Format\nEntity Result Elements\nFields Query Parameter");
+addAvenueInfo("Basic Sequence","EntityResultElements.htm","PropertyExpressions.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"responseformat.htm\">Response Format<\/a> &nbsp;&gt; <a href=\"entityresultelements.htm\">Entity Result Elements<\/a> &nbsp;&gt; Fields Query Parameter<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1><span class="rvts6">Fields Query Parameter</span></h1>
+<p class="rvps2"><span class="rvts6">The value of the</span> <span class="rvts13">fields</span> 
+ <span class="rvts6">query parameter is a</span> <span class="rvts13" style="font-style: italic;"><i>field 
+ list</i></span><span class="rvts6">, which is a comma-delimited list of</span> 
+ <span class="rvts13" style="font-style: italic;"><i>field phrases</i></span><span 
+	 class="rvts6">. &#160;The most common</span> <span class="rvts13" 
+														 style="font-style: italic;"><i>field 
+ phrase</i></span> <span class="rvts6">is a</span> <span class="rvts13" style="font-style: italic;"><i>property 
+ expression</i></span><span class="rvts6">. &#160;The simplest property expression 
+ is just the name of a property. &#160;So, the simplest</span> <span class="rvts13" 
+	 style="font-style: italic;"><i>field list</i></span> <span class="rvts6">is 
+ just a comma-delimited list of property names.</span></p>
+<p class="rvps2"><span class="rvts6">Examples:</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38">...?</span><span class="rvts37">fields=title,creator,created</span></p>
+<p class="Code_table" style="margin-left: 40px; background-color: #e4e4e4;"><span 
+	 class="rvts38">...?</span><span class="rvts37">fields=name,dateOfBirth,gender,mbox</span></p>
+<p class="rvps2"><span class="rvts40">For the first example, the response 
+ will include the &quot;title&quot;, &quot;creator&quot; and &quot;created&quot; 
+ properties of the result object. &#160;If the result is an entity, the 
+ &quot;eid&quot; and &quot;type&quot; properties are also included because 
+ they always are included for entities. &#160;No other properties are included 
+ for the top level result object.</span></p>
+<p class="rvps2"><span class="rvts40">This list only applies to the top 
+ level entity in the response. &#160;For nested entities, the default rule 
+ still applies, which is the</span> <span class="rvts60" style="font-style: italic;"><i>summary</i></span> 
+ <span class="rvts40">rule. &#160;In the first example, assuming that the 
+ value of the &quot;creator&quot; property is a User entity, the properties 
+ included in the response for that entity will be the user's &quot;eid&quot;, 
+ &quot;type&quot; (presumably &quot;User&quot;) and &quot;name&quot; if 
+ they have one.</span></p>
+<p class="rvps2"><a class="rvts14" href="propertyexpressions.htm">Property 
+ expressions</a><span class="rvts40">, described in the next topic, are 
+ used to instruct how to return nested values.</span></p>
+<h2><span class="rvts61">Whitespace</span></h2>
+<p class="rvps2"><span class="rvts6">The</span> <span class="rvts13" style="font-style: italic;"><i>fields 
+ list</i></span> <span class="rvts6">syntax is happy with whitespace. 
+ &#160;Some of the examples in this document will show fields values using 
+ newlines and tabs to help illustrate the 
+ structure of complex expressions. &#160;Remember though that URL encoding 
+ is not so accepting of whitespace. &#160;When a field list is specified 
+ using the</span> <span class="rvts13" style="font-style: italic;"><i>fields</i></span> 
+ <span class="rvts6">query parameter, be sure to URL encode as necessary 
+ (&quot;+&quot; or &quot;%20&quot; for blank space, for instance). &#160;It 
+ may be easiest to just trim the whitespace out for actual queries.<br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

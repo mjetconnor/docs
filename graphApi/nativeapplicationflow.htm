@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Native Application Flow</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reference\nREST API\nAuthentication with OAuth 2.0\nOAuth 2.0 Authorization Flows\nNative Application Flow");
+addAvenueInfo("Basic Sequence","UserAgentFlow.htm","RefreshTokens.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"reference.htm\">Reference<\/a> &nbsp;&gt; <a href=\"rest_api.htm\">REST API<\/a> &nbsp;&gt; <a href=\"authenticationwithoauth20.htm\">Authentication with OAuth 2.0<\/a> &nbsp;&gt; <a href=\"oath_2.0_authorization_flows.htm\">OAuth 2.0 Authorization Flows<\/a> &nbsp;&gt; Native Application Flow<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Native Application Flow</h1>
+<p><span class="rvts6">From the</span> <a class="rvts14" href="http://tools.ietf.org/html/draft-ietf-oauth-v2-20">OAuth 
+ 2.0 v20 specification</a><span class="rvts6">:</span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>A 
+ native application is a public client installed and executed on the resource 
+ owner's device. &#160;Protocol data and credentials are accessible to 
+ the resource owner. &#160;It is assumed that any client authentication 
+ credentials included in the application can be extracted. &#160;On the 
+ other hand, dynamically issued credentials such access tokens or refresh 
+ tokens, can receive an acceptable level of protection. &#160;At a minimum, 
+ these credentials are protected from hostile servers which the application 
+ may interact with. &#160;On some platform these credentials might be protected 
+ from other applications residing</i></span> <span class="rvts6">on the same</span> 
+ <span class="rvts13">device.</span></p>
+<p><span class="rvts6">In other words, use this flow if your application 
+ runs completely in your own environment. &#160;More important, use this 
+ flow if there can be no active end-user, for instance when running an 
+ automated batch process. &#160;In this flow, the authentication credentials 
+ to be used by the application, in particular the Mindjet username and 
+ password, are included right in your application code. &#160;For that 
+ reason, never use this flow in an application that runs in part in external 
+ user agents. &#160;It is much too easy to hack access to the username 
+ and password in that case.</span></p>
+<p>&#160;</p>
+<p><span class="rvts6">This flow strings the OAuth 2.0 requests together 
+ in the following way.</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 1.</span><span 
+	 class="rvts17">&#160;</span>&#160;<span class="rvts6">From your application, 
+ execute an</span><span style="font-family: 'Courier New', monospace;"> 
+ <a class="rvts14" href="oauthtoken.htm" style="font-family: 'Courier New', monospace;">/oauth/token</a></span> 
+ <span class="rvts6">request, specifying the grant_type=password parameter 
+ in the request body. &#160;Both the client secret and user password are 
+ included in the body of this request, so be sure to use https: to encrypt 
+ it.</span></p>
+<p><span class="rvts6">There are no redirections at all here. &#160;A new 
+ user session is created for this username, so no login page is involved. 
+ &#160;</span></p>
+<p><span class="rvts17" style="font-weight: bold;">Step 2.</span> <span 
+	 class="rvts6">&#160;Get the access token from the response to Step 
+ 1. &#160;Make REST requests by specifying that access token in the &quot;Authorization&quot; 
+ header of each request.</span></p>
+<p>&#160;</p>
+<p><span class="rvts6">This flow is often used in server</span><span class="rvts6" 
+	 style="font-style: italic;"><i> cron</i></span><span 
+	 class="rvts6"> jobs, so an example using</span> <span class="rvts13" 
+															 style="font-style: italic;"><i>curl</i></span> 
+ <span class="rvts6">might be helpful. &#160;It's pretty simple actually. 
+ Just use the -d option to specify the request parameters. &#160;</span><span 
+	 class="rvts13" style="font-style: italic;"><i>curl</i></span> <span class="rvts6">automatically 
+ takes this to mean that the request method should be POST. &#160;Once 
+ again, notice that the client secret and user password are right there 
+ in the request, so be sure to put this in a script file that has appropriately 
+ limited read access.</span></p>
+<p class="Code" style="margin-left: 36px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+	 class="rvts29">curl https://www.example.mindjet.com/oauth/token &#160;&#160;&#160;\</span></p>
+<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+	 class="rvts29">-d grant_type=password &#160;&#160;&#160;\</span></p>
+<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+	 class="rvts29">-d client_id=HHejhgvjhe7WT &#160;&#160;&#160;\</span></p>
+<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+	 class="rvts29">-d client_secret=sGKejvoiEJiVJ98tt993FJGljd090DGJdgw6754SfGkne 
+ &#160;&#160;&#160;\</span></p>
+<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+	 class="rvts29">-d username=admin &#160;&#160;&#160;\</span></p>
+<p class="Code" style="margin-left: 72px; margin-top: 0pt; margin-bottom: 0pt;"><span 
+	 class="rvts29">-d password=foobar</span></p>
+<p><span class="rvts13" style="font-family: 'Courier New', monospace; font-style: italic;"><i>curl</i></span> 
+ <span class="rvts6">usually does a good job of automatically handling 
+ all of the heavy lifting for SSL and https: requests. &#160;In some cases, 
+ you may need to explicitly specify a certificate using the --cert option.</span></p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

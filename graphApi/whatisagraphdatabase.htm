@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>What is a Graph Database?</title>
+<!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+<style type="text/css">
+<!--
+#topic_header { background-color:#EFEFEF; }
+-->
+</style>
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+ <link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Welcome to the Mindjet Graph Developers Guide\nWhat is a Graph Database?");
+addAvenueInfo("Basic Sequence","WelcometoMindjetGraphDevelopersG.htm","TheSemanticWeb1.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"welcometomindjetgraphdevelopersg.htm\">Welcome to the Mindjet Graph Developers Guide<\/a> &nbsp;&gt; What is a Graph Database?<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>What is a Graph Database?</h1>
+<p><span class="rvts6">MindjetGraph is a</span> <span class="rvts13" style="font-style: italic;"><i>graph</i></span> 
+ <span class="rvts6">data model. &#160;Everything in a graph database is 
+ either a</span> <span class="rvts13" style="font-style: italic;"><i>vertex</i></span> 
+ <span class="rvts6">or an</span> <span class="rvts13" style="font-style: italic;"><i>edge</i></span><span 
+	 class="rvts6">. &#160;Or a</span> <span class="rvts13" style="font-style: italic;"><i>node</i></span> 
+ <span class="rvts6">or a</span> <span class="rvts13" style="font-style: italic;"><i>relationship</i></span><span 
+	 class="rvts6">. &#160;Or a</span> <span class="rvts13" style="font-style: italic;"><i>resource</i></span> 
+ <span class="rvts6">or a</span> <span class="rvts13" style="font-style: italic;"><i>property</i></span><span 
+	 class="rvts6">. &#160;Or a</span> <span class="rvts13" style="font-style: italic;"><i>subject</i></span> 
+ <span class="rvts6">or a</span> <span class="rvts13" style="font-style: italic;"><i>predicate</i></span><span 
+	 class="rvts6">.</span></p>
+<p><span class="rvts6">These are different labels for exactly the same 
+ thing. &#160;This zealous richness of language may project an air of complexity, 
+ but this kind of model is really simplicity itself. &#160;It all comes 
+ down to just:</span></p>
+<table class="Mindjet_invisible" cellspacing="0" width="90.071%">
+	<col style="width: 28.929%;" />
+	<col style="width: 71.071%;" />
+	<tr>
+		<td style="vertical-align: Top;"><p>1. &#160;Things, and</p></td>
+		<td style="vertical-align: Top;"><p><span style="font-style: italic; 
+													 color: #3f7f7f;"><font color="#3f7f7f" ><i>aka 
+		 vertex, node, resource, subject</i></font></span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: Top;"><p>2. &#160;How Things Relate 
+		 to Other Things.</p></td>
+		<td style="vertical-align: Top;"><p><span style="font-style: italic; 
+													 color: #3f7f7f;"><font color="#3f7f7f" ><i>aka 
+		 edge, relationship, property, predicate</i></font></span></p></td>
+	</tr>
+</table>
+<p class="rvps2">&#160;</p>
+<p class="rvps2"><span class="rvts6">This way of looking at data is especially 
+ powerful when the data domain is rich, as it certainly is for Innovation 
+ Management.</span></p>
+<p class="rvps3"><img alt="" src="newitem153.png" style="padding: 1px;" align="left" border="0" /></p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3">&#160;</p>
+<p class="rvps3"><span class="rvts6">(</span> <a class="rvts14" href="http://www.computerweekly.com/feature/Whiteboard-it-the-power-of-graph-databases">&quot;Whiteboard 
+ it - the power of graph databases&quot;</a> <span class="rvts6">)</span></p>
+<h2><span class="rvts18">What They Say</span></h2>
+<p class="rvps2"><span class="rvts6">Neo4J,</span> <a class="rvts14" href="http://www.neo4j.org/learn/graphdatabase">&quot;What 
+ is a Graph Database?&quot;</a><span class="rvts6">:</span></p>
+<p class="rvps5" style="margin-left: 48px; font-style: italic;"><span class="rvts13">A 
+ graph database stores data in a graph, the most generic of data structures, 
+ capable of elegantly representing any kind of data in a highly accessible 
+ way.</span></p>
+<p class="rvps2" style="margin-left: 8px;"><span class="rvts6">Michael 
+ Hunger in</span> <a class="rvts14" href="http://programming.oreilly.com/2013/07/why-choose-a-graph-database.html">&quot;Why 
+ Choose a Graph Database?&quot;</a><span class="rvts6">:</span></p>
+<p class="rvps5" style="margin-left: 48px; font-style: italic;"><span class="rvts13">Graph 
+ databases are well suited to model rich domains. Both object models and 
+ ER-diagrams are already graphs and provide a hint at the whiteboard-friendliness 
+ of the data model and the low-friction mapping of objects into graphs.</span></p>
+<p class="rvps2"><span class="rvts6">The Internet standard model for graphs 
+ is the</span> <span class="rvts17">R</span><span class="rvts6">esource</span> 
+ <span class="rvts17">D</span><span class="rvts6">escription</span> <span 
+	 class="rvts17">F</span><span class="rvts6">ramework (RDF), alas another 
+ unfriendly name for a simple concept. &#160;From</span> <a class="rvts15" 
+															 href="http://www.rdfabout.com/intro/">&quot;What 
+ is RDF and what is it good for?&quot;</a><span class="rvts6">:</span></p>
+<p class="rvps6" style="margin-left: 48px; font-style: italic;"><span class="rvts16">RDF 
+ is a general method to decompose knowledge into small pieces, with some 
+ rules about the semantics, or meaning, of those pieces. The point is to 
+ have a method so simple that it can express any fact, and yet so structured 
+ that computer applications can do useful things with knowledge expressed 
+ in RDF.</span></p>
+<p class="rvps5" style="margin-left: 48px; font-style: italic;"><span class="rvts6">...</span></p>
+<p class="rvps6" style="margin-left: 48px; font-style: italic;"><span class="rvts16">What 
+ sets RDF apart from XML is that RDF is designed to represent knowledge 
+ in a distributed world.</span></p>
+<h2><span class="rvts18">Not SQL</span></h2>
+<p><span class="rvts6">You are probably already familiar with table-oriented 
+ data, such as spreadsheets or SQL. &#160;Tables and graphs have many similarities. 
+ &#160;It is often possible to map one into the other. &#160;But the difference 
+ in orientation is significant, especially for rich domains such as ours.</span></p>
+<p><span class="rvts6">Consider this from Andy Hogg in</span> <a class="rvts14" 
+	 href="http://www.computerweekly.com/feature/Whiteboard-it-the-power-of-graph-databases">&quot;Whiteboard 
+ it - the power of graph databases&quot;</a><span class="rvts6">:</span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>Relational 
+ databases are great for storing and retrieving data that fits nicely into 
+ a tabular format.</i></span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>Although 
+ they can express relationships by joining the tables, this is a simple 
+ mechanism – for example, specific orders belonging to specific customers 
+ and specific orders comprising specific products.</i></span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>Things 
+ get more complicated when we have a multitude of relationships, each with 
+ complex properties associated with them – more complex than merely “a 
+ one-to-many relationship exists between A and B”.</i></span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>Consider 
+ storing and analyzing data on children's diets – we'll want to record 
+ not only the fact that little Johnny likes turkey-twizzlers, but also 
+ quantify that relationship with the strength of his preference.</i></span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>We'll 
+ need to track food allergies too, along with the severity of the allergy, 
+ and the date the allergy was diagnosed. Certain foods may also be excluded 
+ for religious reasons, parental beliefs – and so it goes on.</i></span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>This 
+ kind of data, with many rich relationships between child and food, is 
+ not easily stored in a relational database.</i></span></p>
+<p style="margin-left: 48px; font-style: italic;"><span class="rvts13"><i>It 
+ can be done – given enough junction tables and additional columns to record 
+ the properties of each relationship – but the results are not pretty.</i></span></p>
+<h2><span class="rvts18">NoSQL</span></h2>
+<p><span class="rvts6">Graph databases are a kind of NoSql database. &#160;A 
+ popular categorization of NoSql databases uses these types:</span></p>
+<ol style="text-indent: 0px; margin-left: 24px; list-style-position: outside; 
+		 list-style-type: decimal;">
+	<li class="rvps2"><p class="steps"><span class="rvts6">Key-value store 
+	 (example: Dynamo)</span></p></li>
+	<li class="rvps2"><p class="steps"><span class="rvts6">Document-based 
+	 store (example: MongoDB)</span></p></li>
+	<li class="rvps2"><p class="steps"><span class="rvts6">Column-based 
+	 store (example: Cassandra)</span></p></li>
+	<li class="rvps2"><p class="steps"><span class="rvts6">Graph (example: 
+	 Neo4J, MindjetGraph)</span></p></li>
+</ol>
+<p><span class="rvts6">(</span> <a class="rvts14" href="http://blog.3pillarglobal.com/exploring-different-types-nosql-databases">Here 
+ is a good discussion of NoSql types</a> <span class="rvts6">)</span></p>
+<p class="rvps2"><span class="rvts6"><br />
+</span></p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

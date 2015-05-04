@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Entity IDs in SpigitEngage</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" src="../MJG1/js/chmRelative.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("SpigitEngage\nEntity IDs in SpigitEngage");
+addAvenueInfo("Basic Sequence","SpigitEngageInstallations.htm","SpigitEngageUsers.htm");
+addButton("show",BTN_TEXT,"< Show Help Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("content.htm", "", "&nbsp;&gt;", "Home", "welcometomindjetgraphdevelopersg.htm");
+document.write("<a href=\"spigitengageandmindjetgraph.htm\">SpigitEngage<\/a> &nbsp;&gt; Entity IDs in SpigitEngage<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('content.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	
+</div>
+
+
+<h1>Entity IDs in SpigitEngage</h1>
+<p>All MindjetGraph entity IDs (see <a href="entityconcepts.htm">Entity 
+ Concepts</a> or <a href="entityclass.htm">Entity Class</a>) begin with 
+ a<span class="rvts6">&#160;</span><span style="font-style: italic;"><i>gatewayURI</i></span><span 
+	 class="rvts6">. &#160;For SpigitEngage instances, that is always the 
+ URL of the primary community there, plus the path segment &quot;/api&quot;. 
+ &#160;The primary community is often (but not always!) the one that starts 
+ with &quot;www.&quot;. &#160;For example, if the primary community has 
+ this URL:</span></p>
+<p class="Code" style="margin-left: 36px;"><span class="rvts24">https://www.mycompany.spigit.com</span></p>
+<p><span class="rvts6">or</span></p>
+<p class="Code" style="margin-left: 36px;"><span class="rvts24">https://main.xyzcorp.spigit.com</span></p>
+<p><span class="rvts6">then the gatewayURI part of entity IDs in this instance 
+ will be:</span></p>
+<p class="Code" style="margin-left: 36px;"><span class="rvts24">https://www.mycompany.spigit.com/api</span></p>
+<p><span class="rvts24" style="font-family: Arial, sans-serif;">o</span><span 
+	 class="rvts6">r</span></p>
+<p class="Code" style="margin-left: 36px;"><span class="rvts24">https://main.xyzcorp.spigit.com/api</span></p>
+<p><span class="rvts6">Every SpigitEngage instance has exactly one <a href="dataspaceclass.htm">dataSpace</a> 
+ entity and one <a href="tenantclass.htm">tenant</a> entity. &#160;(See 
+ <a href="communityandtenantconcepts.htm">Community and Tenant Concepts</a>.) 
+ &#160;These entities always have the same entity keys:</span> </p>
+<div class="rvps5">
+	<table style="border-width: 0px; margin-left: 32px;" cellspacing="0" 
+			 width="600">
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;" width="180"><p style="margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Key for the dataspace</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="font-weight: bold; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts17">ds1</span></p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;" width="180"><p style="margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">Key for the tenant</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="font-weight: bold; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts17">tenant-1</span></p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6">Since the dataSpace key is always &quot;ds1&quot;, 
+ we can work out the</span> <a class="rvts14" href="entityidsandcommonprefixes.htm">common 
+ namespace prefixes</a> <span class="rvts6">used for REST queries this 
+ way:</span></p>
+<div class="rvps5">
+	<table style="border-width: 0px;" cellspacing="0" width="100%">
+		<col width="123" />
+		<col width="282" />
+		<col />
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">_host:</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts13" style="font-style: italic;"><i>primaryCommunityURI</i></span><span 
+			 class="rvts6">/api</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;" width="300"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">https://www.mycompany.spigit.com/api</span><br />
+			https://main.xyzcorp.spigit.com/api</p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">_ds:</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts13" style="font-style: italic;"><i>primaryCommunityURI</i></span><span 
+			 class="rvts6">/api/ds1</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;" width="300"><p style="margin-left: 0pt; 
+														 margin-top: 4.5pt; 
+														 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">https://www.mycompany.spigit.com/api/ds1</span><br />
+			https://main.xyzcorp.spigit.com/api/ds1</p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6">which makes the entity IDs for the dataSpace and 
+ tenant entities to be the following, taking advantage of the <a href="commonnamespaces.htm">&quot;_ds:&quot; 
+ prefix</a>:</span></p>
+<div class="rvps5">
+	<table style="border-width: 0px;" cellspacing="0" width="100%">
+		<col width="146" />
+		<col width="151" />
+		<col width="728" />
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">dataspace</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">_ds:ds1</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">https://www.mycompany.spigit.com/api/ds1/ds1</span><br />
+			https://main.xyzcorp.spigit.com/api/ds1/ds1</p></td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">tenant</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">_ds:tenant-1</span></p></td>
+			<td style="padding-left: 2px; padding-top: 2px; padding-right: 2px; 
+				 padding-bottom: 2px;"><p style="margin-left: 0pt; margin-top: 4.5pt; 
+											 margin-bottom: 4.5pt;"><span 
+			 class="rvts6">https://www.mycompany.spigit.com/api/ds1/tenant-1</span><br />
+			https://main.xyzcorp.spigit.com/api/ds1/tenant-1</p></td>
+		</tr>
+	</table>
+</div>
+<p><span class="rvts6">All of this information is provided mostly for your 
+ understanding in recognizing values and manual navigation. &#160;It is 
+ very unlikely that you will ever need these elements when coding an application. 
+ &#160;You should always get the initial entity IDs from the response to 
+ the access token request. &#160;And you should always use the entity IDs 
+ and prefixes returned in subsequent queries to form new requests (i.e.. 
+ &quot;walk the graph&quot;). &#160;You should never assume, outside of 
+ a development or test environment, that you know in advance what these 
+ values are.</span></p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
